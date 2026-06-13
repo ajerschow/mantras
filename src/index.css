@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Serif+Tibetan:wght@400;600&display=swap");
+
+:root {
+  --bg-top: #f3eee4;
+  --bg-bottom: #e9e2f0;
+  --panel-bg: rgba(255, 255, 255, 0.72);
+  --panel-border: rgba(120, 100, 150, 0.16);
+  --ink: #322c45;
+  --muted: #6f6580;
+  --indigo: #423b6b;
+  --maroon: #8a3b46;
+  --gold: #bb8a2e;
+  --gold-soft: #f1e3c4;
+  --divider: rgba(187, 138, 46, 0.35);
+  --font-display: "Cormorant Garamond", "Noto Serif", serif;
+  --font-body: "EB Garamond", "Noto Serif", Georgia, serif;
+  font-family: "EB Garamond", "Noto Serif", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--bg-bottom);
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: linear-gradient(160deg, var(--bg-top) 0%, var(--bg-bottom) 55%, #ece6f2 100%);
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px 72px;
+}
+
+/* ---------- Header ---------- */
+
+.app-header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  position: relative;
+}
+
+.ornament {
+  font-size: 2.2rem;
+  color: var(--gold);
+  margin-bottom: 6px;
+  opacity: 0.85;
+  text-shadow: 0 0 18px rgba(187, 138, 46, 0.35);
+  transition: opacity 0.2s ease;
+}
+
+.ornament-tibetan {
+  font-family: "Noto Serif Tibetan", serif;
+}
+
+.ornament-sanskrit {
+  font-family: "Noto Sans Devanagari", serif;
+}
+
+.app-header::after {
+  content: "";
+  display: block;
+  width: 84px;
+  height: 1px;
+  margin: 22px auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.app-header h1 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 3.1rem;
+  letter-spacing: 0.04em;
+  color: var(--indigo);
+  text-shadow: 0 1px 24px rgba(138, 59, 70, 0.12);
+}
+
+.subtitle {
+  margin: 0 auto;
+  color: var(--muted);
+  max-width: 560px;
+  line-height: 1.7;
+  font-size: 1.08rem;
+  font-style: italic;
+  font-family: var(--font-body);
+}
+
+/* ---------- Controls ---------- */
+
+.controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  justify-content: center;
+}
+
+.search-box,
+.mantra-select {
+  flex: 1 1 300px;
+  max-width: 420px;
+  padding: 12px 20px;
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  font-size: 1.05rem;
+  font-family: var(--font-body);
+  background: var(--panel-bg);
+  color: var(--ink);
+  box-shadow: 0 1px 3px rgba(70, 50, 90, 0.06);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.search-box::placeholder {
+  color: #a89ebb;
+}
+
+.search-box:focus,
+.mantra-select:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(187, 138, 46, 0.15);
+}
+
+.no-results {
+  text-align: center;
+  color: var(--muted);
+}
+
+.phonetics-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--muted);
+  cursor: pointer;
+  flex: 0 1 auto;
+  white-space: nowrap;
+}
+
+.phonetics-toggle input {
+  accent-color: var(--gold);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* ---------- Title block ---------- */
+
+.mantra-title-block {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.mantra-title {
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 2.3rem;
+  letter-spacing: 0.03em;
+  color: var(--maroon);
+}
+
+.mantra-deity {
+  color: var(--muted);
+  font-style: italic;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tag {
+  background: var(--gold-soft);
+  color: var(--gold);
+  filter: brightness(0.85);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Panels ---------- */
+
+.panels {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 18px;
+  padding: 24px 26px;
+  box-shadow: 0 6px 24px rgba(80, 60, 110, 0.06);
+}
+
+.panel h2 {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--indigo);
+  letter-spacing: 0.04em;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--divider);
+}
+
+.panel h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 24px 0 10px;
+  color: var(--maroon);
+}
+
+/* ---------- Script display ---------- */
+
+.script-line {
+  font-size: 1.85rem;
+  line-height: 1.7;
+  margin: 6px 0 12px;
+  word-break: break-word;
+  color: var(--ink);
+}
+
+.devanagari,
+.devanagari-inline {
+  font-family: "Tiro Devanagari Sanskrit", "Noto Sans Devanagari", "Noto Sans", sans-serif;
+}
+
+.tibetan-script {
+  font-family: "Noto Serif Tibetan", "Noto Sans", sans-serif;
+}
+
+.tib-script {
+  font-family: "Noto Serif Tibetan", "Noto Sans", sans-serif;
+  font-size: 1.45rem;
+}
+
+/* ---------- Verse-by-verse script + phonetics ---------- */
+
+.verse-block {
+  margin: 6px 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.verse-line-wrap {
+  position: relative;
+}
+
+.verse-line {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.verse-line:hover {
+  border-color: var(--panel-border);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.verse-line.verse-line-active {
+  background: var(--gold-soft);
+  border-color: var(--gold);
+}
+
+.verse-script {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.verse-script.tib-script,
+.verse-script.tibetan-script {
+  font-size: 1.4rem;
+}
+
+.verse-phonetic {
+  display: block;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.verse-translation {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink);
+  margin-top: 2px;
+}
+
+.verse-popup {
+  left: 0;
+  transform: none;
+}
+
+.verse-popup::before {
+  left: 32px;
+  transform: none;
+}
+
+.translit-line {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--muted);
+  margin: 4px 0 12px;
+  line-height: 1.7;
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
+}
+
+.translation {
+  font-family: var(--font-body);
+  font-size: 1.08rem;
+  margin: 8px 0 0;
+  line-height: 1.7;
+}
+
+/* ---------- Tibetan script-type badge ---------- */
+
+.script-type-badge {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.script-type-badge.sanskrit-in-tibetan {
+  background: #f6e3df;
+  color: var(--maroon);
+}
+
+.script-type-badge.native-tibetan {
+  background: #e3ecdf;
+  color: #4d7a52;
+}
+
+.intro-note {
+  font-family: var(--font-body);
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin: 10px 0 0;
+}
+
+/* ---------- Chips & popups (clickable words / forms / syllables) ---------- */
+
+.hint {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip-wrap {
+  position: relative;
+}
+
+.chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 16px;
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease;
+}
+
+.chip:hover {
+  border-color: var(--gold);
+  transform: translateY(-1px);
+}
+
+.chip.chip-active {
+  background: var(--gold-soft);
+  border-color: var(--gold);
+}
+
+.chip-label {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--indigo);
+  line-height: 1.3;
+}
+
+.chip-sublabel {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.chip-popup {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(calc(-50% + var(--shift, 0px)));
+  z-index: 30;
+  width: max-content;
+  min-width: 220px;
+  max-width: min(320px, 80vw);
+  background: #fffdf9;
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(80, 60, 110, 0.16);
+  padding: 14px 16px;
+  text-align: left;
+  cursor: default;
+}
+
+.chip-popup::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: calc(50% - var(--shift, 0px));
+  transform: translateX(-50%);
+  border: 7px solid transparent;
+  border-bottom-color: #fffdf9;
+}
+
+.popup-gloss {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--maroon);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.popup-note {
+  font-family: var(--font-body);
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.word-grouping {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ---------- Footer ---------- */
+
+.app-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--divider);
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.app-footer p {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 600px) {
+  .app-header h1 {
+    font-size: 2.3rem;
+  }
+
+  .ornament {
+    font-size: 1.7rem;
+  }
+
+  .script-line {
+    font-size: 1.5rem;
+  }
+
+  .chip-popup {
+    position: fixed;
+    top: auto;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    transform: none;
+    width: auto;
+    max-width: none;
+  }
+
+  .chip-popup::before {
+    display: none;
+  }
+}
