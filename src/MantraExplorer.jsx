@@ -230,9 +230,12 @@ function getCleanScript(entry) {
 function PrintModal({ entry, onClose }) {
   const [fontSize, setFontSize] = useState(48);
   const [traceMode, setTraceMode] = useState(false);
+  const [grayLevel, setGrayLevel] = useState(0);
 
   const text = getCleanScript(entry);
   const scriptClassName = entry.lang === "sanskrit" ? "devanagari" : "tibetan-script";
+  const shade = Math.round((grayLevel / 100) * 255);
+  const inkColor = `rgb(${shade}, ${shade}, ${shade})`;
 
   return (
     <div className="print-overlay open" onClick={onClose}>
@@ -243,13 +246,25 @@ function PrintModal({ entry, onClose }) {
             Font size
             <input
               type="range"
-              min={20}
-              max={140}
-              step={2}
+              min={10}
+              max={60}
+              step={1}
               value={fontSize}
               onChange={(e) => setFontSize(Number(e.target.value))}
             />
             <span className="print-control-value">{fontSize}px</span>
+          </label>
+          <label className="print-control">
+            Grayscale
+            <input
+              type="range"
+              min={0}
+              max={100}
+              step={1}
+              value={grayLevel}
+              onChange={(e) => setGrayLevel(Number(e.target.value))}
+            />
+            <span className="print-control-value">{grayLevel}%</span>
           </label>
           <label className="print-control print-control-checkbox">
             <input
@@ -269,7 +284,11 @@ function PrintModal({ entry, onClose }) {
         <div className="print-preview">
           <div
             className={`print-text ${scriptClassName}${traceMode ? " print-text-trace" : ""}`}
-            style={{ fontSize: `${fontSize}px` }}
+            style={
+              traceMode
+                ? { fontSize: `${fontSize}px`, WebkitTextStroke: `1.5px ${inkColor}`, color: "transparent" }
+                : { fontSize: `${fontSize}px`, color: inkColor }
+            }
           >
             {text}
           </div>

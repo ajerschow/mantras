@@ -609,13 +609,6 @@ body {
 .print-text {
   white-space: pre-wrap;
   line-height: 1.9;
-  color: var(--ink);
-}
-
-.print-text-trace {
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--ink);
-  text-stroke: 1.5px var(--ink);
 }
 
 @media print {
