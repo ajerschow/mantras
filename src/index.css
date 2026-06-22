@@ -490,6 +490,172 @@ body {
   line-height: 1.7;
 }
 
+/* ---------- Print / trace modal ---------- */
+
+.print-trigger-btn {
+  flex: 0 1 auto;
+  white-space: nowrap;
+  padding: 10px 20px;
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  background: var(--panel-bg);
+  color: var(--indigo);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.print-trigger-btn:hover {
+  border-color: var(--gold);
+  background: var(--gold-soft);
+}
+
+.print-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(40, 30, 55, 0.55);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.print-overlay.open {
+  display: flex;
+}
+
+.print-overlay-panel {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 20px 60px rgba(30, 20, 45, 0.3);
+}
+
+.print-controls {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+.print-title {
+  font-family: var(--font-display);
+  color: var(--maroon);
+  font-size: 1.1rem;
+}
+
+.print-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+}
+
+.print-control-checkbox {
+  cursor: pointer;
+}
+
+.print-control-value {
+  min-width: 3.4em;
+  color: var(--muted);
+}
+
+.print-action-btn,
+.print-close-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--panel-border);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  cursor: pointer;
+  background: var(--panel-bg);
+  color: var(--ink);
+}
+
+.print-action-btn {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+  font-weight: 600;
+}
+
+.print-action-btn:hover {
+  filter: brightness(1.05);
+}
+
+.print-close-btn:hover {
+  border-color: var(--gold);
+}
+
+.print-preview {
+  border: 1px dashed var(--panel-border);
+  border-radius: 12px;
+  padding: 32px;
+  overflow: auto;
+  background: #fff;
+}
+
+.print-text {
+  white-space: pre-wrap;
+  line-height: 1.9;
+  color: var(--ink);
+}
+
+.print-text-trace {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--ink);
+  text-stroke: 1.5px var(--ink);
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .print-overlay,
+  .print-overlay * {
+    visibility: visible;
+  }
+
+  .print-overlay {
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    display: block;
+    padding: 0;
+  }
+
+  .print-overlay-panel {
+    box-shadow: none;
+    max-width: none;
+    max-height: none;
+    width: auto;
+    border-radius: 0;
+  }
+
+  .print-controls,
+  .print-close-btn,
+  .print-action-btn {
+    display: none;
+  }
+
+  .print-preview {
+    border: none;
+    padding: 0;
+  }
+}
+
 /* ---------- Footer ---------- */
 
 .app-footer {

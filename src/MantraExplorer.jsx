@@ -217,6 +217,68 @@ function TibetanSection({ tibetan, sectionId, showPhonetics, showTranslation, op
   );
 }
 
+function getCleanScript(entry) {
+  const m = entry.mantra;
+  if (entry.lang === "sanskrit") {
+    const sk = m.sanskrit;
+    return sk.lines ? sk.lines.map((l) => l.script).join("\n") : sk.script;
+  }
+  const ti = m.tibetan;
+  return ti.lines ? ti.lines.map((l) => l.script).join("\n") : ti.script;
+}
+
+function PrintModal({ entry, onClose }) {
+  const [fontSize, setFontSize] = useState(48);
+  const [traceMode, setTraceMode] = useState(false);
+
+  const text = getCleanScript(entry);
+  const scriptClassName = entry.lang === "sanskrit" ? "devanagari" : "tibetan-script";
+
+  return (
+    <div className="print-overlay open" onClick={onClose}>
+      <div className="print-overlay-panel" onClick={(e) => e.stopPropagation()}>
+        <div className="print-controls">
+          <strong className="print-title">{entry.title}</strong>
+          <label className="print-control">
+            Font size
+            <input
+              type="range"
+              min={20}
+              max={140}
+              step={2}
+              value={fontSize}
+              onChange={(e) => setFontSize(Number(e.target.value))}
+            />
+            <span className="print-control-value">{fontSize}px</span>
+          </label>
+          <label className="print-control print-control-checkbox">
+            <input
+              type="checkbox"
+              checked={traceMode}
+              onChange={(e) => setTraceMode(e.target.checked)}
+            />
+            Outline (for tracing)
+          </label>
+          <button type="button" className="print-action-btn" onClick={() => window.print()}>
+            Print
+          </button>
+          <button type="button" className="print-close-btn" onClick={onClose}>
+            Close
+          </button>
+        </div>
+        <div className="print-preview">
+          <div
+            className={`print-text ${scriptClassName}${traceMode ? " print-text-trace" : ""}`}
+            style={{ fontSize: `${fontSize}px` }}
+          >
+            {text}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // Flatten each mantra into one entry per language it has (Sanskrit / Tibetan),
 // so they can be selected separately.
 const entries = mantras.flatMap((m) => {
@@ -246,6 +308,7 @@ export default function MantraExplorer() {
   const [openChipId, setOpenChipId] = useState(null);
   const [showPhonetics, setShowPhonetics] = useState(true);
   const [showTranslation, setShowTranslation] = useState(true);
+  const [printOpen, setPrintOpen] = useState(false);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -337,6 +400,9 @@ export default function MantraExplorer() {
           />
           Show translation under each line
         </label>
+        <button type="button" className="print-trigger-btn" onClick={() => setPrintOpen(true)}>
+          Print / Trace clean copy
+        </button>
       </div>
 
       {filtered.length === 0 && (
@@ -392,6 +458,10 @@ export default function MantraExplorer() {
           classical literary Sanskrit.
         </p>
       </footer>
+
+      {printOpen && selected && (
+        <PrintModal entry={selected} onClose={() => setPrintOpen(false)} />
+      )}
     </div>
   );
 }
