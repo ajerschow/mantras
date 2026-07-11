@@ -1862,5 +1862,195 @@ export const mantras = [
       wordGrouping:
         "Three words across four syllable-blocks: bla-ma ('guru', 2 syllables forming one compound noun) + mkhyen ('knows/cares for', 1 syllable, the verb) + no (1 syllable, a final particle). Sentence pattern: Subject (Guru) + Verb (think-of-me) + Particle (please) — 'Guru, [please] think of me!'. Contrast this with the Sanskrit mantras above: here every silent letter (the prefix མ, the superscript བ) is doing real grammatical/phonological work (raising tone), which is the system that does NOT apply when Tibetan letters are instead used to spell out Sanskrit."
     }
+  },
+  {
+  id: "shakyamuni-mantra",
+  title: "Oṃ Muni Muni Mahāmuni Śākyamuniye Svāhā",
+  deity: "Śākyamuni Buddha (the historical Buddha, Siddhārtha Gautama)",
+  tags: ["Shakyamuni", "historical Buddha", "merit", "purification", "Sanskrit mantra"],
+  sanskrit: {
+    script: "ॐ मुनि मुनि महामुनि शाक्यमुनि स्वाहा",
+    transliteration: "oṃ muni muni mahāmuni śākyamuniye svāhā",
+    translation: "Oṃ, O Sage, Sage, Great Sage, O Sage of the Śākyas — svāhā!",
+    words: [
+      {
+        word: "oṃ",
+        gloss: "the universal seed syllable",
+        note: "The primordial sound, saluting and invoking the deity.",
+        grammar: "Indeclinable interjection."
+      },
+      {
+        word: "muni",
+        gloss: "sage / silent one",
+        note: "From the root √man ('to think'), muni denotes a sage who realises truth through inner silence. Repeated twice as an intensifier: 'Sage, Sage'. In Buddhist usage it is the standard epithet of the Buddha (the Silent Sage who emerged from silence to teach).",
+        grammar: "Masculine vocative singular of muni (i-stem noun)."
+      },
+      {
+        word: "muni",
+        gloss: "sage (second invocation)",
+        note: "Repetition of the epithet for emphasis — a standard Vedic and Buddhist intensification pattern.",
+        grammar: "Masculine vocative singular of muni."
+      },
+      {
+        word: "mahāmuni",
+        gloss: "Great Sage",
+        note: "mahā ('great') + muni: a superlative compound honouring the Buddha above all other sages. The long ā of mahā blends smoothly into muni.",
+        grammar: "Masculine vocative singular of the karmadharaya compound mahā-muni."
+      },
+      {
+        word: "śākyamuniye",
+        gloss: "O Sage of the Śākyas",
+        note: "Śākya (the clan name of the historical Buddha's family) + muni + the vocative suffix -ye (dative-inflected vocative used in Buddhist Hybrid Sanskrit). The Śākya clan ruled the small republic of Kapilavastu in present-day Nepal/India; 'Śākyamuni' ('Sage of the Śākyas') is the most common epithet of Siddhārtha Gautama.",
+        grammar: "Buddhist Hybrid Sanskrit vocative-dative of the compound noun Śākya-muni."
+      },
+      {
+        word: "svāhā",
+        gloss: "svāhā — seal, so be it!",
+        note: "The Vedic offering-cry, placed at the end of mantras as a seal that fixes the merit of the recitation. Literally means 'well-said' or 'hail!' and traditionally accompanied the pouring of offerings into fire. In Buddhist usage it simply closes and empowers the mantra.",
+        grammar: "Indeclinable exclamation / offering formula."
+      }
+    ]
+  },
+  tibetan: {
+    script: "ༀ་མུ་ནི་མུ་ནི་མ་ཧཱ་མུ་ནི་ཤཱཀྱ་མུ་ནི་ཡེ་སྭཱ་ཧཱ།",
+    wylie: "oM mu ni mu ni ma hA mu ni shAk+ya mu ni ye swA hA",
+    phonetic: "Om Muni Muni Maha Muni Shakya Muni Ye Soha",
+    translation: "Oṃ, Sage, Sage, Great Sage, Sage of the Śākyas — svāhā!",
+    scriptType: "sanskrit-in-tibetan",
+    intro: "This is Sanskrit spelled out letter by letter in Tibetan script (the same 'Sanskrit-spelling' mode as Om Mani Padme Hum and the Vajra Guru mantra). Ordinary Tibetan reading rules — silent prefixes, vowel-fronting before suffix ན, etc. — do not apply; each letter has its full Sanskrit sound value. The only points of interest are the subjoined ྱ in ཤཱཀྱ ('śākya', reproducing the Sanskrit cluster kya) and the long-vowel signs ཱ throughout (ā).",
+    words: [
+      {
+        script: "ༀ",
+        wylie: "oM",
+        phon: "Om",
+        gloss: "universal seed syllable",
+        syllables: [
+          {
+            tib: "ༀ",
+            wylie: "oM",
+            phon: "Om",
+            note: "The Oṃ ligature — the standard Tibetan representation of the Sanskrit seed syllable oṃ. The following མུ begins with མ and does not change the sound of this syllable."
+          }
+        ]
+      },
+      {
+        script: "མུ་ནི་མུ་ནི",
+        wylie: "mu ni mu ni",
+        phon: "Muni Muni",
+        gloss: "Sage, Sage",
+        syllables: [
+          {
+            tib: "མུ",
+            wylie: "mu",
+            phon: "mu",
+            note: "Root letter མ (ma) with the vowel sign ུ (u): 'mu'. Begins the first muni. The following ནི begins with ན and does not change this syllable's sound."
+          },
+          {
+            tib: "ནི",
+            wylie: "ni",
+            phon: "ni",
+            note: "Root letter ན (na) with the vowel sign ི (i): 'ni'. Together མུ་ནི = 'muni', 'sage'. The following མུ begins the second muni and does not change this syllable's sound."
+          },
+          {
+            tib: "མུ",
+            wylie: "mu",
+            phon: "mu",
+            note: "Second repetition of མུ (ma + vowel ུ): 'mu'. The repetition intensifies the invocation. The following ནི begins with ན and does not change this syllable's sound."
+          },
+          {
+            tib: "ནི",
+            wylie: "ni",
+            phon: "ni",
+            note: "Second repetition of ནི (na + vowel ི): 'ni'. Together the two མུ་ནི་མུ་ནི = 'muni muni', 'Sage, Sage!' — a doubled invocation. The following མ begins mahā and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "མ་ཧཱ་མུ་ནི",
+        wylie: "ma hA mu ni",
+        phon: "Maha Muni",
+        gloss: "Great Sage",
+        syllables: [
+          {
+            tib: "མ",
+            wylie: "ma",
+            phon: "ma",
+            note: "Root letter མ (ma) with inherent vowel 'a': 'ma'. Begins mahā, 'great'. The following ཧཱ begins with ཧ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཧཱ",
+            wylie: "hA",
+            phon: "ha",
+            note: "Root letter ཧ (ha) with the long-vowel sign ཱ (ā): 'hā'. Together མ་ཧཱ = 'mahā', 'great' (only used in compounds in Sanskrit; it cannot stand alone). The following མུ begins muni and does not change this syllable's sound."
+          },
+          {
+            tib: "མུ",
+            wylie: "mu",
+            phon: "mu",
+            note: "Root letter མ (ma) with vowel sign ུ (u): 'mu'. Third occurrence of mu- in this mantra. The following ནི begins with ན and does not change this syllable's sound."
+          },
+          {
+            tib: "ནི",
+            wylie: "ni",
+            phon: "ni",
+            note: "Root letter ན (na) with vowel sign ི (i): 'ni'. Together མ་ཧཱ་མུ་ནི = 'mahāmuni', 'Great Sage' — the supreme epithet of the Buddha. The following ཤཱཀྱ begins with ཤ and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "ཤཱཀྱ་མུ་ནི་ཡེ",
+        wylie: "shAk+ya mu ni ye",
+        phon: "Shakya Muni Ye",
+        gloss: "O Sage of the Śākyas",
+        syllables: [
+          {
+            tib: "ཤཱཀྱ",
+            wylie: "shAk+ya",
+            phon: "shākya",
+            note: "Root letter ཤ (śa — the Sanskrit palatal sibilant, found only in Sanskrit loanwords in Tibetan) with the long-vowel sign ཱ (ā), carrying a stack of ཀ (ka) with subjoined ྱ (ya) beneath it. The stack ཀྱ reproduces the Sanskrit consonant cluster 'ky' of Śākya (the clan name of the historical Buddha's family). Together ཤཱཀྱ = 'śākya'. The following མུ begins with མ and does not change this syllable's sound."
+          },
+          {
+            tib: "མུ",
+            wylie: "mu",
+            phon: "mu",
+            note: "Root letter མ (ma) with vowel sign ུ (u): 'mu'. Fourth occurrence of mu- in this mantra. The following ནི begins with ན and does not change this syllable's sound."
+          },
+          {
+            tib: "ནི",
+            wylie: "ni",
+            phon: "ni",
+            note: "Root letter ན (na) with vowel sign ི (i): 'ni'. Together ཤཱཀྱ་མུ་ནི = 'śākyamuni', 'Sage of the Śākyas', the primary proper name of the historical Buddha. The following ཡེ begins with ཡ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཡེ",
+            wylie: "ye",
+            phon: "ye",
+            note: "Root letter ཡ (ya) with the vowel sign ེ (e): 'ye'. This is the Buddhist Hybrid Sanskrit vocative/dative suffix -ye added to śākyamuni, used in mantras to address a deity directly ('O Śākyamuni!'). The following སྭཱ begins with ས and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "སྭཱ་ཧཱ",
+        wylie: "swA hA",
+        phon: "Soha",
+        gloss: "svāhā — seal of the mantra",
+        syllables: [
+          {
+            tib: "སྭཱ",
+            wylie: "swA",
+            phon: "swa",
+            note: "Root letter ས (sa) with ཝ (wa) subjoined beneath it and the long-vowel sign ཱ (ā) on top: together 'svā', the first syllable of svāhā. The subjoined ཝ reproduces Sanskrit 'v' (in Tibetan script ཝ stands for both 'w' and 'v' sounds). The following ཧཱ begins with ཧ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཧཱ",
+            wylie: "hA",
+            phon: "ha",
+            note: "Root letter ཧ (ha) with the long-vowel sign ཱ (ā): 'hā'. Together སྭཱ་ཧཱ = 'svāhā', the ancient Vedic offering-cry that seals and empowers the mantra. This is the final syllable; there is no following syllable to affect it."
+          }
+        ]
+      }
+    ],
+    wordGrouping: "Fourteen Tibetan syllable-blocks group into five units: Oṃ (seed syllable) | Muni-Muni (Sage, Sage — doubled invocation) | Mahā-Muni (Great Sage) | Śākya-Muni-ye (O Sage of the Śākyas — the Buddha's proper name plus vocative suffix) | Svāhā (sealing exclamation). The pattern of three progressively fuller invocations — muni, muni → mahā-muni → śākyamuni-ye — mirrors the triple repetition in many other Buddhist mantras and carries the practitioner from general invocation toward the specific, personal name of the historical Buddha."
   }
+}
 ];
