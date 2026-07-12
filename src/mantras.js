@@ -2400,5 +2400,523 @@ export const mantras = [
     ],
     wordGrouping: "Thirty-five Tibetan syllable-blocks group into nine units matching the Sanskrit words: Ye-dharmā (those phenomena) | Hetu-prabhavā (that arise from causes) | Hetun-teṣāṃ (their cause) | Tathāgato (the Tathāgata) | Hy-avadat (has indeed declared) | Teṣāṃ-ca-yo (and the cessation of those) | Nirodha (cessation) | Evaṃ-vādī (thus teaches) | Mahāśramaṇaḥ (the Great Śramaṇa). The verse moves in a precise arc: conditioned phenomena → their cause (declared by the Buddha) → their cessation → the teacher. Meditating on this sequence is itself the path to the independence (nirodha) the verse describes."
   }
+},
+{
+  id: "shakyamuni-prayer",
+  title: "Nyönmong Dü Kyi Dé Tsok Chom — Prayer to Śākyamuni",
+  deity: "Śākyamuni Buddha",
+  tags: ["Shakyamuni", "prayer", "supplication", "eight fears", "native Tibetan", "mantra of independence"],
+  sanskrit: null,
+  tibetan: {
+    script: "ཉོན་མོངས་བདུད་ཀྱི་སྡེ་ཚོགས་བཅོམ། །བསོད་ནམས་ཡེ་ཤེས་ཕུང་པོར་ལྡན། །སྲིད་དང་ཞི་བའི་མཐའ་ལས་འདས། །ཤཱཀྱའི་ཐོག་ལ་གསོལ་བ་འདེབས། །འཇིགས་བརྒྱད་ཞི་བར་བྱིན་གྱིས་རློབས། །སྐྱེ་དང་ཚེ་རབས་ཐམས་ཅད་དུ། །ལར་ཡང་ལྷག་པའི་ལུས་ཐོབ་ནས། །འགྲོ་རྣམས་སྡུག་བསྔལ་ལས་སྒྲོལ་བའི། །བདེ་དཔོན་མཆོག་ཏུ་བདག་གྱུར་ཤོག །",
+    wylie: "nyon mongs bdud kyi sde tshogs bcom / bsod nams ye shes phung por ldan / srid dang zhi ba'i mtha' las 'das / shAkya'i thog la gsol ba 'debs / 'jigs brgyad zhi bar byin gyis rlobs / skye dang tshe rabs thams cad du / lar yang lhag pa'i lus thob nas / 'gro rnams sdug bsngal las sgrol ba'i / bde dpon mchog tu bdag gyur shog",
+    phonetic: "Nyönmong Dü Kyi Dé Tsok Chom, Sönam Yéshé Phungpor Den, Si Dang Zhiwé Ta Lé Dé, Shakyé Tok La Solwa Deb, Jikgyé Zhiwar Jingyi Lob, Kyé Dang Tsérab Tamché Du, Lar Yang Lhakpé Lu Tob Né, Dro Nam Dukngal Lé Drolwé, Dépön Chok Tu Dak Gyur Shok",
+    translation: "Having vanquished the host of Māra's afflictions, / Endowed with the accumulations of merit and wisdom, / Gone beyond the extremes of existence and peace — / To the crown of the Śākyas, I pray: / Bless me to pacify the eight fears. / In all births and lifetimes, / Having again obtained an excellent body, / May I liberate beings from suffering / And become their supreme guide to happiness.",
+    scriptType: "native-tibetan",
+    intro: "This is a native Tibetan prayer of supplication (gsol 'debs) to Śākyamuni Buddha, distinct from the Sanskrit mantra Oṃ Muni Muni Mahāmuni already in this collection. It divides into two parts: the first four lines praise the Buddha's qualities (vanquishing Māra, possessing merit and wisdom, transcending both existence and nirvāṇa), and the last five lines express aspiration (to be blessed, to obtain a precious human body in future lives, and ultimately to liberate beings). Because this is composed in native Tibetan, ordinary reading rules apply throughout: silent prefix consonants (ག ད བ མ འ) shift tone and register; superscripts (ར ལ ས) raise register; the suffix ན fronts preceding vowels (o→ö, a→e); and the suffixes ག, ད, བ become unreleased final stops that shorten the vowel. One syllable — ཤཱཀྱའི (shakyé) — is the Sanskrit clan name Śākya written in Tibetan script with a long ā sign and the genitive particle འི; it follows Sanskrit-spelling conventions rather than native Tibetan reading rules.",
+    lines: [
+      {
+        script: "ཉོན་མོངས་བདུད་ཀྱི་སྡེ་ཚོགས་བཅོམ",
+        translit: "Nyönmong dü kyi dé tsok chom",
+        gloss: "Having vanquished the host of Māra's afflictions",
+        note: "ཉོན་མོངས (kleśa, 'afflictions') — the mental poisons (desire, aversion, ignorance and their derivatives). བདུད (Māra) — the demon who personifies death, temptation, and the forces opposing enlightenment; at the night of his enlightenment the Buddha 'vanquished' (བཅོམ, bcom) Māra's entire assembly (སྡེ་ཚོགས, 'host/army') by touching the earth as witness. ཀྱི is the genitive particle linking Māra to his army."
+      },
+      {
+        script: "བསོད་ནམས་ཡེ་ཤེས་ཕུང་པོར་ལྡན",
+        translit: "Sönam yéshé phungpor den",
+        gloss: "Endowed with the accumulations of merit and wisdom",
+        note: "The two accumulations (tshogs gnyis) are the foundation of Buddhahood: བསོད་ནམས (bsod nams, merit/puṇya) accumulated through ethical conduct and generosity, and ཡེ་ཤེས (ye shes, wisdom/jñāna) accumulated through meditation on emptiness. ཕུང་པོར (phung por, 'in/as heaps/aggregates', dative of ཕུང་པོ) means the Buddha holds these to a vast degree; ལྡན (ldan) = 'endowed with / possessing'."
+      },
+      {
+        script: "སྲིད་དང་ཞི་བའི་མཐའ་ལས་འདས",
+        translit: "Si dang zhiwé ta lé dé",
+        gloss: "Gone beyond the extremes of existence and peace",
+        note: "སྲིད (srid) = cyclic existence / saṃsāra; ཞི་བ (zhi ba) = peace / nirvāṇa. མཐའ (mtha') = extreme/limit. འདས ('das, past of 'da' ba) = 'gone beyond'. The Buddha is praised for transcending both ordinary worldly existence AND the 'quiescent' one-sided nirvāṇa of the śrāvakas — he dwells in mahāparinirvāṇa while remaining active for beings. ལས = the ablative particle 'from/beyond'."
+      },
+      {
+        script: "ཤཱཀྱའི་ཐོག་ལ་གསོལ་བ་འདེབས",
+        translit: "Shakyé tok la solwa deb",
+        gloss: "To the crown of the Śākyas, I pray",
+        note: "ཤཱཀྱའི (shākya'i) — the Sanskrit clan name Śākya (written in Tibetan with the long-ā sign ཱ and subjoined ྱ for the 'ky' cluster) plus the Tibetan genitive འི: 'of the Śākyas'. ཐོག (thog) = crown/pinnacle: 'the pinnacle of the Śākya clan' = the greatest person to arise from that royal lineage. གསོལ་བ་འདེབས (gsol ba 'debs) = 'to offer a supplication / to pray': the standard Tibetan liturgical phrase for petition, where 'debs means 'to place/offer'."
+      },
+      {
+        script: "འཇིགས་བརྒྱད་ཞི་བར་བྱིན་གྱིས་རློབས",
+        translit: "Jikgyé zhiwar jingyi lob",
+        gloss: "Bless me to pacify the eight fears",
+        note: "འཇིགས་བརྒྱད (the eight fears) — a classical list: lion, elephant, fire, snake, robbers, water, false imprisonment, and demons (different traditions enumerate them slightly differently). ཞི་བར (zhi bar) = 'to pacify/calm' (the dative/purposive ར: 'in order to calm'). བྱིན་གྱིས་རློབས (byin gyis rlobs) = the standard Tibetan formula for 'bless / empower': byin = gift/grace, gyis = instrumental, rlobs = command/empower."
+      },
+      {
+        script: "སྐྱེ་དང་ཚེ་རབས་ཐམས་ཅད་དུ",
+        translit: "Kyé dang tsérab tamché du",
+        gloss: "In all births and lifetimes",
+        note: "སྐྱེ (skye) = birth/rebirth; ཚེ་རབས (tshe rabs, 'all lives') — tshe = lifespan/life, rabs = series/sequence, together 'successive lifetimes'. ཐམས་ཅད (thams cad) = all/everything. དུ (du) = locative particle 'in/at'. This line opens the aspiration section: 'in all my future births and lives [may the following come to pass]'."
+      },
+      {
+        script: "ལར་ཡང་ལྷག་པའི་ལུས་ཐོབ་ནས",
+        translit: "Lar yang lhakpé lu tob né",
+        gloss: "Having again obtained an excellent body",
+        note: "ལར་ཡང (lar yang) = 'again, once more' (a set phrase). ལྷག་པ (lhag pa) = superior/excellent/special; with genitive འི: 'of excellence'. ལུས (lus) = body — here 'a precious human body' endowed with the freedoms and opportunities for practice. ཐོབ་ནས (thob nas) = 'having obtained' (ནས is the connective particle linking to the following aspiration)."
+      },
+      {
+        script: "འགྲོ་རྣམས་སྡུག་བསྔལ་ལས་སྒྲོལ་བའི",
+        translit: "Dro nam dukngal lé drolwé",
+        gloss: "May I liberate beings from suffering",
+        note: "འགྲོ་རྣམས ('gro rnams) = sentient beings: 'gro (those who wander/go) + rnams (plural particle). སྡུག་བསྔལ (sdug bsngal) = suffering / duḥkha — the central term of the First Noble Truth. ལས (las) = ablative 'from'. སྒྲོལ་བའི (sgrol ba'i) = 'of liberating' (genitive: this line is a genitive phrase modifying the leader of the next line): '(the) liberating of beings from suffering'."
+      },
+      {
+        script: "བདེ་དཔོན་མཆོག་ཏུ་བདག་གྱུར་ཤོག",
+        translit: "Dépön chok tu dak gyur shok",
+        gloss: "May I become the supreme guide to happiness",
+        note: "བདེ་དཔོན (bde dpon) = 'guide/leader of happiness' — bde = bliss/happiness, dpon = lord/leader/guide. མཆོག་ཏུ (mchog tu) = 'as the supreme / supremely'. བདག (bdag) = I/myself (the practitioner). གྱུར (gyur) = 'become' (past stem used in optative constructions). ཤོག (shog) = the optative/wishful particle 'may it be so!' that closes Tibetan aspirational prayers. The whole prayer ends: 'may I become the supreme guide leading beings to happiness'."
+      }
+    ],
+    words: [
+      {
+        script: "ཉོན་མོངས་བདུད་ཀྱི་སྡེ་ཚོགས་བཅོམ",
+        wylie: "nyon mongs bdud kyi sde tshogs bcom",
+        phon: "Nyönmong Dü Kyi Dé Tsok Chom",
+        gloss: "having vanquished the host of Māra's afflictions",
+        syllables: [
+          {
+            tib: "ཉོན",
+            wylie: "nyon",
+            phon: "nyön",
+            note: "Root letter ཉ (nya) with the vowel sign ོ (o) and suffix ན. The suffix ན fronts the vowel: o → ö, giving 'nyön'. No prefix; ཉ is a low-register consonant, so the syllable has a low/level tone. Begins nyon mongs, 'afflictions/kleśas'."
+          },
+          {
+            tib: "མོངས",
+            wylie: "mongs",
+            phon: "mong",
+            note: "Root letter མ (ma) with the vowel sign ོ (o), suffix ང, and a secondary suffix ས. The suffix ང does not front the vowel (unlike ན), so the vowel stays 'o': 'mong'. The secondary suffix ས is a grammatical plural/agent marker, barely heard in speech. Together ཉོན་མོངས = 'nyon mongs', the Tibetan rendering of Sanskrit kleśa ('afflictions'). The following བདུད begins with བ and does not change this syllable's sound."
+          },
+          {
+            tib: "བདུད",
+            wylie: "bdud",
+            phon: "dü",
+            note: "Prefix བ (silent; raises the register of the following syllable to high/falling tone) + root ད (da) with vowel ུ (u) + suffix ད (unreleased -t stop, closing and shortening the vowel). The prefix བ on voiced root ད devoices and raises it to high register: 'dü' (high falling tone). Means Māra, the 'demon' of death and temptation. The following ཀྱི begins with ཀ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཀྱི",
+            wylie: "kyi",
+            phon: "kyi",
+            note: "Root letter ཀ (ka) with ཡ (ya) subjoined beneath it — the cluster ཀྱ — plus the vowel sign ི (i): 'kyi'. No prefix; ཀ is a high-register consonant. This is the genitive particle 'kyi', linking Māra (བདུད) to his army (སྡེ་ཚོགས). The following སྡེ begins with ས and does not change this syllable's sound."
+          },
+          {
+            tib: "སྡེ",
+            wylie: "sde",
+            phon: "dé",
+            note: "Prefix ས (silent; raises register) + root ད (da) with vowel ེ (e), no suffix. The prefix ས before voiced ད raises it to high register: 'dé' (high tone). Means 'host, division, assembly'. The following ཚོགས begins with ཚ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཚོགས",
+            wylie: "tshogs",
+            phon: "tsok",
+            note: "Root letter ཚ (tsha, aspirated affricate) with the vowel sign ོ (o) and suffix གས (ག + ས). The suffix ག closes the syllable as an unreleased -k stop and shortens the vowel; the ས is a secondary grammatical suffix: 'tsok'. Together སྡེ་ཚོགས = 'host/army/retinue'. The following བཅོམ begins with བ and does not change this syllable's sound."
+          },
+          {
+            tib: "བཅོམ",
+            wylie: "bcom",
+            phon: "chom",
+            note: "Prefix བ (silent; raises register) + root ཅ (ca, the palatal affricate) with vowel ོ (o) + suffix མ (final -m). The prefix བ on ཅ raises it to high register and devoices it to a more aspirated/sharp 'ch': 'chom'. This is the past tense of འཇོམས ('joms), 'to vanquish/defeat': 'having vanquished'. The following བསོད begins a new line and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "བསོད་ནམས་ཡེ་ཤེས་ཕུང་པོར་ལྡན",
+        wylie: "bsod nams ye shes phung por ldan",
+        phon: "Sönam Yéshé Phungpor Den",
+        gloss: "endowed with the accumulations of merit and wisdom",
+        syllables: [
+          {
+            tib: "བསོད",
+            wylie: "bsod",
+            phon: "söd",
+            note: "Prefix བ (silent; raises register) + root ས (sa) with vowel ོ (o) + suffix ད. The prefix བ raises register; suffix ད closes as unreleased -t and slightly shortens the vowel, giving 'söd' (or 'sö' in fluent speech before the following ནམས). The following ནམས begins with ན and does not change this syllable's sound."
+          },
+          {
+            tib: "ནམས",
+            wylie: "nams",
+            phon: "nam",
+            note: "Root letter ན (na) with inherent vowel 'a', suffix མ, secondary suffix ས. The secondary ས is a grammatical marker, barely heard; the syllable is 'nam'. Together བསོད་ནམས = 'sönam' = merit (Sanskrit puṇya), one of the two accumulations required for Buddhahood. The following ཡེ begins with ཡ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཡེ",
+            wylie: "ye",
+            phon: "yé",
+            note: "Root letter ཡ (ya) with the vowel sign ེ (e): 'yé'. No prefix; ཡ is a low-register consonant. Begins ye shes, 'primordial wisdom' (Sanskrit jñāna). The following ཤེས begins with ཤ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཤེས",
+            wylie: "shes",
+            phon: "shé",
+            note: "Root letter ཤ (sha, the palatal sibilant — used in both Sanskrit and native Tibetan words) with the vowel sign ེ (e) and suffix ས. The suffix ས is a grammatical marker here; the syllable is 'shé'. Together ཡེ་ཤེས = 'yéshé' = primordial wisdom/awareness (the direct, non-conceptual knowing that perceives reality). The following ཕུང begins with ཕ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཕུང",
+            wylie: "phung",
+            phon: "phung",
+            note: "Root letter ཕ (pha, aspirated bilabial) with the vowel sign ུ (u) and suffix ང: 'phung'. No prefix; ཕ is naturally high register. Means 'heap/aggregate/accumulation' (Sanskrit skandha). The following པོར begins with པ and does not change this syllable's sound."
+          },
+          {
+            tib: "པོར",
+            wylie: "por",
+            phon: "por",
+            note: "Root letter པ (pa) with the vowel sign ོ (o) and suffix ར. The suffix ར functions here as a dative/locative marker: 'in/as heaps'. Together ཕུང་པོར = 'phungpor', 'in the accumulations / as aggregates of'. The following ལྡན begins with ལ and does not change this syllable's sound."
+          },
+          {
+            tib: "ལྡན",
+            wylie: "ldan",
+            phon: "den",
+            note: "Prefix ལ (here as a prefix consonant, silent) + root ད (da) with inherent vowel 'a' + suffix ན. The suffix ན fronts the vowel: a → e, giving 'den'. Prefix ལ before ད raises the register slightly (high tone). Means 'endowed with / possessing' — a common Tibetan verb of attribution. The following སྲིད begins a new line and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "སྲིད་དང་ཞི་བའི་མཐའ་ལས་འདས",
+        wylie: "srid dang zhi ba'i mtha' las 'das",
+        phon: "Si Dang Zhiwé Ta Lé Dé",
+        gloss: "gone beyond the extremes of existence and peace",
+        syllables: [
+          {
+            tib: "སྲིད",
+            wylie: "srid",
+            phon: "si",
+            note: "Prefix ས (silent) + superscript ར above root ད, giving the cluster རད, with vowel ི (i) and suffix ད. Both the prefix ས and the superscript ར raise the register to high/falling tone. The suffix ད closes as an unreleased stop, giving 'si' (or 'sit' when clearly pronounced). Means 'existence / cyclic existence / saṃsāra'. The following དང begins with ད and does not change this syllable's sound."
+          },
+          {
+            tib: "དང",
+            wylie: "dang",
+            phon: "dang",
+            note: "Root letter ད (da) with inherent vowel 'a' and suffix ང: 'dang'. No prefix. This is the Tibetan conjunction 'and'. The following ཞི begins with ཞ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཞི",
+            wylie: "zhi",
+            phon: "zhi",
+            note: "Root letter ཞ (zha, the voiced palatal fricative) with the vowel sign ི (i): 'zhi'. No prefix; ཞ is low register. Begins zhi ba, 'peace / stillness / nirvāṇa'. The following བའི begins with བ and does not change this syllable's sound."
+          },
+          {
+            tib: "བའི",
+            wylie: "ba'i",
+            phon: "wé",
+            note: "Root letter བ (ba) with inherent vowel 'a' and the genitive suffix འི ('i): 'ba'i', pronounced 'wé' in Central Tibetan (the བ between vowels is lenited to a 'w' sound; the འི adds the high front vowel making -wé). Together ཞི་བའི = 'zhiwé', genitive of 'peace': 'of peace / of nirvāṇa'. The following མཐའ begins with མ and does not change this syllable's sound."
+          },
+          {
+            tib: "མཐའ",
+            wylie: "mtha'",
+            phon: "ta",
+            note: "Prefix མ (silent; raises register) + root ཐ (tha, the aspirated dental) with inherent vowel 'a' + suffix འ (the glottal stop marker, which lengthens or darkens the final vowel). The prefix མ before the aspirate ཐ gives a high register 'th'; the འ suffix gives a slight falling/lengthened quality to the vowel: 'ta' (aspirated). Means 'extreme / limit / boundary'. The following ལས begins with ལ and does not change this syllable's sound."
+          },
+          {
+            tib: "ལས",
+            wylie: "las",
+            phon: "lé",
+            note: "Root letter ལ (la) with inherent vowel 'a' and suffix ས: 'las', pronounced 'lé' in Central Tibetan (the ས suffix shifts the vowel forward). This is the ablative case particle 'from / beyond'. The following འདས begins with འ and does not change this syllable's sound."
+          },
+          {
+            tib: "འདས",
+            wylie: "'das",
+            phon: "dé",
+            note: "Prefix འ (silent; lowers the register to low/rising tone) + root ད (da) with inherent vowel 'a' + suffix ས. The prefix འ before voiced ད keeps it low register; the ས suffix shifts the vowel forward to 'e': 'dé' (low tone). This is the past tense of འདའ་བ ('da' ba), 'to pass beyond / transcend': 'gone beyond'. The following ཤཱཀྱའི begins a new line and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "ཤཱཀྱའི་ཐོག་ལ་གསོལ་བ་འདེབས",
+        wylie: "shAkya'i thog la gsol ba 'debs",
+        phon: "Shakyé Tok La Solwa Deb",
+        gloss: "to the crown of the Śākyas, I pray",
+        syllables: [
+          {
+            tib: "ཤཱཀྱའི",
+            wylie: "shAkya'i",
+            phon: "shakyé",
+            note: "The Sanskrit clan name Śākya written in Tibetan script with Sanskrit-spelling conventions: ཤ (śa, the palatal sibilant) with the long-vowel sign ཱ (ā), then ཀ (ka) with subjoined ྱ (ya) forming the cluster 'kya', followed by the native Tibetan genitive suffix འི (pronounced 'é' in Central Tibetan). Together: 'of the Śākyas'. This is the only syllable in the prayer that uses Sanskrit-spelling rules rather than native Tibetan reading rules. The following ཐོག begins with ཐ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཐོག",
+            wylie: "thog",
+            phon: "tok",
+            note: "Root letter ཐ (tha, aspirated dental) with the vowel sign ོ (o) and suffix ག. The suffix ག closes as an unreleased -k stop and shortens the vowel: 'tok'. No prefix; ཐ is high register. Means 'top / crown / pinnacle'; ཤཱཀྱའི་ཐོག = 'the crown of the Śākyas' = the greatest person of the Śākya clan. The following ལ begins with ལ and does not change this syllable's sound."
+          },
+          {
+            tib: "ལ",
+            wylie: "la",
+            phon: "la",
+            note: "Root letter ལ (la) with inherent vowel 'a': 'la'. The dative particle 'to / at / toward', directing the supplication. The following གསོལ begins with ག and does not change this syllable's sound."
+          },
+          {
+            tib: "གསོལ",
+            wylie: "gsol",
+            phon: "sol",
+            note: "Prefix ག (silent; raises register) + root ས (sa) with vowel ོ (o) + suffix ལ. The prefix ག before ས raises it to high/aspirated register: 'sol' (high tone). Begins gsol ba, the honorific term for 'to speak / to offer / to supplicate' — used specifically when addressing those of higher status (deities, teachers). The following བ begins with བ and does not change this syllable's sound."
+          },
+          {
+            tib: "བ",
+            wylie: "ba",
+            phon: "wa",
+            note: "Root letter བ (ba) with inherent vowel 'a': 'ba', pronounced 'wa' in Central Tibetan when following a vowel (the བ is lenited between vowels). Together གསོལ་བ = 'solwa', the noun/verb of supplication: 'a prayer / to offer a supplication'. The following འདེབས begins with འ and does not change this syllable's sound."
+          },
+          {
+            tib: "འདེབས",
+            wylie: "'debs",
+            phon: "deb",
+            note: "Prefix འ (silent; low register) + root ད (da) with vowel ེ (e) + suffix བ, secondary suffix ས. The prefix འ keeps ད in low register: 'deb' (low tone; the secondary ས is barely heard). འདེབས means 'to offer / to place / to press against'; in the phrase གསོལ་བ་འདེབས it means 'I offer a supplication / I pray'. This closes the praising section; the following འཇིགས begins the request. The following འཇིགས begins a new line and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "འཇིགས་བརྒྱད་ཞི་བར་བྱིན་གྱིས་རློབས",
+        wylie: "'jigs brgyad zhi bar byin gyis rlobs",
+        phon: "Jikgyé Zhiwar Jingyi Lob",
+        gloss: "bless me to pacify the eight fears",
+        syllables: [
+          {
+            tib: "འཇིགས",
+            wylie: "'jigs",
+            phon: "jik",
+            note: "Prefix འ (silent; low register) + root ཇ (ja, the voiced palatal affricate) with vowel ི (i) + suffix གས (ག + secondary ས). The suffix ག closes as unreleased -k; the secondary ས is grammatical: 'jik' (low tone from prefix འ). Means 'fears / terrors'. The following བརྒྱད begins with བ and does not change this syllable's sound."
+          },
+          {
+            tib: "བརྒྱད",
+            wylie: "brgyad",
+            phon: "gyé",
+            note: "Prefix བ (silent; high register) + superscript ར above root ག, giving the cluster རག, with subjoined ྱ (ya) below ག, making a three-consonant stack རྒྱ, plus inherent vowel 'a' and suffix ད. The combined prefixes (བ + superscript ར) raise to high register; the subjoined ྱ palatalises the cluster; suffix ད closes as unreleased stop and shifts the vowel forward to 'e': 'gyé' (high tone). Means 'eight'. Together འཇིགས་བརྒྱད = 'jikgyé', the eight fears. The following ཞི begins with ཞ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཞི",
+            wylie: "zhi",
+            phon: "zhi",
+            note: "Root letter ཞ (zha) with vowel ི (i): 'zhi'. Low register (ཞ is a voiced fricative). Begins zhi bar, 'to pacify'. The following བར begins with བ and does not change this syllable's sound."
+          },
+          {
+            tib: "བར",
+            wylie: "bar",
+            phon: "war",
+            note: "Root letter བ (ba) with inherent vowel 'a' and suffix ར. The suffix ར here is the dative/purposive marker: 'in order to / for the sake of'; བར is pronounced 'war' (the བ is lenited to 'w' between vowels). Together ཞི་བར = 'zhiwar', 'to pacify / in order to calm'. The following བྱིན begins with བ and does not change this syllable's sound."
+          },
+          {
+            tib: "བྱིན",
+            wylie: "byin",
+            phon: "jin",
+            note: "Root letter བ (ba) with subjoined ྱ (ya) forming the cluster བྱ, plus the vowel sign ི (i) and suffix ན. The subjoined ྱ palatalises བ, making 'bya-'; the vowel ི gives 'byi-'; the suffix ན fronts the vowel: i is already front so the effect is minimal — the syllable is 'jin'. Means 'gift / grace / blessing'. The following གྱིས begins with ག and does not change this syllable's sound."
+          },
+          {
+            tib: "གྱིས",
+            wylie: "gyis",
+            phon: "gyi",
+            note: "Root letter ག (ga) with subjoined ྱ (ya) and the vowel sign ི (i), plus suffix ས. The subjoined ྱ palatalises the cluster to 'gy-'; suffix ས is a grammatical instrumental marker: 'gyis'. Together བྱིན་གྱིས (byin gyis) is the standard Tibetan instrumental construction: 'by means of blessing / by grace'. The following རློབས begins with ར and does not change this syllable's sound."
+          },
+          {
+            tib: "རློབས",
+            wylie: "rlobs",
+            phon: "lob",
+            note: "Superscript ར above root ལ (la) — the cluster རལ — with the vowel sign ོ (o) and suffix བས (བ + secondary ས). The superscript ར raises the register to high/falling tone; suffix བ closes as unreleased -p (or soft -b) and the secondary ས is grammatical: 'lob' (high tone). This is the imperative/optative of rlob pa, 'to empower / bless / grant': 'bless! empower!' The full phrase བྱིན་གྱིས་རློབས = 'byin gyis rlobs' is the standard Tibetan liturgical formula for 'bless me / grant blessings'. The following སྐྱེ begins a new line and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "སྐྱེ་དང་ཚེ་རབས་ཐམས་ཅད་དུ",
+        wylie: "skye dang tshe rabs thams cad du",
+        phon: "Kyé Dang Tsérab Tamché Du",
+        gloss: "in all births and lifetimes",
+        syllables: [
+          {
+            tib: "སྐྱེ",
+            wylie: "skye",
+            phon: "kyé",
+            note: "Prefix ས (silent; raises register) + root ཀ (ka) with subjoined ྱ (ya) and the vowel sign ེ (e), no suffix. The prefix ས raises register; the subjoined ྱ palatalises the cluster to 'ky-': 'kyé' (high tone). Means 'birth / rebirth / to arise'. The following དང begins with ད and does not change this syllable's sound."
+          },
+          {
+            tib: "དང",
+            wylie: "dang",
+            phon: "dang",
+            note: "Root letter ད (da) with inherent vowel 'a' and suffix ང: 'dang'. The conjunction 'and'. The following ཚེ begins with ཚ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཚེ",
+            wylie: "tshe",
+            phon: "tsé",
+            note: "Root letter ཚ (tsha, the aspirated affricate) with the vowel sign ེ (e): 'tshé'. No prefix; ཚ is high register. Means 'lifespan / life'. Begins tshe rabs, 'lifetimes'. The following རབས begins with ར and does not change this syllable's sound."
+          },
+          {
+            tib: "རབས",
+            wylie: "rabs",
+            phon: "rab",
+            note: "Root letter ར (ra) with inherent vowel 'a', suffix བ, secondary suffix ས. The suffix བ closes as unreleased -p; the ས is grammatical: 'rab'. Means 'series / sequence / successive'; ཚེ་རབས = 'tshe rabs' = 'successive lifetimes / all lives'. The following ཐམས begins with ཐ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཐམས",
+            wylie: "thams",
+            phon: "tam",
+            note: "Root letter ཐ (tha, aspirated dental) with inherent vowel 'a', suffix མ, secondary suffix ས. The ས is grammatical; suffix མ closes as -m: 'tam'. ཐ is high register. Begins thams cad, 'all / every'. The following ཅད begins with ཅ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཅད",
+            wylie: "cad",
+            phon: "ché",
+            note: "Root letter ཅ (ca, the palatal affricate) with inherent vowel 'a' and suffix ད. The suffix ད closes as unreleased stop and shifts the vowel forward to 'e': 'ché' in Central Tibetan. Together ཐམས་ཅད = 'tamché', 'all / every / in all'. The following དུ begins with ད and does not change this syllable's sound."
+          },
+          {
+            tib: "དུ",
+            wylie: "du",
+            phon: "du",
+            note: "Root letter ད (da) with the vowel sign ུ (u): 'du'. The locative/dative particle 'in / at / to': 'in all births and lifetimes'. The following ལར begins a new line and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "ལར་ཡང་ལྷག་པའི་ལུས་ཐོབ་ནས",
+        wylie: "lar yang lhag pa'i lus thob nas",
+        phon: "Lar Yang Lhakpé Lu Tob Né",
+        gloss: "having again obtained an excellent body",
+        syllables: [
+          {
+            tib: "ལར",
+            wylie: "lar",
+            phon: "lar",
+            note: "Root letter ལ (la) with inherent vowel 'a' and suffix ར. The suffix ར here is a directional/ablative marker: 'returning to / back'. Together ལར་ཡང (lar yang) is a set phrase meaning 'again / once more / in return'. The following ཡང begins with ཡ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཡང",
+            wylie: "yang",
+            phon: "yang",
+            note: "Root letter ཡ (ya) with inherent vowel 'a' and suffix ང: 'yang'. Low register (ཡ is a voiced semi-vowel). Means 'also / again / moreover'. Together ལར་ཡང = 'lar yang', 'once again'. The following ལྷག begins with ལ and does not change this syllable's sound."
+          },
+          {
+            tib: "ལྷག",
+            wylie: "lhag",
+            phon: "lhak",
+            note: "The special two-letter combination ལྷ (la + ha written together, giving the aspirated lateral 'lh-', a breathy or aspirated 'l' sound distinctive in Tibetan) with inherent vowel 'a' and suffix ག. The suffix ག closes as unreleased -k: 'lhak'. No prefix; ལྷ is high register. Means 'superior / excellent / remaining'. The following པའི begins with པ and does not change this syllable's sound."
+          },
+          {
+            tib: "པའི",
+            wylie: "pa'i",
+            phon: "pé",
+            note: "Root letter པ (pa) with inherent vowel 'a' and the genitive suffix འི ('i): 'pa'i', pronounced 'pé' (the འི draws the vowel forward to 'e'). Together ལྷག་པའི = 'lhakpé', genitive of 'excellence': 'of/characterized by excellence'. The following ལུས begins with ལ and does not change this syllable's sound."
+          },
+          {
+            tib: "ལུས",
+            wylie: "lus",
+            phon: "lü",
+            note: "Root letter ལ (la) with the vowel sign ུ (u) and suffix ས. The suffix ས here is a grammatical marker; the syllable is 'lü' (or 'lu'). Means 'body' — here 'a precious human body endowed with the freedoms and opportunities for Dharma practice'. The following ཐོབ begins with ཐ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཐོབ",
+            wylie: "thob",
+            phon: "tob",
+            note: "Root letter ཐ (tha, aspirated) with the vowel sign ོ (o) and suffix བ. Suffix བ closes as unreleased -p: 'tob' (or 'top'). High register (ཐ aspirate). Means 'to obtain / to gain / to attain'. The following ནས begins with ན and does not change this syllable's sound."
+          },
+          {
+            tib: "ནས",
+            wylie: "nas",
+            phon: "né",
+            note: "Root letter ན (na) with inherent vowel 'a' and suffix ས: 'nas', pronounced 'né' (the ས shifts the vowel forward). This is the ablative/connective particle 'having / from / after': 'having obtained'. It links this line to the aspiration that follows. The following འགྲོ begins a new line and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "འགྲོ་རྣམས་སྡུག་བསྔལ་ལས་སྒྲོལ་བའི",
+        wylie: "'gro rnams sdug bsngal las sgrol ba'i",
+        phon: "Dro Nam Dukngal Lé Drolwé",
+        gloss: "may I liberate beings from suffering",
+        syllables: [
+          {
+            tib: "འགྲོ",
+            wylie: "'gro",
+            phon: "dro",
+            note: "Prefix འ (silent; low register) + root ག (ga) with subjoined ར (ra) forming the cluster གྲ, plus the vowel sign ོ (o), no suffix. The prefix འ keeps the cluster in low register: 'dro' (low tone). Means 'to wander / to go'; འགྲོ་བ ('gro ba) = 'sentient beings / wanderers in saṃsāra'. The following རྣམས begins with ར and does not change this syllable's sound."
+          },
+          {
+            tib: "རྣམས",
+            wylie: "rnams",
+            phon: "nam",
+            note: "Superscript ར above root ན (na), with inherent vowel 'a', suffix མ, secondary suffix ས. The superscript ར raises register to high/falling tone; suffix མ closes as -m; ས is grammatical: 'nam'. This is the Tibetan plural particle — it does not add meaning by itself but marks the preceding noun as plural. Together འགྲོ་རྣམས = 'dro nam', 'all sentient beings'. The following སྡུག begins with ས and does not change this syllable's sound."
+          },
+          {
+            tib: "སྡུག",
+            wylie: "sdug",
+            phon: "duk",
+            note: "Prefix ས (silent; raises register) + root ད (da) with the vowel sign ུ (u) + suffix ག. The prefix ས raises register; suffix ག closes as unreleased -k: 'duk' (high tone). Means 'suffering / painful / distressing'. The following བསྔལ begins with བ and does not change this syllable's sound."
+          },
+          {
+            tib: "བསྔལ",
+            wylie: "bsngal",
+            phon: "ngal",
+            note: "Prefix བ (silent) + superscript ས above root ང (nga), with inherent vowel 'a' and suffix ལ. Both prefix བ and superscript ས affect register (raising); suffix ལ closes as -l: 'ngal'. Together སྡུག་བསྔལ = 'dukngal' = suffering / duḥkha — the central term of the First Noble Truth, often understood as 'the painful suffering of body and mind'. The following ལས begins with ལ and does not change this syllable's sound."
+          },
+          {
+            tib: "ལས",
+            wylie: "las",
+            phon: "lé",
+            note: "Root letter ལ (la) with inherent vowel 'a' and suffix ས: 'las', pronounced 'lé'. The ablative particle 'from': 'from suffering'. The following སྒྲོལ begins with ས and does not change this syllable's sound."
+          },
+          {
+            tib: "སྒྲོལ",
+            wylie: "sgrol",
+            phon: "drol",
+            note: "Prefix ས (silent; raises register) + superscript ར above root ག (ga), giving the cluster རག, with the vowel sign ོ (o) and suffix ལ. The prefix ས and superscript ར both affect register; suffix ལ closes as -l: 'drol' (high tone). Means 'to liberate / to free / to deliver'. The following བའི begins with བ and does not change this syllable's sound."
+          },
+          {
+            tib: "བའི",
+            wylie: "ba'i",
+            phon: "wé",
+            note: "Root letter བ (ba) with inherent vowel 'a' and genitive suffix འི: 'ba'i', pronounced 'wé'. Together སྒྲོལ་བའི = 'drolwé', genitive of 'liberation': 'of liberating / for liberating'. This whole line is a genitive phrase modifying the 'guide' in the final line: '[the guide] of liberating beings from suffering'. The following བདེ begins a new line and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "བདེ་དཔོན་མཆོག་ཏུ་བདག་གྱུར་ཤོག",
+        wylie: "bde dpon mchog tu bdag gyur shog",
+        phon: "Dépön Chok Tu Dak Gyur Shok",
+        gloss: "may I become the supreme guide to happiness",
+        syllables: [
+          {
+            tib: "བདེ",
+            wylie: "bde",
+            phon: "dé",
+            note: "Prefix བ (silent; raises register) + root ད (da) with the vowel sign ེ (e), no suffix. The prefix བ on voiced ད raises it to high register: 'dé' (high tone). Means 'happiness / bliss / ease' (Sanskrit sukha). The following དཔོན begins with ད and does not change this syllable's sound."
+          },
+          {
+            tib: "དཔོན",
+            wylie: "dpon",
+            phon: "pön",
+            note: "Prefix ད (silent; raises register) + root པ (pa) with the vowel sign ོ (o) + suffix ན. The prefix ད before unvoiced པ raises it to high/aspirated register; suffix ན fronts the vowel: o → ö: 'pön' (high tone). Means 'leader / lord / guide / master'. Together བདེ་དཔོན = 'dépön', 'guide to happiness / leader toward bliss'. The following མཆོག begins with མ and does not change this syllable's sound."
+          },
+          {
+            tib: "མཆོག",
+            wylie: "mchog",
+            phon: "chok",
+            note: "Prefix མ (silent; raises register) + root ཆ (cha, the aspirated palatal affricate) with the vowel sign ོ (o) + suffix ག. The prefix མ before aspirate ཆ keeps it high register; suffix ག closes as unreleased -k: 'chok'. Means 'supreme / excellent / the best / highest'. The following ཏུ begins with ཏ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཏུ",
+            wylie: "tu",
+            phon: "tu",
+            note: "Root letter ཏ (ta) with the vowel sign ུ (u): 'tu'. No prefix; ཏ is high register. This is the dative/equative particle 'as / in the capacity of / supremely': 'as the supreme guide'. The following བདག begins with བ and does not change this syllable's sound."
+          },
+          {
+            tib: "བདག",
+            wylie: "bdag",
+            phon: "dak",
+            note: "Prefix བ (silent; raises register) + root ད (da) with inherent vowel 'a' + suffix ག. The prefix བ raises register; suffix ག closes as unreleased -k: 'dak' (high tone). Means 'I / myself / the self' — here the practitioner expressing the aspiration in the first person. The following གྱུར begins with ག and does not change this syllable's sound."
+          },
+          {
+            tib: "གྱུར",
+            wylie: "gyur",
+            phon: "gyur",
+            note: "Root letter ག (ga) with subjoined ྱ (ya) and the vowel sign ུ (u), suffix ར. The subjoined ྱ palatalises the cluster to 'gy-': 'gyur'. No prefix; ག is low register in its base form. Means 'to become / became'; used in optative/aspirational constructions: 'may (I) become'. The following ཤོག begins with ཤ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཤོག",
+            wylie: "shog",
+            phon: "shok",
+            note: "Root letter ཤ (sha) with the vowel sign ོ (o) and suffix ག. Suffix ག closes as unreleased -k: 'shok'. ཤ is high register. This is the optative/wishful particle — the standard way to close aspirational prayers in Tibetan, equivalent to 'may it be so!' or 'let it come to pass!'. The prayer ends here; there is no following syllable."
+          }
+        ]
+      }
+    ],
+    wordGrouping: "Sixty-three Tibetan syllable-blocks across nine lines form two sections: a four-line praise of Śākyamuni's qualities (lines 1–4: vanquishing Māra, possessing the two accumulations, transcending extremes, the supplication itself) and a five-line aspiration (lines 5–9: pacify the eight fears; in future lives obtain an excellent body; liberate beings from suffering; become the supreme guide to happiness). The final two lines are syntactically linked — line 8 (of liberating beings from suffering) is a genitive modifying line 9's 'supreme guide' — so the last aspiration reads together: 'may I become the supreme guide who liberates beings from suffering to happiness'."
+  }
 }
 ];
