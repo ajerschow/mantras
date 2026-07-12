@@ -2918,5 +2918,225 @@ export const mantras = [
     ],
     wordGrouping: "Sixty-three Tibetan syllable-blocks across nine lines form two sections: a four-line praise of Śākyamuni's qualities (lines 1–4: vanquishing Māra, possessing the two accumulations, transcending extremes, the supplication itself) and a five-line aspiration (lines 5–9: pacify the eight fears; in future lives obtain an excellent body; liberate beings from suffering; become the supreme guide to happiness). The final two lines are syntactically linked — line 8 (of liberating beings from suffering) is a genitive modifying line 9's 'supreme guide' — so the last aspiration reads together: 'may I become the supreme guide who liberates beings from suffering to happiness'."
   }
+},
+{
+  id: "five-element-purification",
+  title: "Oṃ Āḥ Hūṃ — Five Element Purification Mantra",
+  deity: "Five Dhyāni Buddhas / Five Elements",
+  tags: ["purification", "five elements", "Om Ah Hung", "seed syllables", "space", "wind", "water", "fire", "earth", "Vajrayana"],
+  sanskrit: {
+    script: "ॐ आः हूँ | ए यं कं रं लं | शुद्धे शुद्धे | अ अ",
+    transliteration: "Oṃ Āḥ Hūṃ | E Yaṃ Kaṃ Raṃ Laṃ | Śuddhe Śuddhe | A A",
+    translation: "Oṃ Āḥ Hūṃ [body, speech, mind] | Space Wind Water Fire Earth | Purify! Purify! | A A",
+    words: [
+      {
+        word: "Oṃ",
+        gloss: "the universal seed syllable of awakened awareness",
+        note: "The primordial syllable, composed of three phonemes (a-u-m) representing the three bodies of the Buddha (nirmāṇakāya, sambhogakāya, dharmakāya) and the three realities of appearance, sound, and awareness. In this mantra, together with Āḥ and Hūṃ, it represents the body of all Buddhas.",
+        grammar: "Indeclinable seed (bīja) syllable; Sanskrit oṃ from AUM."
+      },
+      {
+        word: "Āḥ",
+        gloss: "seed syllable of speech and the throat center",
+        note: "A pure long vowel 'ā' followed by the visarga (ḥ), representing an aspirated out-breath or resonance. In the Vajrayāna triad Oṃ-Āḥ-Hūṃ, Āḥ is the seed syllable of the speech of all Buddhas. It represents unobstructed sound and the purification of speech.",
+        grammar: "Bīja syllable; the visarga (ḥ) represents the śakti or resonance following the pure vowel."
+      },
+      {
+        word: "Hūṃ",
+        gloss: "seed syllable of mind and the heart center",
+        note: "The deep-blue seed syllable of Vajrasattva and Akṣobhya, representing the indestructible nature of awakened mind. The long ū gives it a resonant, penetrating quality; the anusvāra (ṃ) represents the undifferentiated vibration from which awareness arises. In the Oṃ-Āḥ-Hūṃ triad it represents the mind of all Buddhas.",
+        grammar: "Bīja syllable; anusvāra (ṃ) is the resonant nasal termination."
+      },
+      {
+        word: "E",
+        gloss: "seed syllable of the space element (ākāśa)",
+        note: "The pure vowel E (pronounced 'ay') is the seed syllable of space (ākāśa), the first and most fundamental of the five elements. Space is the ground in which all other elements arise; it corresponds to Vairocana in many Vajrayāna systems. The Tibetan letter ཨེ is used — the vowel carrier ཨ with the e-sign ེ.",
+        grammar: "Bīja syllable; the sole vowel E, standing for ākāśa (space)."
+      },
+      {
+        word: "Yaṃ",
+        gloss: "seed syllable of the wind / air element (vāyu)",
+        note: "Ya (the Sanskrit semi-vowel) with anusvāra forms the seed of the wind element (vāyu). Wind is associated with movement, breath, and energy-winds (prāṇa) in the body; in Vajrayāna with Amoghasiddhi. The anusvāra gives the syllable a resonant nasal quality, like a vibrating breath.",
+        grammar: "Bīja syllable; ya + anusvāra ṃ."
+      },
+      {
+        word: "Kaṃ",
+        gloss: "seed syllable of the water element (āpa/jala)",
+        note: "In this tradition, Ka with anusvāra is the seed of the water element (āpa, jala). While some tantric systems use Vaṃ for water, this mantra uses Kaṃ — reflecting a specific lineage mapping of syllables to elements. Water is associated with fluidity, purification, and the sense of taste.",
+        grammar: "Bīja syllable; ka + anusvāra ṃ."
+      },
+      {
+        word: "Raṃ",
+        gloss: "seed syllable of the fire element (agni/tejas)",
+        note: "Ra (the Sanskrit liquid consonant) with anusvāra is the seed of fire (agni, tejas). Fire represents transformation, heat, luminosity, and the sense of sight. In Vajrayāna it is associated with Amitābha and the transformation of desire into discriminating awareness.",
+        grammar: "Bīja syllable; ra + anusvāra ṃ."
+      },
+      {
+        word: "Laṃ",
+        gloss: "seed syllable of the earth element (pṛthivī)",
+        note: "La (the Sanskrit lateral) with anusvāra is the seed of earth (pṛthivī). Earth represents solidity, stability, support, and the sense of smell. In Vajrayāna it is associated with Ratnasambhava and the equanimity that recognizes the equal preciousness of all phenomena.",
+        grammar: "Bīja syllable; la + anusvāra ṃ."
+      },
+      {
+        word: "Śuddhe Śuddhe",
+        gloss: "purify! purify!",
+        note: "From the Sanskrit root śudh (to be clean, to purify). Śuddhe is either the vocative singular feminine of śuddha ('O pure one!') or an imperative/optative form ('may it be purified!'). The repetition intensifies the request and applies retroactively to the five elements named before it: 'May space, wind, water, fire, and earth be purified!'",
+        grammar: "Feminine vocative (or imperative) of śuddha (pure, clean); root √śudh + -ta suffix → śuddha; doubled for emphasis."
+      },
+      {
+        word: "A A",
+        gloss: "the primordial seed syllable, repeated",
+        note: "The unmodified vowel A (short 'a') is considered in Indian and Tibetan Buddhist tantra to be the most fundamental seed syllable — the source of all language and all phenomena. In Tibetan Buddhism it is associated with the dharmakāya, with primordial purity (ka dag), and with the nature of mind itself. Repeated twice, it seals the mantra with recognition of the ultimate nature underlying all elements.",
+        grammar: "Bīja syllable A, the primordial vowel, repeated; in some traditions read Āḥ Āḥ with visarga."
+      }
+    ]
+  },
+  tibetan: {
+    script: "ༀ་ཨཱཿ་ཧཱུྃ། ཨེ་ཡཾ་ཀཾ་རཾ་ལཾ། ཤུདྡེ་ཤུདྡེ། ཨ་ཨ།",
+    wylie: "oM AH hUM e yaM kaM raM laM shuddhe shuddhe a a",
+    phonetic: "Om Ah Hung E Yam Kam Ram Lam Shudde Shudde A A",
+    translation: "Oṃ Āḥ Hūṃ — Space Wind Water Fire Earth — Purify! Purify! — A A",
+    scriptType: "sanskrit-in-tibetan",
+    intro: "This mantra is Sanskrit written in Tibetan script, following the same 'Sanskrit-spelling' conventions as Om Mani Padme Hum. None of the ordinary Tibetan reading rules (silent prefixes, vowel fronting, register shifts) apply — every syllable is a Sanskrit bīja read in its Sanskrit form. Special features: ༀ is the dedicated Tibetan OM glyph; ཨཱཿ uses the long-ā sign ཱ and the Tibetan visarga ཿ; ཧཱུྃ uses the long-ū sign ཱུ and the Tibetan anusvāra ྃ; each element seed syllable (ཡཾ, ཀཾ, རཾ, ལཾ) uses the anusvāra ཾ for the Sanskrit ṃ; and ཤུདྡེ contains the rare Tibetan cluster དྡ used only for the Sanskrit geminate ddh, which does not exist in native Tibetan phonology.",
+    words: [
+      {
+        script: "ༀ་ཨཱཿ་ཧཱུྃ",
+        wylie: "oM AH hUM",
+        phon: "Om Āḥ Hūṃ",
+        gloss: "body, speech, and mind of all Buddhas",
+        syllables: [
+          {
+            tib: "ༀ",
+            wylie: "oM",
+            phon: "om",
+            note: "The dedicated Tibetan OM glyph (ༀ), a ligature of the Sanskrit AUM written in a stylized Tibetan form. It does not follow normal Tibetan consonant or vowel rules — it is always read 'oṃ'. In tantric Buddhism it represents the body of all Buddhas and the purification of physical actions. It is the first of the three vajras."
+          },
+          {
+            tib: "ཨཱཿ",
+            wylie: "AH",
+            phon: "āḥ",
+            note: "The letter ཨ (the Tibetan vowel carrier, used when a syllable begins with a vowel) with the long-ā sign ཱ (making ā) and the Tibetan visarga ཿ (representing the Sanskrit ḥ, an aspirated breath-release after the vowel). Together: 'Āḥ'. The visarga ཿ appears only in Sanskrit-spelling mode — it has no counterpart in native Tibetan phonology. This is the seed syllable of speech, representing the purification of speech."
+          },
+          {
+            tib: "ཧཱུྃ",
+            wylie: "hUM",
+            phon: "hūṃ",
+            note: "The letter ཧ (ha) with the long-ū sign ཱུ (a combination of the long-ā sign ཱ and the u-sign ུ stacked together) and the Tibetan anusvāra ྃ (representing the Sanskrit ṃ, a resonant nasal vibration). Together: 'Hūṃ'. This is the indestructible seed syllable of the mind, the blue-black syllable of Akṣobhya and Vajrasattva. It represents the purification of mental actions."
+          }
+        ]
+      },
+      {
+        script: "ཨེ",
+        wylie: "e",
+        phon: "e",
+        gloss: "space (ākāśa)",
+        syllables: [
+          {
+            tib: "ཨེ",
+            wylie: "e",
+            phon: "e",
+            note: "The Tibetan vowel carrier ཨ with the e-sign ེ. In Sanskrit-spelling mode this is simply the vowel 'e' (pronounced like English 'ay'). Tibetan has no independent vowel letters for e or o — ཨ with the vowel sign is the standard way to render a Sanskrit syllable beginning with a vowel other than 'a'. E is the seed syllable of the space element (ākāśa), the open, all-pervading ground in which the other four elements arise."
+          }
+        ]
+      },
+      {
+        script: "ཡཾ",
+        wylie: "yaM",
+        phon: "yaṃ",
+        gloss: "wind / air element (vāyu)",
+        syllables: [
+          {
+            tib: "ཡཾ",
+            wylie: "yaM",
+            phon: "yaṃ",
+            note: "The letter ཡ (ya, the Sanskrit semi-vowel/glide) with the Tibetan anusvāra ཾ (a small subscript circle representing the Sanskrit ṃ, a resonant nasal vibration with no fixed place of articulation). Read 'yaṃ' — not as native Tibetan 'ya' which would have no anusvāra. Yaṃ is the seed syllable of the wind/air element (vāyu), associated with movement, breath, and the vital energy-winds (prāṇa)."
+          }
+        ]
+      },
+      {
+        script: "ཀཾ",
+        wylie: "kaM",
+        phon: "kaṃ",
+        gloss: "water element (āpa/jala)",
+        syllables: [
+          {
+            tib: "ཀཾ",
+            wylie: "kaM",
+            phon: "kaṃ",
+            note: "The letter ཀ (ka, unvoiced velar stop) with the anusvāra ཾ. Read 'kaṃ' — the anusvāra gives a resonant nasal close. Kaṃ is the seed syllable of the water element in this lineage's version of the mantra; other traditions may use Vaṃ (va + anusvāra) for water. The specific syllable used reflects the oral lineage transmission."
+          }
+        ]
+      },
+      {
+        script: "རཾ",
+        wylie: "raM",
+        phon: "raṃ",
+        gloss: "fire element (agni/tejas)",
+        syllables: [
+          {
+            tib: "རཾ",
+            wylie: "raM",
+            phon: "raṃ",
+            note: "The letter ར (ra, the Sanskrit liquid consonant) with the anusvāra ཾ. Read 'raṃ'. Raṃ is universally recognized across Hindu and Buddhist tantric traditions as the seed syllable of the fire element (agni, tejas). The rolling 'r' combined with the resonant nasal close evokes the crackling, spreading quality of fire. Associated in Vajrayāna with Amitābha and the transformation of desire into discriminating wisdom."
+          }
+        ]
+      },
+      {
+        script: "ལཾ",
+        wylie: "laM",
+        phon: "laṃ",
+        gloss: "earth element (pṛthivī)",
+        syllables: [
+          {
+            tib: "ལཾ",
+            wylie: "laM",
+            phon: "laṃ",
+            note: "The letter ལ (la, the Sanskrit lateral consonant) with the anusvāra ཾ. Read 'laṃ'. Laṃ is the seed syllable of the earth element (pṛthivī). The lateral 'l' grounded by the anusvāra resonance evokes the stable, all-supporting quality of earth. In Vajrayāna, associated with Ratnasambhava and the wisdom of equanimity — recognizing the equal preciousness of all phenomena."
+          }
+        ]
+      },
+      {
+        script: "ཤུདྡེ་ཤུདྡེ",
+        wylie: "shuddhe shuddhe",
+        phon: "śuddhe śuddhe",
+        gloss: "purify! purify!",
+        syllables: [
+          {
+            tib: "ཤུདྡེ",
+            wylie: "shuddhe",
+            phon: "śuddhe",
+            note: "The letter ཤ (śa, the palatal sibilant) with the u-sign ུ giving ཤུ (śu), followed by the cluster དྡ with the e-sign ེ giving དྡེ (ddhe). The cluster དྡ — da with subjoined da — is a special Sanskrit-only stack in Tibetan script representing the Sanskrit geminate voiced aspirate 'ddh', a sound absent from native Tibetan phonology. Together: 'śuddhe'. Derives from √śudh ('to purify'); śuddhe is a vocative/imperative: 'O pure one!' or 'Purify!'"
+          },
+          {
+            tib: "ཤུདྡེ",
+            wylie: "shuddhe",
+            phon: "śuddhe",
+            note: "Exact repetition of the preceding syllable. In Sanskrit, doubling a verb or verbal form intensifies its force: 'purify! purify!' — a strong, repeated invocation applied to all five elements named before it: may space, wind, water, fire, and earth each be thoroughly purified."
+          }
+        ]
+      },
+      {
+        script: "ཨ་ཨ",
+        wylie: "a a",
+        phon: "a a",
+        gloss: "the primordial seed syllable, repeated",
+        syllables: [
+          {
+            tib: "ཨ",
+            wylie: "a",
+            phon: "a",
+            note: "The Tibetan letter ཨ in its bare form — the vowel carrier with no vowel sign, representing the short Sanskrit vowel 'a'. This is the first letter of both the Sanskrit and Tibetan alphabets and is considered the most fundamental sound: every consonant when pronounced alone carries the inherent 'a'. In tantric Buddhism ཨ represents the dharmakāya, primordial purity (ka dag), and the unborn nature of mind — the ground from which all elements and phenomena arise."
+          },
+          {
+            tib: "ཨ",
+            wylie: "a",
+            phon: "a",
+            note: "Exact repetition of ཨ. The doubling seals the mantra: two syllables of primordial awareness recalling the ultimate nature underlying and pervading all five elements. Some traditions chant this as 'Āḥ Āḥ' (ཨཱཿ ཨཱཿ, with visarga) rather than bare 'A A'; the variant reflects distinct lineage transmissions."
+          }
+        ]
+      }
+    ],
+    wordGrouping: "Twelve syllable-blocks divide into four natural groups that move from the universal to the specific and back: Oṃ-Āḥ-Hūṃ (the three vajras — body, speech, and mind of all Buddhas; they bless and frame the practice) | E-Yaṃ-Kaṃ-Raṃ-Laṃ (the five element seed syllables in order: space, wind, water, fire, earth — invoking each element by its Sanskrit bīja) | Śuddhe-Śuddhe (the purification command, applied retroactively to all five elements) | A-A (the primordial seed syllable repeated, sealing the mantra in the nature of mind). The arc moves outward into the manifest world of elements and then returns to the source."
+  }
 }
 ];
