@@ -2052,5 +2052,353 @@ export const mantras = [
     ],
     wordGrouping: "Fourteen Tibetan syllable-blocks group into five units: Oṃ (seed syllable) | Muni-Muni (Sage, Sage — doubled invocation) | Mahā-Muni (Great Sage) | Śākya-Muni-ye (O Sage of the Śākyas — the Buddha's proper name plus vocative suffix) | Svāhā (sealing exclamation). The pattern of three progressively fuller invocations — muni, muni → mahā-muni → śākyamuni-ye — mirrors the triple repetition in many other Buddhist mantras and carries the practitioner from general invocation toward the specific, personal name of the historical Buddha."
   }
+},
+{
+  id: "ye-dharma",
+  title: "Ye Dharmā Hetu Prabhavā",
+  deity: "Śākyamuni Buddha / the principle of pratītyasamutpāda (dependent origination)",
+  tags: ["dependent origination", "Shakyamuni", "liberation", "purification", "mantra of independence", "ye dharma"],
+  sanskrit: {
+    script: "ये धर्मा हेतुप्रभवा हेतुन्तेषां तथागतो ह्यवदत् तेषां च यो निरोध एवं वादी महाश्रमणः",
+    transliteration: "ye dharmā hetu-prabhavā hetun teṣāṃ tathāgato hy avadat teṣāṃ ca yo nirodha evaṃ vādī mahāśramaṇaḥ",
+    translation: "Those phenomena that arise from causes — the Tathāgata has declared their cause, and also their cessation — thus the Great Śramaṇa teaches.",
+    words: [
+      {
+        word: "ye dharmā",
+        gloss: "those phenomena which",
+        note: "ye is the nominative plural of the relative pronoun ya ('who/which'). dharmāḥ (phenomena, things, mental and physical events) contracts to dharmā before the following he- by sandhi. Together: 'those phenomena which...' — the subject of the relative clause.",
+        grammar: "ye: nominative plural relative pronoun. dharmā: nominative plural of dharma (a-stem noun), shortened by sandhi."
+      },
+      {
+        word: "hetu-prabhavā",
+        gloss: "arise from causes",
+        note: "A bahuvrīhi compound: hetu ('cause') + prabhavā (nominative plural of prabhava, 'arising/originating'). The whole compound means 'those whose arising is from causes', i.e. conditioned phenomena — everything that is not self-arisen. This is the First Noble Truth's underlying mechanism: all conditioned things have causes.",
+        grammar: "Nominative plural bahuvrīhi compound agreeing with dharmā."
+      },
+      {
+        word: "hetun teṣāṃ",
+        gloss: "their cause",
+        note: "hetun is the accusative singular of hetu ('cause'), here the direct object of avadat. teṣāṃ is the genitive plural of tad ('those/them'): 'their (i.e., those phenomena's) cause'. This picks up the antecedent ye dharmā above.",
+        grammar: "hetun: accusative singular (a-stem). teṣāṃ: genitive plural of tad."
+      },
+      {
+        word: "tathāgato hy avadat",
+        gloss: "the Tathāgata has indeed declared",
+        note: "tathāgataḥ ('the Tathāgata', the Buddha's most formal epithet — literally 'one who has thus gone/come') becomes tathāgato by visarga sandhi before the voiced hy. hi ('indeed, for') becomes hy before the vowel a-. avadat is the 3rd-person singular imperfect of √vad ('to speak, declare'), meaning 'he said / he has declared'. The imperfect here gives a sense of completed, authoritative declaration.",
+        grammar: "tathāgataḥ → tathāgato (sandhi). hi → hy (sandhi). avadat: 3rd singular imperfect active of √vad."
+      },
+      {
+        word: "teṣāṃ ca yo nirodha",
+        gloss: "and the cessation of those",
+        note: "teṣāṃ: genitive plural again ('of those / their'). ca: 'and'. yo = yaḥ ('which'), nominative singular relative pronoun by sandhi before n-. nirodhaḥ (cessation, the Third Noble Truth — literally 'blocking/stopping': ni- 'down/back' + rodha from √rudh 'to obstruct') contracts to nirodha by sandhi. The Buddha declared not just the cause of suffering, but its cessation — this half of the verse gestures toward the Third and Fourth Noble Truths.",
+        grammar: "yo: nominative singular of ya (sandhi before nirodha). nirodha: nominative singular a-stem by sandhi."
+      },
+      {
+        word: "evaṃ vādī",
+        gloss: "thus speaks (he who teaches thus)",
+        note: "evaṃ: the adverb 'thus, in this way'. vādī is the nominative singular of vādin ('one who speaks, a teacher'), an agent noun from √vad — the same root as avadat above. Together: 'the one who teaches thus / the teacher of this doctrine'. Grammatically this is an appositive to mahāśramaṇaḥ.",
+        grammar: "evaṃ: indeclinable adverb. vādī: nominative singular of vādin (in-stem agent noun)."
+      },
+      {
+        word: "mahāśramaṇaḥ",
+        gloss: "the Great Śramaṇa",
+        note: "A compound: mahā ('great') + śramaṇaḥ ('one who strives/labours', a renunciant — from √śram 'to exert oneself'). Śramaṇa was the general Indian term for wandering renouncers (Buddhist, Jain and otherwise); 'Great Śramaṇa' is the Buddha's title within that tradition, distinguishing him as its pinnacle. The verse closes by naming the source of this teaching without using the word 'Buddha' at all — typical of early Buddhist verse.",
+        grammar: "mahāśramaṇaḥ: nominative singular karmadharaya compound (a-stem)."
+      }
+    ]
+  },
+  tibetan: {
+    script: "ཡེ་དྷར་མཱ་ཧེ་ཏུ་པྲ་བྷ་བཱ་ཧེ་ཏུན་ཏེ་ཥཱཾ་ཏ་ཐཱ་ག་ཏོ་ཧྱ་བ་དཏ་ཏེ་ཥཱཾ་ཙ་ཡོ་ནི་རོ་དྷ་ཨེ་བཾ་བཱ་དི་མ་ཧཱ་ཤྲ་མ་ཎཿ།",
+    wylie: "ye d+har mA he tu pra b+ha vA he tun te ShAM ta thA ga to h+ya ba dat te ShAM tsa yo ni ro d+ha e waM bA di ma hA sh+ra ma NaH",
+    phonetic: "Ye Dharma Hetu Prabhawa Hetun Tesham Tathagato Hya Badat Tesham Tsa Yo Niro Dha Ewam Badi Maha Shramana",
+    translation: "Those phenomena that arise from causes — the Tathāgata has declared their cause and also their cessation — thus the Great Śramaṇa teaches.",
+    scriptType: "sanskrit-in-tibetan",
+    intro: "This ancient verse is Sanskrit transcribed syllable-by-syllable into Tibetan script, following the same 'Sanskrit-spelling' mode as Om Mani Padme Hum. Ordinary Tibetan reading rules do not apply. Notable letter-stacks include དྷ (dha — voiced aspirate), བྷ (bha — voiced aspirate), ཥཱཾ (ṣāṃ — retroflex sibilant + long ā + anusvāra), ཧྱ (hya — ha with subjoined ya), དྷ (dha), and ཤྲ (śra — palatal sibilant with subjoined ra). Together these reproduce sounds that exist in Sanskrit but not in native Tibetan.",
+    words: [
+      {
+        script: "ཡེ་དྷར་མཱ",
+        wylie: "ye d+har mA",
+        phon: "Ye Dharma",
+        gloss: "those phenomena which",
+        syllables: [
+          {
+            tib: "ཡེ",
+            wylie: "ye",
+            phon: "ye",
+            note: "Root letter ཡ (ya) with vowel sign ེ (e): 'ye' — the relative pronoun 'which/those which'. The following དྷར begins with ད and does not change this syllable's sound."
+          },
+          {
+            tib: "དྷར",
+            wylie: "d+har",
+            phon: "dhar",
+            note: "Root letter ད (da) with the aspiration mark ྷ subjoined beneath it, giving the voiced aspirate 'dha' (a sound not native to Tibetan), followed by ར (ra) as a suffix closing the syllable — together 'dhar'. Begins dharma. The following མཱ begins with མ and does not change this syllable's sound."
+          },
+          {
+            tib: "མཱ",
+            wylie: "mA",
+            phon: "ma",
+            note: "Root letter མ (ma) with the long-vowel sign ཱ (ā): 'mā'. Together ཡེ་དྷར་མཱ = 'ye dharmā', 'those phenomena which'. The following ཧེ begins with ཧ and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "ཧེ་ཏུ་པྲ་བྷ་བཱ",
+        wylie: "he tu pra b+ha vA",
+        phon: "Hetu Prabhawa",
+        gloss: "arise from causes",
+        syllables: [
+          {
+            tib: "ཧེ",
+            wylie: "he",
+            phon: "he",
+            note: "Root letter ཧ (ha) with vowel sign ེ (e): 'he'. Begins hetu, 'cause'. The following ཏུ begins with ཏ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཏུ",
+            wylie: "tu",
+            phon: "tu",
+            note: "Root letter ཏ (ta) with vowel sign ུ (u): 'tu'. Together ཧེ་ཏུ = 'hetu', 'cause'. The following པྲ begins with པ and does not change this syllable's sound."
+          },
+          {
+            tib: "པྲ",
+            wylie: "pra",
+            phon: "pra",
+            note: "Root letter པ (pa) with ར (ra) subjoined beneath it, giving the cluster 'pr' plus the inherent vowel 'a': 'pra'. This is the Sanskrit verbal prefix 'forth/forth from'. The following བྷ begins with བྷ and does not change this syllable's sound."
+          },
+          {
+            tib: "བྷ",
+            wylie: "b+ha",
+            phon: "bha",
+            note: "Root letter བ (ba) with the aspiration mark ྷ subjoined: the voiced aspirate 'bha', a sound not native to Tibetan. Begins -bhavā, 'arising'. The following བཱ begins with བ and does not change this syllable's sound."
+          },
+          {
+            tib: "བཱ",
+            wylie: "vA",
+            phon: "wa",
+            note: "Root letter བ (ba, used here to represent Sanskrit 'v') with the long-vowel sign ཱ (ā): 'vā'. Together པྲ་བྷ་བཱ = 'prabhavā', '(those whose) arising is from (causes)'. The following ཧེ begins a new phrase and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "ཧེ་ཏུན་ཏེ་ཥཱཾ",
+        wylie: "he tun te ShAM",
+        phon: "Hetun Tesham",
+        gloss: "their cause",
+        syllables: [
+          {
+            tib: "ཧེ",
+            wylie: "he",
+            phon: "he",
+            note: "Root letter ཧ (ha) with vowel sign ེ (e): 'he'. Begins hetun. The following ཏུན begins with ཏ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཏུན",
+            wylie: "tun",
+            phon: "tun",
+            note: "Root letter ཏ (ta) with vowel sign ུ (u) and the letter ན (na) as a syllable-closing suffix: 'tun'. Together ཧེ་ཏུན = 'hetun', the accusative of 'hetu' ('cause') — the cause that the Buddha declared. The following ཏེ begins with ཏ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཏེ",
+            wylie: "te",
+            phon: "te",
+            note: "Root letter ཏ (ta) with vowel sign ེ (e): 'te'. Begins teṣāṃ, 'of those'. The following ཥཱཾ begins with ཥ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཥཱཾ",
+            wylie: "ShAM",
+            phon: "sham",
+            note: "Root letter ཥ (ṣa — the retroflex sibilant, found only in Sanskrit) with the long-vowel sign ཱ (ā) and the anusvāra ཾ (the small circle above, nasalising the vowel to '-āṃ'): 'ṣāṃ'. Together ཏེ་ཥཱཾ = 'teṣāṃ', genitive plural 'of those (phenomena)', referring back to ye dharmā. The following ཏ begins tathāgata and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "ཏ་ཐཱ་ག་ཏོ",
+        wylie: "ta thA ga to",
+        phon: "Tathagato",
+        gloss: "the Tathāgata",
+        syllables: [
+          {
+            tib: "ཏ",
+            wylie: "ta",
+            phon: "ta",
+            note: "Root letter ཏ (ta) with inherent vowel 'a': 'ta'. Begins tathāgata. The following ཐཱ begins with ཐ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཐཱ",
+            wylie: "thA",
+            phon: "tha",
+            note: "The aspirate root letter ཐ (tha) with the long-vowel sign ཱ (ā): 'thā'. Together ཏ་ཐཱ = 'tathā', 'thus, in that way'. The following ག begins with ག and does not change this syllable's sound."
+          },
+          {
+            tib: "ག",
+            wylie: "ga",
+            phon: "ga",
+            note: "Root letter ག (ga) with inherent vowel 'a': 'ga'. The following ཏོ begins with ཏ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཏོ",
+            wylie: "to",
+            phon: "to",
+            note: "Root letter ཏ (ta) with vowel sign ོ (o): 'to'. Together ཏ་ཐཱ་ག་ཏོ = 'tathāgato' — the Tathāgata (the Buddha's most formal epithet, meaning 'one who has thus gone/come'). The -o reflects the sandhi form of -taḥ before the following hy-. The following ཧྱ begins with ཧ and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "ཧྱ་བ་དཏ",
+        wylie: "h+ya ba dat",
+        phon: "Hya Badat",
+        gloss: "has indeed declared",
+        syllables: [
+          {
+            tib: "ཧྱ",
+            wylie: "h+ya",
+            phon: "hya",
+            note: "Root letter ཧ (ha) with ཡ (ya) subjoined beneath it, giving the cluster 'hy': 'hya'. This transcribes the Sanskrit particle hi ('indeed, for') in its sandhi form hy- before a vowel, emphasising that the Tathāgata truly and authoritatively declared this teaching. The following བ begins with བ and does not change this syllable's sound."
+          },
+          {
+            tib: "བ",
+            wylie: "ba",
+            phon: "ba",
+            note: "Root letter བ (ba) with inherent vowel 'a': 'ba'. Represents the Sanskrit prefix a- of avadat (the augment marking past tense in the imperfect). The following དཏ begins with ད and does not change this syllable's sound."
+          },
+          {
+            tib: "དཏ",
+            wylie: "dat",
+            phon: "dat",
+            note: "Root letter ད (da) with inherent vowel 'a' and the letter ཏ (ta) as a suffix: 'dat'. Together ཧྱ་བ་དཏ = 'hy avadat', 'has indeed declared' (3rd-person singular imperfect of Sanskrit √vad, 'to speak/declare'; the imperfect denotes a completed, authoritative act). The following ཏེ begins the next phrase and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "ཏེ་ཥཱཾ་ཙ་ཡོ",
+        wylie: "te ShAM tsa yo",
+        phon: "Tesham Tsa Yo",
+        gloss: "and the cessation of those",
+        syllables: [
+          {
+            tib: "ཏེ",
+            wylie: "te",
+            phon: "te",
+            note: "Root letter ཏ (ta) with vowel sign ེ (e): 'te'. Second occurrence of te- in teṣāṃ ('of those'). The following ཥཱཾ begins with ཥ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཥཱཾ",
+            wylie: "ShAM",
+            phon: "sham",
+            note: "Same as above: retroflex ཥ (ṣa) with long ཱ (ā) and anusvāra ཾ (-āṃ): 'ṣāṃ'. Together ཏེ་ཥཱཾ = 'teṣāṃ', again genitive plural 'of those'. Here it refers to the cessation of those phenomena. The following ཙ begins with ཙ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཙ",
+            wylie: "tsa",
+            phon: "tsa",
+            note: "Root letter ཙ (tsa) representing Sanskrit 'ca' ('and') with the inherent vowel 'a': 'ca'. The following ཡོ begins with ཡ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཡོ",
+            wylie: "yo",
+            phon: "yo",
+            note: "Root letter ཡ (ya) with vowel sign ོ (o): 'yo', the sandhi form of Sanskrit yaḥ ('which', nominative singular relative pronoun). Together ཏེ་ཥཱཾ་ཙ་ཡོ = 'teṣāṃ ca yo', 'and that which is their cessation'. The following ནི begins nirodha and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "ནི་རོ་དྷ",
+        wylie: "ni ro d+ha",
+        phon: "Niro Dha",
+        gloss: "cessation",
+        syllables: [
+          {
+            tib: "ནི",
+            wylie: "ni",
+            phon: "ni",
+            note: "Root letter ན (na) with vowel sign ི (i): 'ni'. The Sanskrit prefix ni- means 'down, back, into' and intensifies the following root. The following རོ begins with ར and does not change this syllable's sound."
+          },
+          {
+            tib: "རོ",
+            wylie: "ro",
+            phon: "ro",
+            note: "Root letter ར (ra) with vowel sign ོ (o): 'ro'. Together ནི་རོ = 'niro-', from Sanskrit ni + rodha (blocking/stopping). The following དྷ begins with ད and does not change this syllable's sound."
+          },
+          {
+            tib: "དྷ",
+            wylie: "d+ha",
+            phon: "dha",
+            note: "Root letter ད (da) with the aspiration mark ྷ subjoined: the voiced aspirate 'dha'. Together ནི་རོ་དྷ = 'nirodha', 'cessation' — the Sanskrit technical term for the Third Noble Truth, the cessation of suffering. Literally 'blocking off / stopping' (ni + √rudh 'to obstruct'). This is the goal of the path: independence from conditioned suffering. The following ཨེ begins evaṃ and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "ཨེ་བཾ་བཱ་དི",
+        wylie: "e waM bA di",
+        phon: "Ewam Badi",
+        gloss: "thus teaches",
+        syllables: [
+          {
+            tib: "ཨེ",
+            wylie: "e",
+            phon: "e",
+            note: "The vowel-carrier letter ཨ (a-chung) with the vowel sign ེ (e): 'e'. Used to write a vowel that does not follow a consonant. Begins evaṃ, 'thus'. The following བཾ begins with བ and does not change this syllable's sound."
+          },
+          {
+            tib: "བཾ",
+            wylie: "waM",
+            phon: "wam",
+            note: "Root letter བ (ba, here representing Sanskrit 'v') with the anusvāra ཾ (nasalising to '-ṃ'): 'vaṃ'. Together ཨེ་བཾ = 'evaṃ', the Sanskrit adverb 'thus, in this way', marking the manner of the teaching that follows. The following བཱ begins with བ and does not change this syllable's sound."
+          },
+          {
+            tib: "བཱ",
+            wylie: "bA",
+            phon: "wa",
+            note: "Root letter བ (ba, for Sanskrit 'v') with the long-vowel sign ཱ (ā): 'vā'. Begins vādī, 'teacher/speaker'. The following དི begins with ད and does not change this syllable's sound."
+          },
+          {
+            tib: "དི",
+            wylie: "di",
+            phon: "di",
+            note: "Root letter ད (da) with vowel sign ི (i): 'di'. Together བཱ་དི = 'vādī', nominative singular of vādin ('one who speaks/teaches', from the same root √vad as avadat above). The verse thus rhymes its verb (avadat) and agent (vādī) from the same root. The following མ begins mahāśramaṇaḥ and does not change this syllable's sound."
+          }
+        ]
+      },
+      {
+        script: "མ་ཧཱ་ཤྲ་མ་ཎཿ",
+        wylie: "ma hA sh+ra ma NaH",
+        phon: "Maha Shramana",
+        gloss: "the Great Śramaṇa",
+        syllables: [
+          {
+            tib: "མ",
+            wylie: "ma",
+            phon: "ma",
+            note: "Root letter མ (ma) with inherent vowel 'a': 'ma'. Begins mahā, 'great'. The following ཧཱ begins with ཧ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཧཱ",
+            wylie: "hA",
+            phon: "ha",
+            note: "Root letter ཧ (ha) with the long-vowel sign ཱ (ā): 'hā'. Together མ་ཧཱ = 'mahā', 'great' (the Sanskrit intensifying prefix, only used in compounds). The following ཤྲ begins with ཤ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཤྲ",
+            wylie: "sh+ra",
+            phon: "shra",
+            note: "Root letter ཤ (śa — the Sanskrit palatal sibilant, found only in Sanskrit loanwords) with ར (ra) subjoined beneath it, giving the cluster 'śr': 'śra'. This cluster begins śramaṇa. The following མ begins with མ and does not change this syllable's sound."
+          },
+          {
+            tib: "མ",
+            wylie: "ma",
+            phon: "ma",
+            note: "Root letter མ (ma) with inherent vowel 'a': 'ma'. The following ཎཿ begins with ཎ and does not change this syllable's sound."
+          },
+          {
+            tib: "ཎཿ",
+            wylie: "NaH",
+            phon: "na",
+            note: "The retroflex nasal ཎ (ṇa — found only in Sanskrit, not in native Tibetan words) with the visarga ཿ (two small dots marking the Sanskrit aspirated final '-ḥ'): 'ṇaḥ'. Together མ་ཧཱ་ཤྲ་མ་ཎཿ = 'mahāśramaṇaḥ', 'the Great Śramaṇa' — the Buddha's title as the supreme renunciant. This is the final syllable of the verse; there is no following syllable to affect it."
+          }
+        ]
+      }
+    ],
+    wordGrouping: "Thirty-five Tibetan syllable-blocks group into nine units matching the Sanskrit words: Ye-dharmā (those phenomena) | Hetu-prabhavā (that arise from causes) | Hetun-teṣāṃ (their cause) | Tathāgato (the Tathāgata) | Hy-avadat (has indeed declared) | Teṣāṃ-ca-yo (and the cessation of those) | Nirodha (cessation) | Evaṃ-vādī (thus teaches) | Mahāśramaṇaḥ (the Great Śramaṇa). The verse moves in a precise arc: conditioned phenomena → their cause (declared by the Buddha) → their cessation → the teacher. Meditating on this sequence is itself the path to the independence (nirodha) the verse describes."
+  }
 }
 ];
