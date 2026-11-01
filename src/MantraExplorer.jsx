@@ -326,6 +326,18 @@ const entries = mantras.flatMap((m) => {
 });
 
 const THEME_KEY = "mantra-explorer-theme";
+const SA_FONT_KEY = "mantra-explorer-sa-font";
+
+// Devanagari fonts for the main Sanskrit line; ids match data-sa-font rules in index.css.
+// All were checked against every conjunct in the data (त्र्य, ज्ञ, क्ष, द्ध, reph …).
+const SANSKRIT_FONTS = [
+  { id: "amita", label: "Amita — nib-pen calligraphy" },
+  { id: "tiro", label: "Tiro Devanagari Sanskrit — classic" },
+  { id: "jaini", label: "Jaini — Jain manuscript style" },
+  { id: "eczar", label: "Eczar — calligraphic serif" },
+  { id: "yatra", label: "Yatra One — bold brush" },
+  { id: "kalam", label: "Kalam — handwritten" },
+];
 
 function readStoredTheme() {
   try {
@@ -336,8 +348,18 @@ function readStoredTheme() {
   }
 }
 
+function readStoredSaFont() {
+  try {
+    const f = window.localStorage.getItem(SA_FONT_KEY);
+    return SANSKRIT_FONTS.some((o) => o.id === f) ? f : SANSKRIT_FONTS[0].id;
+  } catch {
+    return SANSKRIT_FONTS[0].id;
+  }
+}
+
 export default function MantraExplorer() {
   const [theme, setTheme] = useState(readStoredTheme);
+  const [saFont, setSaFont] = useState(readStoredSaFont);
   const [query, setQuery] = useState("");
   const [selectedKey, setSelectedKey] = useState(entries[0].key);
   const [openChipId, setOpenChipId] = useState(null);
@@ -375,6 +397,15 @@ export default function MantraExplorer() {
       // storage unavailable (private mode etc.) — theme still applies for this session
     }
   }, [theme]);
+
+  useEffect(() => {
+    document.documentElement.dataset.saFont = saFont;
+    try {
+      window.localStorage.setItem(SA_FONT_KEY, saFont);
+    } catch {
+      // storage unavailable — font still applies for this session
+    }
+  }, [saFont]);
 
   // close any open popup when switching mantras
   useEffect(() => {
@@ -451,6 +482,20 @@ export default function MantraExplorer() {
             onChange={(e) => setShowTranslation(e.target.checked)}
           />
           Show translation under each line
+        </label>
+        <label className="phonetics-toggle">
+          Sanskrit font
+          <select
+            className="font-select"
+            value={saFont}
+            onChange={(e) => setSaFont(e.target.value)}
+          >
+            {SANSKRIT_FONTS.map((f) => (
+              <option key={f.id} value={f.id}>
+                {f.label}
+              </option>
+            ))}
+          </select>
         </label>
         <button
           type="button"

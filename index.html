@@ -9,6 +9,8 @@
         if (localStorage.getItem("mantra-explorer-theme") === "light") {
           document.documentElement.dataset.theme = "light";
         }
+        var f = localStorage.getItem("mantra-explorer-sa-font");
+        if (f) document.documentElement.dataset.saFont = f;
       } catch (e) {}
     </script>
   </head>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Serif+Tibetan:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Amita&family=Jaini&family=Eczar&family=Yatra+One&family=Kalam&family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Serif+Tibetan:wght@400;600&display=swap");
 
 :root {
   /* Dark theme (default) */
@@ -32,6 +32,9 @@
   --badge-mixed-fg: #dfc086;
   --font-display: "Cormorant Garamond", "Noto Serif", serif;
   --font-body: "EB Garamond", "Noto Serif", Georgia, serif;
+  /* Sanskrit display font: default Amita; overridden per data-sa-font below */
+  --font-devanagari-display: "Amita", "Tiro Devanagari Sanskrit", "Noto Sans Devanagari", serif;
+  --devanagari-scale: 1;
   font-family: "EB Garamond", "Noto Serif", Georgia, serif;
 }
 
@@ -110,7 +113,8 @@ body {
 }
 
 .ornament-sanskrit {
-  font-family: "Noto Sans Devanagari", serif;
+  font-family: var(--font-devanagari-display);
+  font-size: calc(2.2rem * var(--devanagari-scale));
 }
 
 .app-header::after {
@@ -216,6 +220,23 @@ body {
   white-space: nowrap;
 }
 
+.font-select {
+  padding: 6px 12px;
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  background: var(--panel-bg);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.font-select:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-soft);
+}
+
 .phonetics-toggle input {
   accent-color: var(--gold);
   width: 16px;
@@ -302,6 +323,29 @@ body {
   color: var(--maroon);
 }
 
+/* ---------- Sanskrit font choice (data-sa-font on <html>) ---------- */
+
+:root[data-sa-font="tiro"] {
+  --font-devanagari-display: "Tiro Devanagari Sanskrit", "Noto Sans Devanagari", serif;
+}
+
+:root[data-sa-font="jaini"] {
+  --font-devanagari-display: "Jaini", "Tiro Devanagari Sanskrit", "Noto Sans Devanagari", serif;
+  --devanagari-scale: 1.2;
+}
+
+:root[data-sa-font="eczar"] {
+  --font-devanagari-display: "Eczar", "Tiro Devanagari Sanskrit", "Noto Sans Devanagari", serif;
+}
+
+:root[data-sa-font="yatra"] {
+  --font-devanagari-display: "Yatra One", "Tiro Devanagari Sanskrit", "Noto Sans Devanagari", serif;
+}
+
+:root[data-sa-font="kalam"] {
+  --font-devanagari-display: "Kalam", "Tiro Devanagari Sanskrit", "Noto Sans Devanagari", serif;
+}
+
 /* ---------- Script display ---------- */
 
 .script-line {
@@ -312,9 +356,16 @@ body {
   color: var(--ink);
 }
 
-.devanagari,
-.devanagari-inline {
-  font-family: "Tiro Devanagari Sanskrit", "Noto Sans Devanagari", "Noto Sans", sans-serif;
+.devanagari {
+  font-family: var(--font-devanagari-display);
+}
+
+.script-line.devanagari {
+  font-size: calc(1.85rem * var(--devanagari-scale));
+}
+
+.verse-script.devanagari {
+  font-size: calc(1.6rem * var(--devanagari-scale));
 }
 
 .tibetan-script {
