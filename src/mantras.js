@@ -1,12 +1,22 @@
 // Data model for each mantra:
 // {
 //   id, title, deity, tags,
-//   sanskrit: { script, transliteration, words: [{word, gloss, note}], translation, grammar: [{form, analysis}] },
+//   sanskrit: {                       // null when the text is native Tibetan
+//     script, transliteration, translation,
+//     lines?: [{script, translit, gloss, note}],   // multi-line texts only
+//     words: [{word, gloss, note, grammar}]
+//   },
 //   tibetan: {
-//     script, wylie, phonetic, translation, scriptType: "sanskrit-in-tibetan" | "native-tibetan",
-//     intro, syllables: [{tib, wylie, phon, note}], wordGrouping
+//     script, wylie, phonetic, translation,
+//     scriptType: "sanskrit-in-tibetan" | "native-tibetan" | "mixed",
+//     intro,
+//     lines?: [{script, translit, gloss, note}],   // multi-line texts only
+//     words: [{script, wylie, phon, gloss, syllables: [{tib, wylie, phon, note}]}],
+//     wordGrouping
 //   }
 // }
+// A Sanskrit section is only given for texts that are actually Sanskrit;
+// native Tibetan prayers have sanskrit: null.
 
 export const mantras = [
   {
@@ -66,7 +76,7 @@ export const mantras = [
               wylie: "oM",
               phon: "Om",
               note:
-                "A single dedicated ligature-letter that exists only to write the syllable Oṃ — a fusion of the vowel-carrier ཨ (a), the o-vowel sign, and the anusvāra Ṿ (ṃ, nasalisation, written here as the small circle). Read exactly as in Sanskrit: 'Om'. The following syllable (མ, 'ma') begins with a plain consonant, so nothing here is altered by what comes next."
+                "A single dedicated ligature-letter that exists only to write the syllable Oṃ — a fusion of the vowel-carrier ཨ (a), the o-vowel sign, and the anusvāra ྂ (ṃ, nasalisation, written here as the small circle). Read exactly as in Sanskrit: 'Om'. The following syllable (མ, 'ma') begins with a plain consonant, so nothing here is altered by what comes next."
             }
           ]
         },
@@ -326,7 +336,7 @@ export const mantras = [
           note:
             "The genitive pronoun that turns the rest of the line into a personal petition: 'increase MY lifespan, merit, and wisdom'. This is the point where the mantra shifts from praising Tārā (vocatives ending in -e) to asking for a specific benefit for the practitioner.",
           grammar:
-            "Genitive singular of the first-person pronoun aham ('I'); the stem mad- takes the genitive ending -ama, giving mama, 'of me / my' (cf. English 'mine')."
+            "Genitive singular of the first-person pronoun aham ('I'). The pronoun is suppletive (its forms come from different stems: aham, mām, mama...), so mama is simply the irregular genitive, 'of me / my'; the enclitic me seen in the Vajrasattva mantra is its short form."
         },
         {
           word: "āyu-puṇya-jñāna-puṣṭiṃ",
@@ -462,26 +472,20 @@ export const mantras = [
             {
               tib: "ཨ",
               wylie: "a",
-              phon: "ā",
-              note: "The vowel-carrier letter ཨ (a-chung), used to write a vowel that does not follow a consonant. Read long as 'ā' here (beginning of āyu, 'lifespan'). The following ཡུ begins with ཡ, which does not change this syllable's sound."
+              phon: "a / ā",
+              note: "The vowel-carrier letter ཨ (a-chen), used to write a vowel that does not follow a consonant. As written here it is a short 'a' (long ā would carry the sign ཱ: ཨཱ); Tibetan editions vary, and in recitation it is heard as the first syllable of āyu, 'lifespan'. The following ཡུ begins with ཡ, which does not change this syllable's sound."
             },
             {
               tib: "ཡུ",
               wylie: "yu",
               phon: "yu",
-              note: "Root letter ཡ (ya) with the vowel sign ུ (u): 'yu'. Combined with the preceding ཨ, this spells āyu, 'life, lifespan'. The following པུ begins with པ, which does not change this syllable's sound."
+              note: "Root letter ཡ (ya) with the vowel sign ུ (u): 'yu'. Combined with the preceding ཨ, this spells āyu, 'life, lifespan'. The following པུཎྱ begins with པ, which does not change this syllable's sound."
             },
             {
-              tib: "པུ",
-              wylie: "pu",
-              phon: "pu",
-              note: "Root letter པ (pa) with the vowel sign ུ (u): 'pu'. Begins puṇya, 'merit, virtue'. The following ཎྱ is part of the same word and does not change this syllable's sound."
-            },
-            {
-              tib: "ཎྱ",
-              wylie: "Nya",
-              phon: "ṇya",
-              note: "The retroflex root letter ཎ (ṇa) — a sound found only in Sanskrit loanwords, made with the tongue curled back against the roof of the mouth — with the semivowel ྱ (ya) subjoined beneath it, giving the cluster 'ṇya'. Combined with the preceding pu, this spells puṇya, 'merit'. The following word ཛྙཱ་ན begins with the conjunct ཛྙ, which does not change this syllable's sound."
+              tib: "པུཎྱ",
+              wylie: "puNya",
+              phon: "pu-ṇya",
+              note: "A single syllable block: root letter པ (pa) with the vowel sign ུ (u) gives 'pu'; then, in the suffix position of the same block, the retroflex letter ཎ (ṇa — a sound found only in Sanskrit loanwords, made with the tongue curled back) with the semivowel ྱ (ya) subjoined beneath it, giving 'ṇya'. Together 'puṇya', 'merit, virtue'. The following word ཛྙཱ་ན begins with the conjunct ཛྙ, which does not change this syllable's sound."
             }
           ]
         },
@@ -563,7 +567,7 @@ export const mantras = [
         }
       ],
       wordGrouping:
-        "Twenty Tibetan syllable-blocks group into the ten Sanskrit words: Om | Tā-re | Tut-tā-re | Tu-re | Ma-ma | Ā-yu-pu-ṇya | Jñā-na | Puṣṭiṃ | Ku-ru | Svā-hā. The first four words (Om Tare Tuttare Ture) are identical to the Green Tārā mantra; the remaining words add the long-life/wisdom/merit petition that is unique to White Tārā."
+        "Nineteen Tibetan syllable-blocks group into ten units: Om | Tā-re | Tut-tā-re | Tu-re | Ma-ma | Ā-yu-puṇya | Jñā-na | Puṣṭiṃ | Ku-ru | Svā-hā. The first four words (Om Tare Tuttare Ture) are identical to the Green Tārā mantra; the remaining words add the long-life/wisdom/merit petition that is unique to White Tārā."
     }
   },
 
@@ -572,45 +576,7 @@ export const mantras = [
     title: "Oṃ Āḥ Hūṃ Vajra Guru Padma Siddhi Hūṃ",
     deity: "Guru Padmasambhava (the 'Vajra Guru')",
     tags: ["guru yoga", "Padmasambhava", "twelve syllables"],
-    sanskrit: {
-      script: "ॐ आः हूँ वज्र गुरु पद्म सिद्धि हूँ",
-      transliteration: "oṃ āḥ hūṃ vajra guru padma siddhi hūṃ",
-      translation:
-        "Oṃ Āḥ Hūṃ — Vajra Guru, the Lotus(-Born One) — grant attainments (siddhi), Hūṃ!",
-      words: [
-        {
-          word: "oṃ āḥ hūṃ",
-          gloss: "three seed syllables",
-          note:
-            "A standard opening triad of bīja syllables corresponding to body (oṃ), speech (āḥ) and mind (hūṃ), or to the three kāyas of a Buddha. āḥ ends in visarga (-ḥ), a final voiceless breath-release common to many Sanskrit seed syllables.",
-          grammar:
-            "All three are indeclinable bīja (seed) syllables, outside the normal case system. āḥ ends in visarga (ḥ), the Sanskrit sandhi-sound that replaces final -s/-r in many contexts — here it is simply part of the fixed seed syllable's form, not a live grammatical ending."
-        },
-        {
-          word: "vajra guru padma",
-          gloss: "Vajra-Guru Padma(sambhava)",
-          note:
-            "A string of nominal stems used as an epithet/name for Padmasambhava: vajra ('diamond/thunderbolt', symbol of indestructible reality), guru ('teacher/master'), padma ('lotus', referring to his miraculous lotus-birth). In mantric Sanskrit such epithets are very often left as bare stems without case endings — a hallmark of 'mantra Sanskrit', which is looser than classical literary Sanskrit.",
-          grammar:
-            "Sequence of uninflected nominal stems (a-stems: vajra, guru, padma) used in apposition as a vocative-like epithet, '(O) Vajra-Guru Padma...'. Classical grammar would expect an explicit vocative ending, but for masculine a-stems the vocative singular already coincides with the bare stem -a, so no extra ending is needed here."
-        },
-        {
-          word: "siddhi",
-          gloss: "accomplishment, spiritual attainment",
-          note:
-            "A feminine noun meaning 'success, accomplishment, supernatural power'. Here used almost as an imperative request: '(grant) siddhi!'.",
-          grammar:
-            "Feminine i-stem noun, here in its bare stem/nominative-vocative form siddhi(ḥ) (with the final -ḥ often dropped in recitation); functions as an implicit request, 'grant siddhi'."
-        },
-        {
-          word: "hūṃ",
-          gloss: "seed syllable",
-          note: "Closing bīja, often felt to carry an imperative force — 'so be it now!'.",
-          grammar:
-            "Bīja syllable; grammatically an interjection/indeclinable, outside normal declension."
-        }
-      ]
-    },
+    sanskrit: null,
     tibetan: {
       script: "ༀ་ཨཱཿཧཱུྂ་བཛྲ་གུ་རུ་པདྨ་སིདྡྷི་ཧཱུྂ།",
       wylie: "oM AH hU~M badz+ra gu ru pad+ma sid+d+hi hU~M",
@@ -645,7 +611,7 @@ export const mantras = [
           syllables: [
             {
               tib: "བཛྲ",
-              wylie: "badz ra",
+              wylie: "badz+ra",
               phon: "Benza",
               note:
                 "Root letter བ (ba) with ཛ (ja/dza) and ྲ (ra) both subjoined, reproducing the Sanskrit consonant cluster 'vajra' (the Tibetan letter ཝ for 'v' is not used here; བ stands in for the 'v/b' sound). Tibetans pronounce ཛ like 'dz', so the whole cluster comes out as 'badza/benza' — hence the very common Tibetanised spelling 'Benza' for 'Vajra'. The following གུ begins with plain ག and does not change this syllable."
@@ -654,7 +620,7 @@ export const mantras = [
             { tib: "རུ", wylie: "ru", phon: "ru", note: "ར (ra) + vowel sign ུ (u) = 'ru'. Together གུ་རུ = 'guru', 'teacher/master'. The following པདྨ begins with པ and does not affect this syllable." },
             {
               tib: "པདྨ",
-              wylie: "pad ma",
+              wylie: "pad+ma",
               phon: "Pema",
               note:
                 "Root letter པ (pa) with ད (da) and མ (ma) subjoined — the Sanskrit cluster 'dma' of padma — read with the inherent vowel 'a'. Commonly Tibetanised to 'Pema'. As the last syllable of this epithet, it is followed by སིདྡྷི, which has no effect on its sound."
@@ -687,7 +653,7 @@ export const mantras = [
         }
       ],
       wordGrouping:
-        "Eight Tibetan syllable blocks correspond to the three opening seed syllables Om / Ah / Hung (body–speech–mind), the three-word epithet Benza–Guru–Pema (= Vajra Guru Padma, addressing Padmasambhava), and the closing request Siddhi–Hung ('grant attainments now')."
+        "Nine Tibetan syllable blocks correspond to the three opening seed syllables Om / Ah / Hung (body–speech–mind), the three-word epithet Benza–Guru–Pema (= Vajra Guru Padma, addressing Padmasambhava), and the closing request Siddhi–Hung ('grant attainments now')."
     }
   },
 
@@ -875,7 +841,7 @@ export const mantras = [
       translation: "Same as Sanskrit above. ('Bekandze' is the everyday Tibetanised pronunciation of bhaiṣajye.)",
       scriptType: "sanskrit-in-tibetan",
       intro:
-        "This mantra has the heaviest consonant-clustering of the set, because Sanskrit retroflex/aspirate sounds (bh, ṣ, dgh-type clusters) that don't exist in native Tibetan all have to be specially written. In everyday chanting Tibetans simplify these clusters heavily — hence 'Bekandze' for bhaiṣajye and 'Radza' for rāja.",
+        "This mantra has the heaviest consonant-clustering of the set, because Sanskrit retroflex/aspirate sounds (bh, ṣ, dg-type clusters) that don't exist in native Tibetan all have to be specially written. In everyday chanting Tibetans simplify these clusters heavily — hence 'Bekandze' for bhaiṣajye and 'Radza' for rāja.",
       words: [
         {
           script: "ༀ",
@@ -883,7 +849,7 @@ export const mantras = [
           phon: "Om",
           gloss: "sacred syllable (oṃ)",
           syllables: [
-            { tib: "ༀ", wylie: "oM", phon: "Om", note: "The Oṃ syllable, here written in full (vowel-carrier ཨ + o-vowel sign + anusvāra) rather than as the ligature ༀ used in the other mantras. The following བྷཻ begins with the voiced aspirate བྷ and does not change this syllable's sound." }
+            { tib: "ༀ", wylie: "oM", phon: "Om", note: "The Oṃ ligature, as in the other mantras. The following བྷཻ begins with the voiced aspirate བྷ and does not change this syllable's sound." }
           ]
         },
         {
@@ -959,7 +925,7 @@ export const mantras = [
               wylie: "mut+ga",
               phon: "mut-ga",
               note:
-                "Root letter མ (ma) with vowel sign ུ (u) giving 'mu', followed in the same block by ྟ (subjoined ta) and ག (ga): a cluster reproducing the Sanskrit '-dg-' of (sam)udga(te), here spelled with 't' for 'd' as Tibetan has no separate way to stack a voiced 'd' in this position. Read 'mut-ga'. The following ཏེ begins with ཏ and does not alter this syllable."
+                "Root letter མ (ma) with vowel sign ུ (u) giving 'mu', followed in the same block by ཏ (ta) in the suffix position with ྒ (ga) subjoined beneath it: the stack ཏྒ reproduces the Sanskrit '-dg-' of (sam)udga(te), spelled with 't' for 'd' in this common Tibetan edition. Read 'mut-ga'. The following ཏེ begins with ཏ and does not alter this syllable."
             },
             { tib: "ཏེ", wylie: "te", phon: "te", note: "Root letter ཏ with vowel sign ེ: 'te'. sa-mut-ga-te = samudgate. The next word སྭཱ་ཧཱ begins with the cluster སྭ and does not change this syllable's sound." }
           ]
@@ -976,7 +942,7 @@ export const mantras = [
         }
       ],
       wordGrouping:
-        "About eighteen Tibetan syllable-blocks group into the seven Sanskrit words: Om | Bhaiṣajye | Bhaiṣajye | Mahā-bhaiṣajya-rāje | Samudgate | Svāhā. Note that the long compound 'mahā-bhaiṣajya-rāje' alone spans six Tibetan syllable-blocks (ma-hā-bhai-ṣa-jya-rā-je, i.e. seven blocks) but functions as a single grammatical word."
+        "Nineteen Tibetan syllable-blocks group into the six Sanskrit words: Om | Bhaiṣajye | Bhaiṣajye | Mahā-bhaiṣajya-rāje | Samudgate | Svāhā. Note that the long compound 'mahā-bhaiṣajya-rāje' alone spans seven Tibetan syllable-blocks (ma-hā-bhai-ṣa-jya-rā-je) but functions as a single grammatical word."
     }
   },
 
@@ -989,7 +955,7 @@ export const mantras = [
       script:
         "ॐ वज्रसत्त्व समयम् अनुपालय । वज्रसत्त्व त्वेनोपतिष्ठ । दृढो मे भव । सुतोष्यो मे भव । सुपोष्यो मे भव । अनुरक्तो मे भव । सर्वसिद्धिं मे प्रयच्छ । सर्वकर्मसु च मे चित्तं श्रेयः कुरु हूं । ह ह ह ह होः । भगवन् सर्वतथागतवज्र मा मे मुञ्च । वज्री भव महासमयसत्त्व आः ॥",
       transliteration:
-        "oṃ vajrasattva samayam anupālaya | vajrasattva tvenopatiṣṭha | dṛḍho me bhava | sutoṣyo me bhava | suposyo me bhava | anurakto me bhava | sarva-siddhiṃ me prayaccha | sarva-karmasu ca me cittaṃ śreyaḥ kuru hūṃ | ha ha ha ha hoḥ | bhagavan sarva-tathāgata-vajra mā me muñca | vajrī bhava mahāsamaya-sattva āḥ",
+        "oṃ vajrasattva samayam anupālaya | vajrasattva tvenopatiṣṭha | dṛḍho me bhava | sutoṣyo me bhava | supoṣyo me bhava | anurakto me bhava | sarva-siddhiṃ me prayaccha | sarva-karmasu ca me cittaṃ śreyaḥ kuru hūṃ | ha ha ha ha hoḥ | bhagavan sarva-tathāgata-vajra mā me muñca | vajrī bhava mahāsamaya-sattva āḥ",
       translation:
         "Oṃ, Vajrasattva! Keep your sacred pledge (samaya). Vajrasattva, be present as me/abide close to me. Be steadfast for me. Be greatly pleased with me. Nourish me well. Be devoted to me. Grant me all accomplishments (siddhis). And in every action make my mind excellent — hūṃ! Ha ha ha ha hoḥ! O Blessed One, Vajra of all the Tathāgatas, do not abandon me — be the Vajra-holder, O great being of the sacred pledge, āḥ!",
       lines: [
@@ -1019,14 +985,14 @@ export const mantras = [
           translit: "sutoṣyo me bhava",
           gloss: "Be greatly pleased with me!",
           note:
-            "sutoṣyaḥ is a gerundive ('to be made pleased') from su- ('well/very') + √tuṣ ('be satisfied'). Parallel in form to suposyo and anurakto below."
+            "sutoṣyaḥ is a gerundive ('to be made pleased') from su- ('well/very') + √tuṣ ('be satisfied'). Parallel in form to supoṣyo and anurakto below."
         },
         {
           script: "सुपोष्यो मे भव",
-          translit: "suposyo me bhava",
+          translit: "supoṣyo me bhava",
           gloss: "Nourish me well!",
           note:
-            "suposyaḥ, another gerundive, from su- + √puṣ ('nourish'): 'to be well-nourished/sustained'."
+            "supoṣyaḥ, another gerundive, from su- + √puṣ ('nourish'): 'to be well-nourished/sustained'."
         },
         {
           script: "अनुरक्तो मे भव",
@@ -1104,12 +1070,12 @@ export const mantras = [
             "tvena = instrumental singular of tvam ('you'). upatiṣṭha = imperative 2sg of upa-√sthā ('stand near'), with the regular thematic -a ending — see note on anupālaya above. Sandhi: tvena + upatiṣṭha → tvenopatiṣṭha (a + u → o)."
         },
         {
-          word: "dṛḍho / sutoṣyo / suposyo / anurakto me bhava",
+          word: "dṛḍho / sutoṣyo / supoṣyo / anurakto me bhava",
           gloss: "be firm / well-pleased / nourishing / devoted toward me!",
           note:
-            "Four parallel phrases, each ending in me bhava ('be ... for/toward me', with bhava the imperative of √bhū 'to be', and me an enclitic form of the pronoun 'I' used for both genitive 'my' and dative 'to/for me'). dṛḍhaḥ = 'firm, steadfast' (adjective). sutoṣyaḥ and suposyaḥ are gerundives ('to be made greatly pleased' / 'to be greatly nourished', from su- 'well/very' + the gerundives of √tuṣ 'be satisfied' and √puṣ 'nourish'). anuraktaḥ = past participle of anu-√rañj, 'attached/devoted to'. Together these four lines ask Vajrasattva to remain firm, pleased, sustaining and devoted in relation to the practitioner.",
+            "Four parallel phrases, each ending in me bhava ('be ... for/toward me', with bhava the imperative of √bhū 'to be', and me an enclitic form of the pronoun 'I' used for both genitive 'my' and dative 'to/for me'). dṛḍhaḥ = 'firm, steadfast' (adjective). sutoṣyaḥ and supoṣyaḥ are gerundives ('to be made greatly pleased' / 'to be greatly nourished', from su- 'well/very' + the gerundives of √tuṣ 'be satisfied' and √puṣ 'nourish'). anuraktaḥ = past participle of anu-√rañj, 'attached/devoted to'. Together these four lines ask Vajrasattva to remain firm, pleased, sustaining and devoted in relation to the practitioner.",
           grammar:
-            "bhava = imperative 2sg of √bhū ('be'), regular thematic -a ending. sutoṣyaḥ and suposyaḥ are gerundives (future passive participles) in -ya from √tuṣ and √puṣ with the intensifying prefix su- ('well/very'), expressing '(that which is) to be done'; the final -aḥ (nom. sg. masc.) assimilates to -o before the following voiced me. anuraktaḥ is a past participle of anu-√rañj. me is the enclitic 1st-person singular pronoun (of aham, 'I'), here functioning as a dative, 'to/for me'."
+            "bhava = imperative 2sg of √bhū ('be'), regular thematic -a ending. sutoṣyaḥ and supoṣyaḥ are gerundives (future passive participles) in -ya from √tuṣ and √puṣ with the intensifying prefix su- ('well/very'), expressing '(that which is) to be done'; the final -aḥ (nom. sg. masc.) assimilates to -o before the following voiced me. anuraktaḥ is a past participle of anu-√rañj. me is the enclitic 1st-person singular pronoun (of aham, 'I'), here functioning as a dative, 'to/for me'."
         },
         {
           word: "sarva-siddhiṃ me prayaccha",
@@ -1386,23 +1352,23 @@ export const mantras = [
             { tib: "མེ", wylie: "me", phon: "me", note: "Root letter མ (ma) with the vowel sign ེ (e): 'me' — 'me/for me'. The following བྷ begins with བྷ and does not change this syllable's sound." },
             { tib: "བྷ", wylie: "b+ha", phon: "bha", note: "The voiced-aspirate letter བྷ (ba + aspiration mark ྷ) with inherent vowel 'a': 'bha'. Begins bhava, 'be!'. The following ཝ begins with ཝ and does not change this syllable's sound." },
             { tib: "ཝ", wylie: "wa", phon: "wa", note: "Root letter ཝ (wa) with inherent vowel 'a': 'wa'. Together བྷ་ཝ = 'bhava'; with the preceding syllables, 'sutoṣyo me bhava' = 'be greatly pleased with me!'. The following སུ begins a new repetition with the same letter ས and does not change this syllable's sound." },
-            { tib: "སུ", wylie: "su", phon: "su", note: "Same as the first སུ above: root ས (sa) with vowel sign ུ (u), 'su' — begins suposyo, 'to be well-nourished'. The following པོཥྱོ begins with པ and does not change this syllable's sound." },
+            { tib: "སུ", wylie: "su", phon: "su", note: "Same as the first སུ above: root ས (sa) with vowel sign ུ (u), 'su' — begins supoṣyo, 'to be well-nourished'. The following པོཥྱོ begins with པ and does not change this syllable's sound." },
             {
               tib: "པོཥྱོ",
               wylie: "poShyo",
               phon: "poshyo",
               note:
-                "Root letter པ (pa) with the vowel sign ོ (o), carrying the same retroflex-plus-subjoined stack ཥྱ as ཏོཥྱོ above, reproducing '-ṣy-'. Read 'poṣyo' (suposyaḥ → suposyo before me). Combined with su-, 'suposyo' = 'to be well-nourished'. The following མེ begins with མ and does not change this syllable's sound."
+                "Root letter པ (pa) with the vowel sign ོ (o), carrying the same retroflex-plus-subjoined stack ཥྱ as ཏོཥྱོ above, reproducing '-ṣy-'. Read 'poṣyo' (supoṣyaḥ → supoṣyo before me). Combined with su-, 'supoṣyo' = 'to be well-nourished'. The following མེ begins with མ and does not change this syllable's sound."
             },
             { tib: "མེ", wylie: "me", phon: "me", note: "= 'me/for me', as above. The following བྷ begins with བྷ and does not change this syllable's sound." },
             { tib: "བྷ", wylie: "b+ha", phon: "bha", note: "= 'bha', as above, beginning bhava. The following ཝ begins with ཝ and does not change this syllable's sound." },
-            { tib: "ཝ", wylie: "wa", phon: "wa", note: "= 'wa', completing the second 'bhava': 'suposyo me bhava' = 'nourish me well!'. The following ཨ begins a new word with the vowel-carrier ཨ and does not change this syllable's sound." },
+            { tib: "ཝ", wylie: "wa", phon: "wa", note: "= 'wa', completing the second 'bhava': 'supoṣyo me bhava' = 'nourish me well!'. The following ཨ begins a new word with the vowel-carrier ཨ and does not change this syllable's sound." },
             {
               tib: "ཨ",
               wylie: "a",
               phon: "a",
               note:
-                "The vowel-carrier letter ཨ (a-chung), used to write a vowel that does not follow a consonant: short 'a'. Begins anurakto, 'devoted'. The following ནུ begins with ན and does not change this syllable's sound."
+                "The vowel-carrier letter ཨ (a-chen), used to write a vowel that does not follow a consonant: short 'a'. Begins anurakto, 'devoted'. The following ནུ begins with ན and does not change this syllable's sound."
             },
             { tib: "ནུ", wylie: "nu", phon: "nu", note: "Root letter ན (na) with the vowel sign ུ (u): 'nu'. Combined with the preceding a, this gives 'anu-' ('toward'). The following རཀྟོ begins with ར and does not change this syllable's sound." },
             {
@@ -1634,7 +1600,7 @@ export const mantras = [
               wylie: "AH",
               phon: "ah",
               note:
-                "The vowel-carrier letter ཨ (a-chung, used to write a vowel not following a consonant) with the long-vowel sign ཱ and the visarga ཿ — together 'āḥ', a closing seed syllable associated with speech (compare oṃ āḥ hūṃ in the Vajra Guru mantra), sealing the mantra. This is the final syllable of the entire hundred-syllable mantra, so there is no following syllable to affect it."
+                "The vowel-carrier letter ཨ (a-chen, used to write a vowel not following a consonant) with the long-vowel sign ཱ and the visarga ཿ — together 'āḥ', a closing seed syllable associated with speech (compare oṃ āḥ hūṃ in the Vajra Guru mantra), sealing the mantra. This is the final syllable of the entire hundred-syllable mantra, so there is no following syllable to affect it."
             }
           ]
         }
@@ -1656,7 +1622,7 @@ export const mantras = [
       phonetic: "Om Ah Hung Benza Guru Yutok Yönten Gönpo Siddhi Hung",
       translation:
         "Oṃ Āḥ Hūṃ — Vajra Guru Yuthok Yönten Gönpo — grant attainments (siddhi), Hūṃ! A guru-yoga mantra of the Yuthok Nyingthig tradition, invoking Yuthok Yönten Gönpo (the legendary founder of Tibetan medicine) as an emanation of Padmasambhava.",
-      scriptType: "native-tibetan",
+      scriptType: "mixed",
       intro:
         "This mantra is a hybrid: it opens and closes with the same Sanskrit-spelling blocks as the Vajra Guru mantra (Om Āḥ Hūṃ ... Siddhi Hūṃ), but its centre replaces 'Padma' with the genuinely Tibetan name of Yuthok Yönten Gönpo — 'Yuthok' ('Turquoise Roof', his family name) and 'Yönten Gönpo' ('Glorious/Lordly One of Good Qualities', part of his personal name). These middle syllables follow ordinary Tibetan reading rules (silent prefixes, vowel-fronting before certain suffixes), unlike the Sanskrit-spelling syllables around them.",
       words: [
@@ -1666,7 +1632,7 @@ export const mantras = [
           phon: "Om Ah Hung",
           gloss: "three seed syllables — body, speech, mind",
           syllables: [
-            { tib: "ཨོཾ", wylie: "oM", phon: "Om", note: "The vowel-carrier letter ཨ (a-chung) with the vowel sign ོ (o) and the anusvāra ཾ (ṃ), spelling out oṃ syllable-by-syllable rather than with the single Oṃ ligature ༀ — both are read identically, representing the body aspect. The following ཨཱཿ begins with the same vowel-carrier ཨ and has no effect on this syllable's sound." },
+            { tib: "ཨོཾ", wylie: "oM", phon: "Om", note: "The vowel-carrier letter ཨ (a-chen) with the vowel sign ོ (o) and the anusvāra ཾ (ṃ), spelling out oṃ syllable-by-syllable rather than with the single Oṃ ligature ༀ — both are read identically, representing the body aspect. The following ཨཱཿ begins with the same vowel-carrier ཨ and has no effect on this syllable's sound." },
             {
               tib: "ཨཱཿ",
               wylie: "AH",
@@ -1685,7 +1651,7 @@ export const mantras = [
           syllables: [
             {
               tib: "བཛྲ",
-              wylie: "badz ra",
+              wylie: "badz+ra",
               phon: "Benza",
               note:
                 "Root letter བ (ba) with ཛ (ja/dza) and ྲ (ra) both subjoined, reproducing the Sanskrit consonant cluster 'vajra'. Tibetans pronounce ཛ like 'dz', so the cluster comes out as 'badza/benza' — the familiar Tibetanised 'Benza' for 'Vajra'. The following གུ begins with plain ག and does not change this syllable."
@@ -1749,7 +1715,7 @@ export const mantras = [
               wylie: "mgon",
               phon: "gön",
               note:
-                "Root letter ག (ga) with the silent prefix letter མ (ma) written above it, the vowel sign ོ (o), and the suffix letter ན (na). The prefix མ is one of the five silent prefix consonants (ག ད བ མ འ) and is not pronounced, but — as with bla-ma above — it can shift the syllable's register; here it keeps the naturally high-register ག from shifting further. The suffix ན again fronts the vowel, so -o + ན is heard as '-ön': མགོན is pronounced 'gön'. The following པོ begins with པ and does not change this syllable's sound."
+                "Root letter ག (ga) with the silent prefix letter མ (ma) written above it, the vowel sign ོ (o), and the suffix letter ན (na). The prefix མ is one of the five silent prefix consonants (ག ད བ མ འ) and is not pronounced, but — as in Lama Khyen-no — it can shift the syllable's register; here it keeps the naturally high-register ག from shifting further. The suffix ན again fronts the vowel, so -o + ན is heard as '-ön': མགོན is pronounced 'gön'. The following པོ begins with པ and does not change this syllable's sound."
             },
             {
               tib: "པོ",
@@ -1786,7 +1752,7 @@ export const mantras = [
         }
       ],
       wordGrouping:
-        "Eleven Tibetan syllable-blocks group into seven units: Om | Ah | Hung (body–speech–mind, spelled out letter-by-letter rather than with the Oṃ ligature) | Benza-Guru ('Vajra Guru') | Yutok ('Turquoise Roof', the guru's family name) | Yönten-Gönpo ('Lord of Good Qualities', his personal name) | Siddhi-Hung ('grant attainments now'). The middle three words name Yuthok Yönten Gönpo directly, framed by the same opening/closing formula as the Vajra Guru mantra — reflecting his identity as an emanation of Padmasambhava."
+        "Fourteen Tibetan syllable-blocks group into seven units: Om | Ah | Hung (body–speech–mind, spelled out letter-by-letter rather than with the Oṃ ligature) | Benza-Guru ('Vajra Guru') | Yutok ('Turquoise Roof', the guru's family name) | Yönten-Gönpo ('Lord of Good Qualities', his personal name) | Siddhi-Hung ('grant attainments now'). The middle three words name Yuthok Yönten Gönpo directly, framed by the same opening/closing formula as the Vajra Guru mantra — reflecting his identity as an emanation of Padmasambhava."
     }
   },
 
@@ -1817,7 +1783,7 @@ export const mantras = [
               wylie: "bla",
               phon: "la (high tone)",
               note:
-                "Structure: superscript བ (ba) over root letter ལ (la), inherent vowel 'a'. In modern Central Tibetan, a superscript ར, ལ or ས before certain root letters is not pronounced as a separate consonant — but it is NOT 'wasted': it shifts the syllable into HIGH register/tone. ལ on its own is one of the 'low' (voiced/resonant) consonants and would give a low-toned 'la'; with the silent superscript བ, བླ is pronounced 'la' but in a HIGH tone, audibly different from plain ལ. Lexically, 'bla' is an old word for 'soul/highest/upper', seen in bla-ma 'guru' (lit. 'the higher one'). The following syllable མ begins with a plain low-register consonant and does not change this syllable's tone or sound."
+                "Structure: root letter བ (ba) with ལ (la) subjoined beneath it (la-btags), inherent vowel 'a'. In the combinations བླ, ཟླ, རླ and སླ the subjoined ལ takes over the sound and the root letter is silent — but it is NOT 'wasted': it shifts the syllable into HIGH register/tone. ལ on its own is one of the 'low' (voiced/resonant) consonants and would give a low-toned 'la'; with the silent བ, བླ is pronounced 'la' but in a HIGH tone, audibly different from plain ལ. (The same tone-raising effect comes from the superscripts ར, ལ, ས and the prefixes, seen in the next syllables.) Lexically, 'bla' is an old word for 'soul/highest/upper', seen in bla-ma 'guru' (lit. 'the higher one'). The following syllable མ begins with a plain low-register consonant and does not change this syllable's tone or sound."
             },
             {
               tib: "མ",
@@ -1860,7 +1826,7 @@ export const mantras = [
         }
       ],
       wordGrouping:
-        "Three words across four syllable-blocks: bla-ma ('guru', 2 syllables forming one compound noun) + mkhyen ('knows/cares for', 1 syllable, the verb) + no (1 syllable, a final particle). Sentence pattern: Subject (Guru) + Verb (think-of-me) + Particle (please) — 'Guru, [please] think of me!'. Contrast this with the Sanskrit mantras above: here every silent letter (the prefix མ, the superscript བ) is doing real grammatical/phonological work (raising tone), which is the system that does NOT apply when Tibetan letters are instead used to spell out Sanskrit."
+        "Three words across four syllable-blocks: bla-ma ('guru', 2 syllables forming one compound noun) + mkhyen ('knows/cares for', 1 syllable, the verb) + no (1 syllable, a final particle). Sentence pattern: Subject (Guru) + Verb (think-of-me) + Particle (please) — 'Guru, [please] think of me!'. Contrast this with the Sanskrit mantras above: here every silent letter (the prefix མ, the silent བ of བླ) is doing real grammatical/phonological work (raising tone), which is the system that does NOT apply when Tibetan letters are instead used to spell out Sanskrit."
     }
   },
   {
@@ -1869,7 +1835,7 @@ export const mantras = [
   deity: "Śākyamuni Buddha (the historical Buddha, Siddhārtha Gautama)",
   tags: ["Shakyamuni", "historical Buddha", "merit", "purification", "Sanskrit mantra"],
   sanskrit: {
-    script: "ॐ मुनि मुनि महामुनि शाक्यमुनि स्वाहा",
+    script: "ॐ मुनि मुनि महामुनि शाक्यमुनिये स्वाहा",
     transliteration: "oṃ muni muni mahāmuni śākyamuniye svāhā",
     translation: "Oṃ, O Sage, Sage, Great Sage, O Sage of the Śākyas — svāhā!",
     words: [
@@ -1883,19 +1849,19 @@ export const mantras = [
         word: "muni",
         gloss: "sage / silent one",
         note: "From the root √man ('to think'), muni denotes a sage who realises truth through inner silence. Repeated twice as an intensifier: 'Sage, Sage'. In Buddhist usage it is the standard epithet of the Buddha (the Silent Sage who emerged from silence to teach).",
-        grammar: "Masculine vocative singular of muni (i-stem noun)."
+        grammar: "Masculine i-stem noun used as an address. The classical vocative singular would be mune; mantric (Buddhist Hybrid) Sanskrit instead uses the bare stem muni as a vocative — the same 'bare stem' habit seen in vajra guru padma."
       },
       {
         word: "muni",
         gloss: "sage (second invocation)",
         note: "Repetition of the epithet for emphasis — a standard Vedic and Buddhist intensification pattern.",
-        grammar: "Masculine vocative singular of muni."
+        grammar: "Bare stem used as vocative, as above."
       },
       {
         word: "mahāmuni",
         gloss: "Great Sage",
-        note: "mahā ('great') + muni: a superlative compound honouring the Buddha above all other sages. The long ā of mahā blends smoothly into muni.",
-        grammar: "Masculine vocative singular of the karmadharaya compound mahā-muni."
+        note: "mahā ('great', the compounding form of mahat) + muni: a superlative compound honouring the Buddha above all other sages.",
+        grammar: "Karmadhāraya compound mahā-muni, again in the bare stem form used as a vocative."
       },
       {
         word: "śākyamuniye",
@@ -2050,7 +2016,7 @@ export const mantras = [
         ]
       }
     ],
-    wordGrouping: "Fourteen Tibetan syllable-blocks group into five units: Oṃ (seed syllable) | Muni-Muni (Sage, Sage — doubled invocation) | Mahā-Muni (Great Sage) | Śākya-Muni-ye (O Sage of the Śākyas — the Buddha's proper name plus vocative suffix) | Svāhā (sealing exclamation). The pattern of three progressively fuller invocations — muni, muni → mahā-muni → śākyamuni-ye — mirrors the triple repetition in many other Buddhist mantras and carries the practitioner from general invocation toward the specific, personal name of the historical Buddha."
+    wordGrouping: "Fifteen Tibetan syllable-blocks group into five units: Oṃ (seed syllable) | Muni-Muni (Sage, Sage — doubled invocation) | Mahā-Muni (Great Sage) | Śākya-Muni-ye (O Sage of the Śākyas — the Buddha's proper name plus vocative suffix) | Svāhā (sealing exclamation). The pattern of three progressively fuller invocations — muni, muni → mahā-muni → śākyamuni-ye — mirrors the triple repetition in many other Buddhist mantras and carries the practitioner from general invocation toward the specific, personal name of the historical Buddha."
   }
 },
 {
@@ -2079,7 +2045,7 @@ export const mantras = [
         word: "hetun teṣāṃ",
         gloss: "their cause",
         note: "hetun is the accusative singular of hetu ('cause'), here the direct object of avadat. teṣāṃ is the genitive plural of tad ('those/them'): 'their (i.e., those phenomena's) cause'. This picks up the antecedent ye dharmā above.",
-        grammar: "hetun: accusative singular (a-stem). teṣāṃ: genitive plural of tad."
+        grammar: "hetun: accusative singular of the masculine u-stem hetu (hetum, with final -m written as -n before the following t- in this traditional spelling). teṣāṃ: genitive plural of tad."
       },
       {
         word: "tathāgato hy avadat",
@@ -2109,7 +2075,7 @@ export const mantras = [
   },
   tibetan: {
     script: "ཡེ་དྷར་མཱ་ཧེ་ཏུ་པྲ་བྷ་བཱ་ཧེ་ཏུན་ཏེ་ཥཱཾ་ཏ་ཐཱ་ག་ཏོ་ཧྱ་བ་དཏ་ཏེ་ཥཱཾ་ཙ་ཡོ་ནི་རོ་དྷ་ཨེ་བཾ་བཱ་དི་མ་ཧཱ་ཤྲ་མ་ཎཿ།",
-    wylie: "ye d+har mA he tu pra b+ha vA he tun te ShAM ta thA ga to h+ya ba dat te ShAM tsa yo ni ro d+ha e waM bA di ma hA sh+ra ma NaH",
+    wylie: "ye d+har mA he tu pra b+ha bA he tun te ShAM ta thA ga to h+ya ba dat te ShAM tsa yo ni ro d+ha e baM bA di ma hA sh+ra ma NaH",
     phonetic: "Ye Dharma Hetu Prabhawa Hetun Tesham Tathagato Hya Badat Tesham Tsa Yo Niro Dha Ewam Badi Maha Shramana",
     translation: "Those phenomena that arise from causes — the Tathāgata has declared their cause and also their cessation — thus the Great Śramaṇa teaches.",
     scriptType: "sanskrit-in-tibetan",
@@ -2143,7 +2109,7 @@ export const mantras = [
       },
       {
         script: "ཧེ་ཏུ་པྲ་བྷ་བཱ",
-        wylie: "he tu pra b+ha vA",
+        wylie: "he tu pra b+ha bA",
         phon: "Hetu Prabhawa",
         gloss: "arise from causes",
         syllables: [
@@ -2173,7 +2139,7 @@ export const mantras = [
           },
           {
             tib: "བཱ",
-            wylie: "vA",
+            wylie: "bA",
             phon: "wa",
             note: "Root letter བ (ba, used here to represent Sanskrit 'v') with the long-vowel sign ཱ (ā): 'vā'. Together པྲ་བྷ་བཱ = 'prabhavā', '(those whose) arising is from (causes)'. The following ཧེ begins a new phrase and does not change this syllable's sound."
           }
@@ -2259,7 +2225,7 @@ export const mantras = [
             tib: "བ",
             wylie: "ba",
             phon: "ba",
-            note: "Root letter བ (ba) with inherent vowel 'a': 'ba'. Represents the Sanskrit prefix a- of avadat (the augment marking past tense in the imperfect). The following དཏ begins with ད and does not change this syllable's sound."
+            note: "Root letter བ (ba, representing Sanskrit 'v') with inherent vowel 'a': 'va'. The Tibetan blocks divide 'hy avadat' as hya-va-dat, so the a- of avadat (the augment marking past tense) is carried by the preceding ཧྱ, and this block gives the 'va'. The following དཏ begins with ད and does not change this syllable's sound."
           },
           {
             tib: "དཏ",
@@ -2329,7 +2295,7 @@ export const mantras = [
       },
       {
         script: "ཨེ་བཾ་བཱ་དི",
-        wylie: "e waM bA di",
+        wylie: "e baM bA di",
         phon: "Ewam Badi",
         gloss: "thus teaches",
         syllables: [
@@ -2337,11 +2303,11 @@ export const mantras = [
             tib: "ཨེ",
             wylie: "e",
             phon: "e",
-            note: "The vowel-carrier letter ཨ (a-chung) with the vowel sign ེ (e): 'e'. Used to write a vowel that does not follow a consonant. Begins evaṃ, 'thus'. The following བཾ begins with བ and does not change this syllable's sound."
+            note: "The vowel-carrier letter ཨ (a-chen) with the vowel sign ེ (e): 'e'. Used to write a vowel that does not follow a consonant. Begins evaṃ, 'thus'. The following བཾ begins with བ and does not change this syllable's sound."
           },
           {
             tib: "བཾ",
-            wylie: "waM",
+            wylie: "baM",
             phon: "wam",
             note: "Root letter བ (ba, here representing Sanskrit 'v') with the anusvāra ཾ (nasalising to '-ṃ'): 'vaṃ'. Together ཨེ་བཾ = 'evaṃ', the Sanskrit adverb 'thus, in this way', marking the manner of the teaching that follows. The following བཱ begins with བ and does not change this syllable's sound."
           },
@@ -2505,7 +2471,7 @@ export const mantras = [
             tib: "སྡེ",
             wylie: "sde",
             phon: "dé",
-            note: "Prefix ས (silent; raises register) + root ད (da) with vowel ེ (e), no suffix. The prefix ས before voiced ད raises it to high register: 'dé' (high tone). Means 'host, division, assembly'. The following ཚོགས begins with ཚ and does not change this syllable's sound."
+            note: "Superscript ས (sa-mgo, silent) above root ད (da), with vowel ེ (e), no suffix. The superscript ས raises the voiced ད to high register: 'dé' (high tone). Means 'host, division, assembly'. The following ཚོགས begins with ཚ and does not change this syllable's sound."
           },
           {
             tib: "ཚོགས",
@@ -2567,7 +2533,7 @@ export const mantras = [
             tib: "ལྡན",
             wylie: "ldan",
             phon: "den",
-            note: "Prefix ལ (here as a prefix consonant, silent) + root ད (da) with inherent vowel 'a' + suffix ན. The suffix ན fronts the vowel: a → e, giving 'den'. Prefix ལ before ད raises the register slightly (high tone). Means 'endowed with / possessing' — a common Tibetan verb of attribution. The following སྲིད begins a new line and does not change this syllable's sound."
+            note: "Superscript ལ (la-mgo, silent) above root ད (da), with inherent vowel 'a' + suffix ན. The suffix ན fronts the vowel: a → e, giving 'den'. The superscript ལ raises the register (high tone). Means 'endowed with / possessing' — a common Tibetan verb of attribution. The following སྲིད begins a new line and does not change this syllable's sound."
           }
         ]
       },
@@ -2581,7 +2547,7 @@ export const mantras = [
             tib: "སྲིད",
             wylie: "srid",
             phon: "si",
-            note: "Prefix ས (silent) + superscript ར above root ད, giving the cluster རད, with vowel ི (i) and suffix ད. Both the prefix ས and the superscript ར raise the register to high/falling tone. The suffix ད closes as an unreleased stop, giving 'si' (or 'sit' when clearly pronounced). Means 'existence / cyclic existence / saṃsāra'. The following དང begins with ད and does not change this syllable's sound."
+            note: "Root letter ས (sa) with ར (ra) subjoined beneath it (ra-btags), vowel ི (i) and suffix ད. In the cluster སྲ the subjoined ར is silent in Central Tibetan, leaving a high-register 's'; the suffix ད closes as an unreleased stop, giving 'si' (or 'sit' when clearly pronounced). Means 'existence / cyclic existence / saṃsāra'. The following དང begins with ད and does not change this syllable's sound."
           },
           {
             tib: "དང",
@@ -2725,7 +2691,7 @@ export const mantras = [
             tib: "སྐྱེ",
             wylie: "skye",
             phon: "kyé",
-            note: "Prefix ས (silent; raises register) + root ཀ (ka) with subjoined ྱ (ya) and the vowel sign ེ (e), no suffix. The prefix ས raises register; the subjoined ྱ palatalises the cluster to 'ky-': 'kyé' (high tone). Means 'birth / rebirth / to arise'. The following དང begins with ད and does not change this syllable's sound."
+            note: "Superscript ས (sa-mgo, silent) above root ཀ (ka), with subjoined ྱ (ya) and the vowel sign ེ (e), no suffix — a three-letter stack སྐྱ. The superscript ས raises register; the subjoined ྱ palatalises the cluster to 'ky-': 'kyé' (high tone). Means 'birth / rebirth / to arise'. The following དང begins with ད and does not change this syllable's sound."
           },
           {
             tib: "དང",
@@ -2837,7 +2803,7 @@ export const mantras = [
             tib: "སྡུག",
             wylie: "sdug",
             phon: "duk",
-            note: "Prefix ས (silent; raises register) + root ད (da) with the vowel sign ུ (u) + suffix ག. The prefix ས raises register; suffix ག closes as unreleased -k: 'duk' (high tone). Means 'suffering / painful / distressing'. The following བསྔལ begins with བ and does not change this syllable's sound."
+            note: "Superscript ས (sa-mgo, silent) above root ད (da), with the vowel sign ུ (u) + suffix ག. The superscript ས raises register; suffix ག closes as unreleased -k: 'duk' (high tone). Means 'suffering / painful / distressing'. The following བསྔལ begins with བ and does not change this syllable's sound."
           },
           {
             tib: "བསྔལ",
@@ -2855,7 +2821,7 @@ export const mantras = [
             tib: "སྒྲོལ",
             wylie: "sgrol",
             phon: "drol",
-            note: "Prefix ས (silent; raises register) + superscript ར above root ག (ga), giving the cluster རག, with the vowel sign ོ (o) and suffix ལ. The prefix ས and superscript ར both affect register; suffix ལ closes as -l: 'drol' (high tone). Means 'to liberate / to free / to deliver'. The following བའི begins with བ and does not change this syllable's sound."
+            note: "Superscript ས (sa-mgo, silent) above root ག (ga), with ར (ra) subjoined beneath it (ra-btags), the vowel sign ོ (o) and suffix ལ — a three-letter stack སྒྲ. The superscript ས raises register; the subjoined ར turns ག into a retroflex 'dr'; suffix ལ closes as -l: 'drol' (high tone). Means 'to liberate / to free / to deliver'. The following བའི begins with བ and does not change this syllable's sound."
           },
           {
             tib: "བའི",
@@ -2916,7 +2882,7 @@ export const mantras = [
         ]
       }
     ],
-    wordGrouping: "Sixty-three Tibetan syllable-blocks across nine lines form two sections: a four-line praise of Śākyamuni's qualities (lines 1–4: vanquishing Māra, possessing the two accumulations, transcending extremes, the supplication itself) and a five-line aspiration (lines 5–9: pacify the eight fears; in future lives obtain an excellent body; liberate beings from suffering; become the supreme guide to happiness). The final two lines are syntactically linked — line 8 (of liberating beings from suffering) is a genitive modifying line 9's 'supreme guide' — so the last aspiration reads together: 'may I become the supreme guide who liberates beings from suffering to happiness'."
+    wordGrouping: "Sixty-two Tibetan syllable-blocks across nine lines form two sections: a four-line praise of Śākyamuni's qualities (lines 1–4: vanquishing Māra, possessing the two accumulations, transcending extremes, the supplication itself) and a five-line aspiration (lines 5–9: pacify the eight fears; in future lives obtain an excellent body; liberate beings from suffering; become the supreme guide to happiness). The final two lines are syntactically linked — line 8 (of liberating beings from suffering) is a genitive modifying line 9's 'supreme guide' — so the last aspiration reads together: 'may I become the supreme guide who liberates beings from suffering to happiness'."
   }
 },
 {
@@ -2924,80 +2890,14 @@ export const mantras = [
   title: "Oṃ Āḥ Hūṃ — Five Element Purification Mantra",
   deity: "Five Dhyāni Buddhas / Five Elements",
   tags: ["purification", "five elements", "Om Ah Hung", "seed syllables", "space", "wind", "water", "fire", "earth", "Vajrayana"],
-  sanskrit: {
-    script: "ॐ आः हूँ | ए यं कं रं लं | शुद्धे शुद्धे | अ अ",
-    transliteration: "Oṃ Āḥ Hūṃ | E Yaṃ Kaṃ Raṃ Laṃ | Śuddhe Śuddhe | A A",
-    translation: "Oṃ Āḥ Hūṃ [body, speech, mind] | Space Wind Water Fire Earth | Purify! Purify! | A A",
-    words: [
-      {
-        word: "Oṃ",
-        gloss: "the universal seed syllable of awakened awareness",
-        note: "The primordial syllable, composed of three phonemes (a-u-m) representing the three bodies of the Buddha (nirmāṇakāya, sambhogakāya, dharmakāya) and the three realities of appearance, sound, and awareness. In this mantra, together with Āḥ and Hūṃ, it represents the body of all Buddhas.",
-        grammar: "Indeclinable seed (bīja) syllable; Sanskrit oṃ from AUM."
-      },
-      {
-        word: "Āḥ",
-        gloss: "seed syllable of speech and the throat center",
-        note: "A pure long vowel 'ā' followed by the visarga (ḥ), representing an aspirated out-breath or resonance. In the Vajrayāna triad Oṃ-Āḥ-Hūṃ, Āḥ is the seed syllable of the speech of all Buddhas. It represents unobstructed sound and the purification of speech.",
-        grammar: "Bīja syllable; the visarga (ḥ) represents the śakti or resonance following the pure vowel."
-      },
-      {
-        word: "Hūṃ",
-        gloss: "seed syllable of mind and the heart center",
-        note: "The deep-blue seed syllable of Vajrasattva and Akṣobhya, representing the indestructible nature of awakened mind. The long ū gives it a resonant, penetrating quality; the anusvāra (ṃ) represents the undifferentiated vibration from which awareness arises. In the Oṃ-Āḥ-Hūṃ triad it represents the mind of all Buddhas.",
-        grammar: "Bīja syllable; anusvāra (ṃ) is the resonant nasal termination."
-      },
-      {
-        word: "E",
-        gloss: "seed syllable of the space element (ākāśa)",
-        note: "The pure vowel E (pronounced 'ay') is the seed syllable of space (ākāśa), the first and most fundamental of the five elements. Space is the ground in which all other elements arise; it corresponds to Vairocana in many Vajrayāna systems. The Tibetan letter ཨེ is used — the vowel carrier ཨ with the e-sign ེ.",
-        grammar: "Bīja syllable; the sole vowel E, standing for ākāśa (space)."
-      },
-      {
-        word: "Yaṃ",
-        gloss: "seed syllable of the wind / air element (vāyu)",
-        note: "Ya (the Sanskrit semi-vowel) with anusvāra forms the seed of the wind element (vāyu). Wind is associated with movement, breath, and energy-winds (prāṇa) in the body; in Vajrayāna with Amoghasiddhi. The anusvāra gives the syllable a resonant nasal quality, like a vibrating breath.",
-        grammar: "Bīja syllable; ya + anusvāra ṃ."
-      },
-      {
-        word: "Kaṃ",
-        gloss: "seed syllable of the water element (āpa/jala)",
-        note: "In this tradition, Ka with anusvāra is the seed of the water element (āpa, jala). While some tantric systems use Vaṃ for water, this mantra uses Kaṃ — reflecting a specific lineage mapping of syllables to elements. Water is associated with fluidity, purification, and the sense of taste.",
-        grammar: "Bīja syllable; ka + anusvāra ṃ."
-      },
-      {
-        word: "Raṃ",
-        gloss: "seed syllable of the fire element (agni/tejas)",
-        note: "Ra (the Sanskrit liquid consonant) with anusvāra is the seed of fire (agni, tejas). Fire represents transformation, heat, luminosity, and the sense of sight. In Vajrayāna it is associated with Amitābha and the transformation of desire into discriminating awareness.",
-        grammar: "Bīja syllable; ra + anusvāra ṃ."
-      },
-      {
-        word: "Laṃ",
-        gloss: "seed syllable of the earth element (pṛthivī)",
-        note: "La (the Sanskrit lateral) with anusvāra is the seed of earth (pṛthivī). Earth represents solidity, stability, support, and the sense of smell. In Vajrayāna it is associated with Ratnasambhava and the equanimity that recognizes the equal preciousness of all phenomena.",
-        grammar: "Bīja syllable; la + anusvāra ṃ."
-      },
-      {
-        word: "Śuddhe Śuddhe",
-        gloss: "purify! purify!",
-        note: "From the Sanskrit root śudh (to be clean, to purify). Śuddhe is either the vocative singular feminine of śuddha ('O pure one!') or an imperative/optative form ('may it be purified!'). The repetition intensifies the request and applies retroactively to the five elements named before it: 'May space, wind, water, fire, and earth be purified!'",
-        grammar: "Feminine vocative (or imperative) of śuddha (pure, clean); root √śudh + -ta suffix → śuddha; doubled for emphasis."
-      },
-      {
-        word: "A A",
-        gloss: "the primordial seed syllable, repeated",
-        note: "The unmodified vowel A (short 'a') is considered in Indian and Tibetan Buddhist tantra to be the most fundamental seed syllable — the source of all language and all phenomena. In Tibetan Buddhism it is associated with the dharmakāya, with primordial purity (ka dag), and with the nature of mind itself. Repeated twice, it seals the mantra with recognition of the ultimate nature underlying all elements.",
-        grammar: "Bīja syllable A, the primordial vowel, repeated; in some traditions read Āḥ Āḥ with visarga."
-      }
-    ]
-  },
+  sanskrit: null,
   tibetan: {
-    script: "ༀ་ཨཱཿ་ཧཱུྃ། ཨེ་ཡཾ་ཀཾ་རཾ་ལཾ། ཤུདྡེ་ཤུདྡེ། ཨ་ཨ།",
-    wylie: "oM AH hUM e yaM kaM raM laM shuddhe shuddhe a a",
+    script: "ༀ་ཨཱཿ་ཧཱུྃ། ཨེ་ཡཾ་ཀཾ་རཾ་ལཾ། ཤུདྡྷེ་ཤུདྡྷེ། ཨ་ཨ།",
+    wylie: "oM AH hUM e yaM kaM raM laM shud+d+he shud+d+he a a",
     phonetic: "Om Ah Hung E Yam Kam Ram Lam Shudde Shudde A A",
     translation: "Oṃ Āḥ Hūṃ — Space Wind Water Fire Earth — Purify! Purify! — A A",
     scriptType: "sanskrit-in-tibetan",
-    intro: "This mantra is Sanskrit written in Tibetan script, following the same 'Sanskrit-spelling' conventions as Om Mani Padme Hum. None of the ordinary Tibetan reading rules (silent prefixes, vowel fronting, register shifts) apply — every syllable is a Sanskrit bīja read in its Sanskrit form. Special features: ༀ is the dedicated Tibetan OM glyph; ཨཱཿ uses the long-ā sign ཱ and the Tibetan visarga ཿ; ཧཱུྃ uses the long-ū sign ཱུ and the Tibetan anusvāra ྃ; each element seed syllable (ཡཾ, ཀཾ, རཾ, ལཾ) uses the anusvāra ཾ for the Sanskrit ṃ; and ཤུདྡེ contains the rare Tibetan cluster དྡ used only for the Sanskrit geminate ddh, which does not exist in native Tibetan phonology.",
+    intro: "This mantra is Sanskrit written in Tibetan script, following the same 'Sanskrit-spelling' conventions as Om Mani Padme Hum. None of the ordinary Tibetan reading rules (silent prefixes, vowel fronting, register shifts) apply — every syllable is a Sanskrit bīja read in its Sanskrit form. Special features: ༀ is the dedicated Tibetan OM glyph; ཨཱཿ uses the long-ā sign ཱ and the Tibetan visarga ཿ; ཧཱུྃ uses the long-ū sign ཱུ and the Tibetan anusvāra ྃ; each element seed syllable (ཡཾ, ཀཾ, རཾ, ལཾ) uses the anusvāra ཾ for the Sanskrit ṃ; and ཤུདྡྷེ contains the stack དྡྷ (as in སིདྡྷི, siddhi) used only for the Sanskrit geminate aspirate ddh, which does not exist in native Tibetan phonology.",
     words: [
       {
         script: "ༀ་ཨཱཿ་ཧཱུྃ",
@@ -3096,20 +2996,20 @@ export const mantras = [
         ]
       },
       {
-        script: "ཤུདྡེ་ཤུདྡེ",
-        wylie: "shuddhe shuddhe",
+        script: "ཤུདྡྷེ་ཤུདྡྷེ",
+        wylie: "shud+d+he shud+d+he",
         phon: "śuddhe śuddhe",
         gloss: "purify! purify!",
         syllables: [
           {
-            tib: "ཤུདྡེ",
-            wylie: "shuddhe",
+            tib: "ཤུདྡྷེ",
+            wylie: "shud+d+he",
             phon: "śuddhe",
-            note: "The letter ཤ (śa, the palatal sibilant) with the u-sign ུ giving ཤུ (śu), followed by the cluster དྡ with the e-sign ེ giving དྡེ (ddhe). The cluster དྡ — da with subjoined da — is a special Sanskrit-only stack in Tibetan script representing the Sanskrit geminate voiced aspirate 'ddh', a sound absent from native Tibetan phonology. Together: 'śuddhe'. Derives from √śudh ('to purify'); śuddhe is a vocative/imperative: 'O pure one!' or 'Purify!'"
+            note: "The letter ཤ (śa, the palatal sibilant) with the u-sign ུ giving ཤུ (śu), followed in the same block by ད (da) with a subjoined ད and the aspiration mark ྷ stacked beneath it, plus the e-sign ེ: དྡྷེ (ddhe). The stack དྡྷ is a Sanskrit-only combination in Tibetan script (the same one seen in སིདྡྷི, siddhi) representing the geminate voiced aspirate 'ddh', a sound absent from native Tibetan phonology. Together: 'śuddhe'. Derives from √śudh ('to purify'); śuddhe is a vocative/imperative: 'O pure one!' or 'Purify!'"
           },
           {
-            tib: "ཤུདྡེ",
-            wylie: "shuddhe",
+            tib: "ཤུདྡྷེ",
+            wylie: "shud+d+he",
             phon: "śuddhe",
             note: "Exact repetition of the preceding syllable. In Sanskrit, doubling a verb or verbal form intensifies its force: 'purify! purify!' — a strong, repeated invocation applied to all five elements named before it: may space, wind, water, fire, and earth each be thoroughly purified."
           }
@@ -3138,5 +3038,117 @@ export const mantras = [
     ],
     wordGrouping: "Twelve syllable-blocks divide into four natural groups that move from the universal to the specific and back: Oṃ-Āḥ-Hūṃ (the three vajras — body, speech, and mind of all Buddhas; they bless and frame the practice) | E-Yaṃ-Kaṃ-Raṃ-Laṃ (the five element seed syllables in order: space, wind, water, fire, earth — invoking each element by its Sanskrit bīja) | Śuddhe-Śuddhe (the purification command, applied retroactively to all five elements) | A-A (the primordial seed syllable repeated, sealing the mantra in the nature of mind). The arc moves outward into the manifest world of elements and then returns to the source."
   }
-}
+},
+  {
+    id: "maha-mrityunjaya",
+    title: "Mahāmṛtyuñjaya Mantra (Oṃ Tryambakaṃ Yajāmahe)",
+    deity: "Rudra / Śiva as Tryambaka, the Three-Eyed One (Ṛgveda 7.59.12)",
+    tags: ["Śiva", "Rudra", "Vedic", "Hindu", "healing", "long life", "conquering death", "Rigveda"],
+    sanskrit: {
+      script: "ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम् । उर्वारुकमिव बन्धनान् मृत्योर्मुक्षीय माऽमृतात् ॥",
+      transliteration:
+        "oṃ tryambakaṃ yajāmahe sugandhiṃ puṣṭi-vardhanam | urvārukam iva bandhanān mṛtyor mukṣīya mā'mṛtāt",
+      translation:
+        "Oṃ. We worship the Three-Eyed One, fragrant, who increases nourishment. As a cucumber (is freed) from its stalk, may I be freed from death — not from immortality.",
+      lines: [
+        {
+          script: "ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम्",
+          translit: "oṃ tryambakaṃ yajāmahe sugandhiṃ puṣṭi-vardhanam",
+          gloss: "Oṃ. We worship the Three-Eyed One, fragrant, increaser of nourishment",
+          note:
+            "The first half-verse is pure praise: three accusatives (tryambakam, sugandhim, puṣṭi-vardhanam) all describe the object of the one verb yajāmahe ('we worship'). oṃ is not part of the Ṛgvedic text; it is prefixed in later recitation."
+        },
+        {
+          script: "उर्वारुकमिव बन्धनान् मृत्योर्मुक्षीय माऽमृतात्",
+          translit: "urvārukam iva bandhanān mṛtyor mukṣīya mā'mṛtāt",
+          gloss: "As a cucumber from its stalk, may I be freed from death — not from immortality",
+          note:
+            "The second half-verse is the petition, built on a simile: a ripe cucumber drops from its stem without force. Three ablatives (bandhanāt, mṛtyoḥ, amṛtāt) answer the question 'freed from what?' — from the stalk, from death, but not from the deathless state."
+        }
+      ],
+      words: [
+        {
+          word: "oṃ",
+          gloss: "sacred syllable",
+          note:
+            "The praṇava. Not found in the Ṛgveda verse itself (RV 7.59.12), where the hymn begins directly with tryambakaṃ; it is added in the mantra's later liturgical form.",
+          grammar:
+            "Indeclinable sacred particle (praṇava); not assigned to a part of speech in classical grammar."
+        },
+        {
+          word: "tryambakaṃ",
+          gloss: "the Three-Eyed One (accusative)",
+          note:
+            "tri ('three') + ambaka ('eye') → tryambaka, 'three-eyed', an epithet of Rudra/Śiva whose third eye is the eye of wisdom (and of destruction). The oldest Vedic sense may be 'having three mothers' (ambā, 'mother'), but the 'three-eyed' reading is the one followed by the tradition. Sandhi: the final -i of tri becomes -y before the vowel a- (yaṇ-sandhi), giving try-ambaka; the final -m becomes anusvāra before the following y-.",
+          grammar:
+            "Accusative singular masculine of the a-stem tryambaka (a bahuvrīhi compound: 'he whose eyes are three'), direct object of yajāmahe."
+        },
+        {
+          word: "yajāmahe",
+          gloss: "we worship / we offer sacrifice",
+          note:
+            "The single finite verb of the praise-half. √yaj means 'to worship, to offer sacrifice' — in the Vedic setting a literal ritual offering; in later recitation, worship by the mantra itself.",
+          grammar:
+            "1st person plural, present indicative, ātmanepada (middle voice) of √yaj (class 1): yaj-ā-mahe. The middle voice is regular for 'sacrificing for one's own benefit'."
+        },
+        {
+          word: "sugandhiṃ",
+          gloss: "fragrant, sweet-smelling (accusative)",
+          note:
+            "su- ('well, good') + gandha ('smell') → sugandhi, 'of good fragrance'. Understood as the fragrance of Śiva's virtues and the sweetness he spreads, like that of a flower. Sandhi: final -m → anusvāra ṃ before the following p- of puṣṭi.",
+          grammar:
+            "Accusative singular masculine of the Vedic i-stem bahuvrīhi sugandhi ('whose scent is good'; classical Sanskrit would use sugandha), in agreement with tryambakam."
+        },
+        {
+          word: "puṣṭi-vardhanam",
+          gloss: "the increaser of nourishment / prosperity (accusative)",
+          note:
+            "puṣṭi ('nourishment, thriving, prosperity' — the same word as in the White Tārā mantra's puṣṭiṃ kuru) + vardhana ('increasing, causing to grow', from the causative of √vṛdh 'to grow'). The compound names Śiva as the one who makes all nourishment and well-being increase. The final -m is kept as a full consonant here because it stands before the pause at the end of the half-verse.",
+          grammar:
+            "Accusative singular masculine of the tatpuruṣa compound puṣṭi-vardhana ('increaser of puṣṭi'); vardhana is an agent/action noun in -ana from the causative stem vardhaya-. Third of the three accusatives governed by yajāmahe."
+        },
+        {
+          word: "urvārukam iva",
+          gloss: "like a cucumber",
+          note:
+            "urvāruka is a cucumber or melon of the kind that ripens on a creeping vine and, when ripe, detaches from its stalk by itself. iva is the comparison particle 'like, as'. The image is of a release that happens naturally, without violence, at the right time.",
+          grammar:
+            "urvārukam: nominative/accusative singular of the neuter a-stem urvāruka, here the subject of the implied verb of the simile ('as a cucumber [is freed]'). iva: indeclinable comparative particle, always placed after the word it compares."
+        },
+        {
+          word: "bandhanān",
+          gloss: "from the stalk / from bondage (ablative)",
+          note:
+            "bandhana means 'binding, bond, fetter' and, concretely, the stem that binds the fruit to the vine — so the word works on both levels of the simile: the cucumber's stalk and the bonds of mortality. Sandhi: the underlying bandhanāt ends in -t, which becomes -n before the nasal m- of mṛtyoḥ (bandhanāt + mṛtyoḥ → bandhanān mṛtyoḥ).",
+          grammar:
+            "Ablative singular of the neuter a-stem bandhana (a-stem ablative singular = stem + -āt), 'from the bond'; final -t → -n by consonant sandhi before m-."
+        },
+        {
+          word: "mṛtyor",
+          gloss: "from death (ablative)",
+          note:
+            "mṛtyu, 'death', from √mṛ 'to die' (cognate with Latin mors, English 'mortal'). Sandhi: the underlying mṛtyoḥ ends in visarga, which becomes -r before the voiced m- of mukṣīya.",
+          grammar:
+            "Ablative singular of the masculine u-stem mṛtyu: u-stem ablative singular = guṇa of the stem vowel (u → o) + -ḥ, giving mṛtyoḥ; visarga → r before a voiced consonant."
+        },
+        {
+          word: "mukṣīya",
+          gloss: "may I be freed / released",
+          note:
+            "The verb of the petition, from √muc 'to release, let go' — the same root as muñca in the Vajrasattva mantra (mā me muñca, 'do not abandon me'). The form is first person singular: the worshipper asks for their own release, in the middle voice ('may I be released [for myself]').",
+          grammar:
+            "1st person singular, precative (āśīrliṅ, the benedictive optative) ātmanepada of √muc: muc + s-īya → mukṣīya (c → k before s; s → ṣ after k by ruki). The precative expresses a wish or prayer, 'may I...'."
+        },
+        {
+          word: "mā'mṛtāt",
+          gloss: "not from immortality",
+          note:
+            "mā + amṛtāt. amṛta ('the deathless, immortality', a- 'not' + mṛta 'dead') is the opposite of mṛtyu. The line thus ends on a contrast: 'free me from death, but not from immortality'. Sandhi: mā + amṛtāt → mā'mṛtāt (ā + a → ā; the lost initial a- is marked in writing by the avagraha ऽ, which is silent). Note that mā is normally the prohibitive particle ('do not...!'); its use here as a plain 'not' is a Vedic peculiarity that commentators from Sāyaṇa onward have had to explain.",
+          grammar:
+            "mā: indeclinable negative particle (here used as simple negation rather than prohibition). amṛtāt: ablative singular of the neuter a-stem amṛta (stem + -āt), parallel to bandhanāt and mṛtyoḥ, all governed by mukṣīya ('be freed from')."
+        }
+      ]
+    },
+    tibetan: null
+  }
 ];
