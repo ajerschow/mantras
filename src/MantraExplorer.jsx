@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { mantras } from "./mantras.js";
+import { openSpiralizer } from "./spiralizer.js";
 
 function Chip({ id, label, sublabel, labelClassName, openChipId, setOpenChipId, children }) {
   const isOpen = openChipId === id;
@@ -331,13 +332,28 @@ const SA_FONT_KEY = "mantra-explorer-sa-font";
 // Devanagari fonts for the main Sanskrit line; ids match data-sa-font rules in index.css.
 // All were checked against every conjunct in the data (त्र्य, ज्ञ, क्ष, द्ध, reph …).
 const SANSKRIT_FONTS = [
-  { id: "amita", label: "Amita — nib-pen calligraphy" },
-  { id: "tiro", label: "Tiro Devanagari Sanskrit — classic" },
-  { id: "jaini", label: "Jaini — Jain manuscript style" },
-  { id: "eczar", label: "Eczar — calligraphic serif" },
-  { id: "yatra", label: "Yatra One — bold brush" },
-  { id: "kalam", label: "Kalam — handwritten" },
+  { id: "amita", family: "Amita", label: "Amita — nib-pen calligraphy" },
+  { id: "tiro", family: "Tiro Devanagari Sanskrit", label: "Tiro Devanagari Sanskrit — classic" },
+  { id: "jaini", family: "Jaini", label: "Jaini — Jain manuscript style" },
+  { id: "eczar", family: "Eczar", label: "Eczar — calligraphic serif" },
+  { id: "yatra", family: "Yatra One", label: "Yatra One — bold brush" },
+  { id: "kalam", family: "Kalam", label: "Kalam — handwritten" },
 ];
+const TIBETAN_FONTS = [{ family: "Noto Serif Tibetan", label: "Noto Serif Tibetan" }];
+
+function spiralize(entry, saFont) {
+  const isSa = entry.lang === "sanskrit";
+  const fontOptions = isSa ? SANSKRIT_FONTS : TIBETAN_FONTS;
+  const current = isSa ? SANSKRIT_FONTS.find((f) => f.id === saFont) : TIBETAN_FONTS[0];
+  openSpiralizer({
+    title: entry.title,
+    text: getCleanScript(entry).replace(/\n/g, " "),
+    symbol: isSa ? "ॐ" : "ཨོཾ",
+    fontFamily: (current || fontOptions[0]).family,
+    fontOptions,
+    fileName: `${entry.mantra.id}-spiral.png`,
+  });
+}
 
 function readStoredTheme() {
   try {
@@ -504,6 +520,15 @@ export default function MantraExplorer() {
           onClick={() => setPrintOpen(true)}
         >
           Print / Trace clean copy
+        </button>
+        <button
+          type="button"
+          className="print-trigger-btn"
+          disabled={!selected}
+          onClick={() => spiralize(selected, saFont)}
+          title="Draw this mantra as a spiral in a new window"
+        >
+          Spiralize
         </button>
       </div>
 

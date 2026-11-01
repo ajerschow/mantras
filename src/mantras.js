@@ -960,77 +960,77 @@ export const mantras = [
         "Oṃ, Vajrasattva! Keep your sacred pledge (samaya). Vajrasattva, be present as me/abide close to me. Be steadfast for me. Be greatly pleased with me. Nourish me well. Be devoted to me. Grant me all accomplishments (siddhis). And in every action make my mind excellent — hūṃ! Ha ha ha ha hoḥ! O Blessed One, Vajra of all the Tathāgatas, do not abandon me — be the Vajra-holder, O great being of the sacred pledge, āḥ!",
       lines: [
         {
-          script: "ॐ वज्रसत्त्व समयम् अनुपालय",
+          script: "ॐ वज्रसत्त्व समयम् अनुपालय ।",
           translit: "oṃ vajrasattva samayam anupālaya",
           gloss: "Oṃ Vajrasattva, keep your sacred pledge!",
           note:
             "oṃ — the opening praṇava. vajrasattva — 'Vajra-Being', the deity of purification, addressed directly throughout this mantra. samayam anupālaya — accusative samayam ('pledge, sacred bond') + causative imperative anupālaya ('keep/maintain!'), from anu-√pāl."
         },
         {
-          script: "वज्रसत्त्व त्वेनोपतिष्ठ",
+          script: "वज्रसत्त्व त्वेनोपतिष्ठ ।",
           translit: "vajrasattva tvenopatiṣṭha",
           gloss: "Vajrasattva, be present as me!",
           note:
             "tvena — instrumental of tvam ('you'), 'by/as you'. upatiṣṭha — imperative of upa-√sthā, 'stand near, be present'. tvena + upatiṣṭha → tvenopatiṣṭha by sandhi."
         },
         {
-          script: "दृढो मे भव",
+          script: "दृढो मे भव ।",
           translit: "dṛḍho me bhava",
           gloss: "Be steadfast for me!",
           note:
             "dṛḍhaḥ ('firm, steadfast') + me ('for me') + bhava (imperative of √bhū, 'be'). Final -aḥ becomes -o before the voiced me."
         },
         {
-          script: "सुतोष्यो मे भव",
+          script: "सुतोष्यो मे भव ।",
           translit: "sutoṣyo me bhava",
           gloss: "Be greatly pleased with me!",
           note:
             "sutoṣyaḥ is a gerundive ('to be made pleased') from su- ('well/very') + √tuṣ ('be satisfied'). Parallel in form to supoṣyo and anurakto below."
         },
         {
-          script: "सुपोष्यो मे भव",
+          script: "सुपोष्यो मे भव ।",
           translit: "supoṣyo me bhava",
           gloss: "Nourish me well!",
           note:
             "supoṣyaḥ, another gerundive, from su- + √puṣ ('nourish'): 'to be well-nourished/sustained'."
         },
         {
-          script: "अनुरक्तो मे भव",
+          script: "अनुरक्तो मे भव ।",
           translit: "anurakto me bhava",
           gloss: "Be devoted to me!",
           note:
             "anuraktaḥ is the past participle of anu-√rañj, 'attached/devoted to'. Completes the set of four parallel '...me bhava' requests."
         },
         {
-          script: "सर्वसिद्धिं मे प्रयच्छ",
+          script: "सर्वसिद्धिं मे प्रयच्छ ।",
           translit: "sarva-siddhiṃ me prayaccha",
           gloss: "Grant me all accomplishments!",
           note:
             "sarva-siddhim — accusative of sarva-siddhi, 'all attainments/siddhis'. prayaccha — imperative of pra-√yam/√dā, 'grant, give forth'."
         },
         {
-          script: "सर्वकर्मसु च मे चित्तं श्रेयः कुरु हूं",
+          script: "सर्वकर्मसु च मे चित्तं श्रेयः कुरु हूं ।",
           translit: "sarva-karmasu ca me cittaṃ śreyaḥ kuru hūṃ",
           gloss: "And in all actions make my mind excellent — hūṃ!",
           note:
             "sarva-karmasu — locative plural, 'in all actions'. ca — 'and'. me cittam — 'my mind' (accusative). śreyaḥ — 'more excellent/auspicious', used adverbially. kuru — imperative of √kṛ, 'do/make'. hūṃ — closing seed syllable, as in Om Mani Padme Hum."
         },
         {
-          script: "ह ह ह ह होः",
+          script: "ह ह ह ह होः ।",
           translit: "ha ha ha ha hoḥ",
           gloss: "Ha ha ha ha hoḥ!",
           note:
             "A string of exclamatory seed-sounds with no literal meaning — linked in tantric exegesis to the four joys/empowerments, with hoḥ as a burst of joyful release marking the mantra's climax."
         },
         {
-          script: "भगवन् सर्वतथागतवज्र मा मे मुञ्च",
+          script: "भगवन् सर्वतथागतवज्र मा मे मुञ्च ।",
           translit: "bhagavan sarva-tathāgata-vajra mā me muñca",
           gloss: "O Blessed One, Vajra of all the Tathāgatas, do not abandon me!",
           note:
             "bhagavan — vocative of bhagavat, 'Blessed/Glorious One'. sarva-tathāgata-vajra — '(O) Vajra (essence) of all the Buddhas'. mā me muñca — prohibitive mā + imperative muñca (√muc, 'release'): 'do not abandon me!'."
         },
         {
-          script: "वज्री भव महासमयसत्त्व आः",
+          script: "वज्री भव महासमयसत्त्व आः ॥",
           translit: "vajrī bhava mahāsamaya-sattva āḥ",
           gloss: "Be the Vajra-holder, O great being of the pledge — āḥ!",
           note:
@@ -1157,77 +1157,77 @@ export const mantras = [
         "Like Om Mani Padme Hum and the other deity mantras above, this is Sanskrit written in Tibetan 'Sanskrit-spelling' mode, so the ordinary Tibetan reading rules (silent prefixes/suffixes that shift tone, explained for Lama Khyen-no) do not apply. Each of the eighty-one Tibetan syllable-blocks is shown individually below, grouped into the nine Sanskrit word-units used above, with its own letter-by-letter construction and pronunciation — including the Sanskrit-only conjunct clusters such as ཙྪ ('cch' in prayaccha) and ཉྩ ('ñc' in muñca).",
       lines: [
         {
-          script: "ༀ་བཛྲ་སཏྭ་ས་མ་ཡ་མ་ནུ་པཱ་ལ་ཡ",
+          script: "ༀ་བཛྲ་སཏྭ་ས་མ་ཡ་མ་ནུ་པཱ་ལ་ཡ།",
           translit: "Om Benza Sato Samaya Manupalaya",
           gloss: "Om Vajrasattva, keep your pledge!",
           note:
             "The Oṃ ligature, then བཛྲ (badzra, for 'vajra') and སཏྭ (sa-twa, for 'sattva' — cf. 'Benza Sato'), followed by eight simple, unstacked syllables spelling samaya manupalaya."
         },
         {
-          script: "བཛྲ་སཏྭ་ཏྭེ་ནོ་པ་ཏིཥྛ",
+          script: "བཛྲ་སཏྭ་ཏྭེ་ནོ་པ་ཏིཥྛ།",
           translit: "Benza Sato Tenopa Tishta",
           gloss: "Vajrasattva, be present as me!",
           note:
             "Repeats 'Vajrasattva', then ཏྭེ་ནོ་པ་ཏིཥྛ — note ཥྛ, a stack of retroflex ཥ (ṣa) and ཏ (ta) used only to write Sanskrit."
         },
         {
-          script: "དྲྀ་ཌྷོ་མེ་བྷ་ཝ",
+          script: "དྲྀ་ཌྷོ་མེ་བྷ་ཝ།",
           translit: "Dridho Me Bhava",
           gloss: "Be steadfast for me!",
           note:
             "དྲྀ uses the vocalic-r vowel sign ྲྀ (a Sanskrit-only vowel) for dṛ-; ཌྷོ adds the aspirated retroflex ཌྷ. མེ་བྷ་ཝ = me bhava, 'be ... for me'."
         },
         {
-          script: "སུ་ཏོཥྱོ་མེ་བྷ་ཝ",
+          script: "སུ་ཏོཥྱོ་མེ་བྷ་ཝ།",
           translit: "Sutokhyo Me Bhava",
           gloss: "Be greatly pleased with me!",
           note:
             "ཏོཥྱོ carries retroflex ཥ plus subjoined ྱ (ya), reproducing the gerundive cluster '-ṣy-' of sutoṣyo."
         },
         {
-          script: "སུ་པོཥྱོ་མེ་བྷ་ཝ",
+          script: "སུ་པོཥྱོ་མེ་བྷ་ཝ།",
           translit: "Suposhyo Me Bhava",
           gloss: "Nourish me well!",
           note:
             "Parallel to the previous line, with པོཥྱོ for poṣyo."
         },
         {
-          script: "ཨ་ནུ་རཀྟོ་མེ་བྷ་ཝ",
+          script: "ཨ་ནུ་རཀྟོ་མེ་བྷ་ཝ།",
           translit: "Anurakto Me Bhava",
           gloss: "Be devoted to me!",
           note:
             "རཀྟོ stacks ཀ and ཏ for the cluster 'kt' of anurakto, completing the set of four 'me bhava' lines."
         },
         {
-          script: "སརྦ་སིདྡྷིཾ་མེ་པྲ་ཡཙྪ",
+          script: "སརྦ་སིདྡྷིཾ་མེ་པྲ་ཡཙྪ།",
           translit: "Sarva Siddhim Me Prayatsa",
           gloss: "Grant me all accomplishments!",
           note:
             "སརྦ subjoins ར under ས for the cluster 'rv'. སིདྡྷིཾ stacks ད and ྷ for 'ddh', with anusvāra ཾ for the final -ṃ."
         },
         {
-          script: "སརྦ་ཀརྨ་སུ་ཙ་མེ་ཙིཏྟཾ་ཤྲེ་ཡཿ་ཀུ་རུ་ཧཱུྂ",
+          script: "སརྦ་ཀརྨ་སུ་ཙ་མེ་ཙིཏྟཾ་ཤྲེ་ཡཿ་ཀུ་རུ་ཧཱུྂ།",
           translit: "Sarva Karma Sutsa Me Tsittam Shreya Kuru Hung",
           gloss: "And in all actions make my mind excellent — hūṃ!",
           note:
             "ཙིཏྟཾ stacks ཏ for 'tt' in cittam. ཤྲེ uses ཤ, the Sanskrit-only palatal śa, with subjoined ར. The line closes on ཧཱུྂ (hūṃ)."
         },
         {
-          script: "ཧ་ཧ་ཧ་ཧ་ཧོཿ",
+          script: "ཧ་ཧ་ཧ་ཧ་ཧོཿ།",
           translit: "Ha Ha Ha Ha Ho",
           gloss: "Ha ha ha ha hoḥ!",
           note:
             "Five plain syllables with no consonant stacking at all — the simplest stretch of the whole mantra."
         },
         {
-          script: "བྷ་ག་ཝཱན་སརྦ་ཏ་ཐཱ་ག་ཏ་བཛྲ་མཱ་མེ་མུཉྩ",
+          script: "བྷ་ག་ཝཱན་སརྦ་ཏ་ཐཱ་ག་ཏ་བཛྲ་མཱ་མེ་མུཉྩ།",
           translit: "Bhagavan Sarva Tathagata Benza Mame Muntsa",
           gloss: "O Blessed One, Vajra of all the Tathāgatas, do not abandon me!",
           note:
             "བྷ marks the voiced aspirate 'bha'; ཝཱན carries suffix ན for the final -n of bhagavan. མུཉྩ stacks ཉ and ཙ for the cluster 'ñc' of muñca."
         },
         {
-          script: "བཛྲཱི་བྷ་ཝ་མ་ཧཱ་ས་མ་ཡ་སཏྭ་ཨཱཿ",
+          script: "བཛྲཱི་བྷ་ཝ་མ་ཧཱ་ས་མ་ཡ་སཏྭ་ཨཱཿ༎",
           translit: "Benzri Bhava Maha Samaya Sato Ah",
           gloss: "Be the Vajra-holder, O great being of the pledge — āḥ!",
           note:
@@ -2382,55 +2382,55 @@ export const mantras = [
     intro: "This is a native Tibetan prayer of supplication (gsol 'debs) to Śākyamuni Buddha, distinct from the Sanskrit mantra Oṃ Muni Muni Mahāmuni already in this collection. It divides into two parts: the first four lines praise the Buddha's qualities (vanquishing Māra, possessing merit and wisdom, transcending both existence and nirvāṇa), and the last five lines express aspiration (to be blessed, to obtain a precious human body in future lives, and ultimately to liberate beings). Because this is composed in native Tibetan, ordinary reading rules apply throughout: silent prefix consonants (ག ད བ མ འ) shift tone and register; superscripts (ར ལ ས) raise register; the suffix ན fronts preceding vowels (o→ö, a→e); and the suffixes ག, ད, བ become unreleased final stops that shorten the vowel. One syllable — ཤཱཀྱའི (shakyé) — is the Sanskrit clan name Śākya written in Tibetan script with a long ā sign and the genitive particle འི; it follows Sanskrit-spelling conventions rather than native Tibetan reading rules.",
     lines: [
       {
-        script: "ཉོན་མོངས་བདུད་ཀྱི་སྡེ་ཚོགས་བཅོམ",
+        script: "ཉོན་མོངས་བདུད་ཀྱི་སྡེ་ཚོགས་བཅོམ། །",
         translit: "Nyönmong dü kyi dé tsok chom",
         gloss: "Having vanquished the host of Māra's afflictions",
         note: "ཉོན་མོངས (kleśa, 'afflictions') — the mental poisons (desire, aversion, ignorance and their derivatives). བདུད (Māra) — the demon who personifies death, temptation, and the forces opposing enlightenment; at the night of his enlightenment the Buddha 'vanquished' (བཅོམ, bcom) Māra's entire assembly (སྡེ་ཚོགས, 'host/army') by touching the earth as witness. ཀྱི is the genitive particle linking Māra to his army."
       },
       {
-        script: "བསོད་ནམས་ཡེ་ཤེས་ཕུང་པོར་ལྡན",
+        script: "བསོད་ནམས་ཡེ་ཤེས་ཕུང་པོར་ལྡན། །",
         translit: "Sönam yéshé phungpor den",
         gloss: "Endowed with the accumulations of merit and wisdom",
         note: "The two accumulations (tshogs gnyis) are the foundation of Buddhahood: བསོད་ནམས (bsod nams, merit/puṇya) accumulated through ethical conduct and generosity, and ཡེ་ཤེས (ye shes, wisdom/jñāna) accumulated through meditation on emptiness. ཕུང་པོར (phung por, 'in/as heaps/aggregates', dative of ཕུང་པོ) means the Buddha holds these to a vast degree; ལྡན (ldan) = 'endowed with / possessing'."
       },
       {
-        script: "སྲིད་དང་ཞི་བའི་མཐའ་ལས་འདས",
+        script: "སྲིད་དང་ཞི་བའི་མཐའ་ལས་འདས། །",
         translit: "Si dang zhiwé ta lé dé",
         gloss: "Gone beyond the extremes of existence and peace",
         note: "སྲིད (srid) = cyclic existence / saṃsāra; ཞི་བ (zhi ba) = peace / nirvāṇa. མཐའ (mtha') = extreme/limit. འདས ('das, past of 'da' ba) = 'gone beyond'. The Buddha is praised for transcending both ordinary worldly existence AND the 'quiescent' one-sided nirvāṇa of the śrāvakas — he dwells in mahāparinirvāṇa while remaining active for beings. ལས = the ablative particle 'from/beyond'."
       },
       {
-        script: "ཤཱཀྱའི་ཐོག་ལ་གསོལ་བ་འདེབས",
+        script: "ཤཱཀྱའི་ཐོག་ལ་གསོལ་བ་འདེབས། །",
         translit: "Shakyé tok la solwa deb",
         gloss: "To the crown of the Śākyas, I pray",
         note: "ཤཱཀྱའི (shākya'i) — the Sanskrit clan name Śākya (written in Tibetan with the long-ā sign ཱ and subjoined ྱ for the 'ky' cluster) plus the Tibetan genitive འི: 'of the Śākyas'. ཐོག (thog) = crown/pinnacle: 'the pinnacle of the Śākya clan' = the greatest person to arise from that royal lineage. གསོལ་བ་འདེབས (gsol ba 'debs) = 'to offer a supplication / to pray': the standard Tibetan liturgical phrase for petition, where 'debs means 'to place/offer'."
       },
       {
-        script: "འཇིགས་བརྒྱད་ཞི་བར་བྱིན་གྱིས་རློབས",
+        script: "འཇིགས་བརྒྱད་ཞི་བར་བྱིན་གྱིས་རློབས། །",
         translit: "Jikgyé zhiwar jingyi lob",
         gloss: "Bless me to pacify the eight fears",
         note: "འཇིགས་བརྒྱད (the eight fears) — a classical list: lion, elephant, fire, snake, robbers, water, false imprisonment, and demons (different traditions enumerate them slightly differently). ཞི་བར (zhi bar) = 'to pacify/calm' (the dative/purposive ར: 'in order to calm'). བྱིན་གྱིས་རློབས (byin gyis rlobs) = the standard Tibetan formula for 'bless / empower': byin = gift/grace, gyis = instrumental, rlobs = command/empower."
       },
       {
-        script: "སྐྱེ་དང་ཚེ་རབས་ཐམས་ཅད་དུ",
+        script: "སྐྱེ་དང་ཚེ་རབས་ཐམས་ཅད་དུ། །",
         translit: "Kyé dang tsérab tamché du",
         gloss: "In all births and lifetimes",
         note: "སྐྱེ (skye) = birth/rebirth; ཚེ་རབས (tshe rabs, 'all lives') — tshe = lifespan/life, rabs = series/sequence, together 'successive lifetimes'. ཐམས་ཅད (thams cad) = all/everything. དུ (du) = locative particle 'in/at'. This line opens the aspiration section: 'in all my future births and lives [may the following come to pass]'."
       },
       {
-        script: "ལར་ཡང་ལྷག་པའི་ལུས་ཐོབ་ནས",
+        script: "ལར་ཡང་ལྷག་པའི་ལུས་ཐོབ་ནས། །",
         translit: "Lar yang lhakpé lu tob né",
         gloss: "Having again obtained an excellent body",
         note: "ལར་ཡང (lar yang) = 'again, once more' (a set phrase). ལྷག་པ (lhag pa) = superior/excellent/special; with genitive འི: 'of excellence'. ལུས (lus) = body — here 'a precious human body' endowed with the freedoms and opportunities for practice. ཐོབ་ནས (thob nas) = 'having obtained' (ནས is the connective particle linking to the following aspiration)."
       },
       {
-        script: "འགྲོ་རྣམས་སྡུག་བསྔལ་ལས་སྒྲོལ་བའི",
+        script: "འགྲོ་རྣམས་སྡུག་བསྔལ་ལས་སྒྲོལ་བའི། །",
         translit: "Dro nam dukngal lé drolwé",
         gloss: "May I liberate beings from suffering",
         note: "འགྲོ་རྣམས ('gro rnams) = sentient beings: 'gro (those who wander/go) + rnams (plural particle). སྡུག་བསྔལ (sdug bsngal) = suffering / duḥkha — the central term of the First Noble Truth. ལས (las) = ablative 'from'. སྒྲོལ་བའི (sgrol ba'i) = 'of liberating' (genitive: this line is a genitive phrase modifying the leader of the next line): '(the) liberating of beings from suffering'."
       },
       {
-        script: "བདེ་དཔོན་མཆོག་ཏུ་བདག་གྱུར་ཤོག",
+        script: "བདེ་དཔོན་མཆོག་ཏུ་བདག་གྱུར་ཤོག །",
         translit: "Dépön chok tu dak gyur shok",
         gloss: "May I become the supreme guide to happiness",
         note: "བདེ་དཔོན (bde dpon) = 'guide/leader of happiness' — bde = bliss/happiness, dpon = lord/leader/guide. མཆོག་ཏུ (mchog tu) = 'as the supreme / supremely'. བདག (bdag) = I/myself (the practitioner). གྱུར (gyur) = 'become' (past stem used in optative constructions). ཤོག (shog) = the optative/wishful particle 'may it be so!' that closes Tibetan aspirational prayers. The whole prayer ends: 'may I become the supreme guide leading beings to happiness'."
@@ -3052,14 +3052,14 @@ export const mantras = [
         "Oṃ. We worship the Three-Eyed One, fragrant, who increases nourishment. As a cucumber (is freed) from its stalk, may I be freed from death — not from immortality.",
       lines: [
         {
-          script: "ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम्",
+          script: "ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम् ।",
           translit: "oṃ tryambakaṃ yajāmahe sugandhiṃ puṣṭi-vardhanam",
           gloss: "Oṃ. We worship the Three-Eyed One, fragrant, increaser of nourishment",
           note:
             "The first half-verse is pure praise: three accusatives (tryambakam, sugandhim, puṣṭi-vardhanam) all describe the object of the one verb yajāmahe ('we worship'). oṃ is not part of the Ṛgvedic text; it is prefixed in later recitation."
         },
         {
-          script: "उर्वारुकमिव बन्धनान् मृत्योर्मुक्षीय माऽमृतात्",
+          script: "उर्वारुकमिव बन्धनान् मृत्योर्मुक्षीय माऽमृतात् ॥",
           translit: "urvārukam iva bandhanān mṛtyor mukṣīya mā'mṛtāt",
           gloss: "As a cucumber from its stalk, may I be freed from death — not from immortality",
           note:
