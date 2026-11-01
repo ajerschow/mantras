@@ -1,20 +1,69 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Serif+Tibetan:wght@400;600&display=swap");
 
 :root {
+  /* Dark theme (default) */
+  color-scheme: dark;
+  --bg-top: #221e31;
+  --bg-bottom: #161320;
+  --bg-end: #1a1626;
+  --panel-bg: rgba(255, 255, 255, 0.045);
+  --panel-border: rgba(205, 190, 235, 0.14);
+  --surface-hover: rgba(255, 255, 255, 0.07);
+  --surface-raised: rgba(255, 255, 255, 0.06);
+  --popup-bg: #2a2538;
+  --modal-bg: #221e2e;
+  --overlay-bg: rgba(5, 3, 10, 0.7);
+  --ink: #e9e3f2;
+  --muted: #a89fba;
+  --placeholder: #7d7490;
+  --indigo: #c3b9ec;
+  --maroon: #e0959e;
+  --gold: #d6ab4d;
+  --gold-soft: rgba(214, 171, 77, 0.18);
+  --divider: rgba(214, 171, 77, 0.4);
+  --on-accent: #1a1420;
+  --shadow: rgba(0, 0, 0, 0.35);
+  --shadow-strong: rgba(0, 0, 0, 0.6);
+  --badge-sa-bg: rgba(224, 149, 158, 0.16);
+  --badge-sa-fg: #eaa9b1;
+  --badge-ti-bg: rgba(130, 190, 140, 0.16);
+  --badge-ti-fg: #a6d4ad;
+  --badge-mixed-bg: rgba(214, 171, 77, 0.16);
+  --badge-mixed-fg: #dfc086;
+  --font-display: "Cormorant Garamond", "Noto Serif", serif;
+  --font-body: "EB Garamond", "Noto Serif", Georgia, serif;
+  font-family: "EB Garamond", "Noto Serif", Georgia, serif;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
   --bg-top: #f3eee4;
   --bg-bottom: #e9e2f0;
+  --bg-end: #ece6f2;
   --panel-bg: rgba(255, 255, 255, 0.72);
   --panel-border: rgba(120, 100, 150, 0.16);
+  --surface-hover: rgba(255, 255, 255, 0.5);
+  --surface-raised: rgba(255, 255, 255, 0.55);
+  --popup-bg: #fffdf9;
+  --modal-bg: #fff;
+  --overlay-bg: rgba(40, 30, 55, 0.55);
   --ink: #322c45;
   --muted: #6f6580;
+  --placeholder: #a89ebb;
   --indigo: #423b6b;
   --maroon: #8a3b46;
   --gold: #bb8a2e;
   --gold-soft: #f1e3c4;
   --divider: rgba(187, 138, 46, 0.35);
-  --font-display: "Cormorant Garamond", "Noto Serif", serif;
-  --font-body: "EB Garamond", "Noto Serif", Georgia, serif;
-  font-family: "EB Garamond", "Noto Serif", Georgia, serif;
+  --on-accent: #fff;
+  --shadow: rgba(80, 60, 110, 0.06);
+  --shadow-strong: rgba(80, 60, 110, 0.16);
+  --badge-sa-bg: #f6e3df;
+  --badge-sa-fg: #8a3b46;
+  --badge-ti-bg: #e3ecdf;
+  --badge-ti-fg: #4d7a52;
+  --badge-mixed-bg: #efe6d8;
+  --badge-mixed-fg: #7a5c2e;
 }
 
 * {
@@ -28,7 +77,8 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: linear-gradient(160deg, var(--bg-top) 0%, var(--bg-bottom) 55%, #ece6f2 100%);
+  background: linear-gradient(160deg, var(--bg-top) 0%, var(--bg-bottom) 55%, var(--bg-end) 100%);
+  min-height: 100vh;
 }
 
 .app {
@@ -51,7 +101,7 @@ body {
   color: var(--gold);
   margin-bottom: 6px;
   opacity: 0.85;
-  text-shadow: 0 0 18px rgba(187, 138, 46, 0.35);
+  text-shadow: 0 0 18px var(--gold-soft);
   transition: opacity 0.2s ease;
 }
 
@@ -79,7 +129,7 @@ body {
   font-size: 3.1rem;
   letter-spacing: 0.04em;
   color: var(--indigo);
-  text-shadow: 0 1px 24px rgba(138, 59, 70, 0.12);
+  text-shadow: 0 1px 24px var(--shadow);
 }
 
 .subtitle {
@@ -90,6 +140,27 @@ body {
   font-size: 1.08rem;
   font-style: italic;
   font-family: var(--font-body);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--panel-border);
+  background: var(--panel-bg);
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
 /* ---------- Controls ---------- */
@@ -113,19 +184,19 @@ body {
   font-family: var(--font-body);
   background: var(--panel-bg);
   color: var(--ink);
-  box-shadow: 0 1px 3px rgba(70, 50, 90, 0.06);
+  box-shadow: 0 1px 3px var(--shadow);
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .search-box::placeholder {
-  color: #a89ebb;
+  color: var(--placeholder);
 }
 
 .search-box:focus,
 .mantra-select:focus {
   outline: none;
   border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(187, 138, 46, 0.15);
+  box-shadow: 0 0 0 3px var(--gold-soft);
 }
 
 .no-results {
@@ -209,7 +280,7 @@ body {
   border: 1px solid var(--panel-border);
   border-radius: 18px;
   padding: 24px 26px;
-  box-shadow: 0 6px 24px rgba(80, 60, 110, 0.06);
+  box-shadow: 0 6px 24px var(--shadow);
 }
 
 .panel h2 {
@@ -283,7 +354,7 @@ body {
 
 .verse-line:hover {
   border-color: var(--panel-border);
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--surface-hover);
 }
 
 .verse-line.verse-line-active {
@@ -361,13 +432,18 @@ body {
 }
 
 .script-type-badge.sanskrit-in-tibetan {
-  background: #f6e3df;
-  color: var(--maroon);
+  background: var(--badge-sa-bg);
+  color: var(--badge-sa-fg);
 }
 
 .script-type-badge.native-tibetan {
-  background: #e3ecdf;
-  color: #4d7a52;
+  background: var(--badge-ti-bg);
+  color: var(--badge-ti-fg);
+}
+
+.script-type-badge.mixed {
+  background: var(--badge-mixed-bg);
+  color: var(--badge-mixed-fg);
 }
 
 .intro-note {
@@ -408,7 +484,7 @@ body {
   padding: 8px 16px;
   border: 1px solid var(--panel-border);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--surface-raised);
   cursor: pointer;
   font-family: inherit;
   transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease;
@@ -448,10 +524,10 @@ body {
   width: max-content;
   min-width: 220px;
   max-width: min(320px, 80vw);
-  background: #fffdf9;
+  background: var(--popup-bg);
   border: 1px solid var(--panel-border);
   border-radius: 12px;
-  box-shadow: 0 10px 28px rgba(80, 60, 110, 0.16);
+  box-shadow: 0 10px 28px var(--shadow-strong);
   padding: 14px 16px;
   text-align: left;
   cursor: default;
@@ -464,7 +540,7 @@ body {
   left: calc(50% - var(--shift, 0px));
   transform: translateX(-50%);
   border: 7px solid transparent;
-  border-bottom-color: #fffdf9;
+  border-bottom-color: var(--popup-bg);
 }
 
 .popup-gloss {
@@ -515,7 +591,7 @@ body {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(40, 30, 55, 0.55);
+  background: var(--overlay-bg);
   z-index: 1000;
   align-items: center;
   justify-content: center;
@@ -527,7 +603,7 @@ body {
 }
 
 .print-overlay-panel {
-  background: #fff;
+  background: var(--modal-bg);
   border-radius: 16px;
   width: 100%;
   max-width: 900px;
@@ -537,7 +613,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  box-shadow: 0 20px 60px rgba(30, 20, 45, 0.3);
+  box-shadow: 0 20px 60px var(--shadow-strong);
 }
 
 .print-controls {
@@ -586,7 +662,7 @@ body {
 .print-action-btn {
   background: var(--gold);
   border-color: var(--gold);
-  color: #fff;
+  color: var(--on-accent);
   font-weight: 600;
 }
 

@@ -138,6 +138,12 @@ function SanskritSection({ sanskrit, sectionId, showPhonetics, showTranslation, 
   );
 }
 
+const SCRIPT_TYPE_LABELS = {
+  "sanskrit-in-tibetan": "Sanskrit spelled in Tibetan script",
+  "native-tibetan": "Native Tibetan",
+  mixed: "Sanskrit spelling + native Tibetan"
+};
+
 function TibetanSection({ tibetan, sectionId, showPhonetics, showTranslation, openChipId, setOpenChipId }) {
   return (
     <section className="panel">
@@ -175,9 +181,7 @@ function TibetanSection({ tibetan, sectionId, showPhonetics, showTranslation, op
       )}
 
       <div className={`script-type-badge ${tibetan.scriptType}`}>
-        {tibetan.scriptType === "sanskrit-in-tibetan"
-          ? "Sanskrit spelled in Tibetan script"
-          : "Native Tibetan"}
+        {SCRIPT_TYPE_LABELS[tibetan.scriptType]}
       </div>
       <p className="intro-note">{tibetan.intro}</p>
 
@@ -321,7 +325,19 @@ const entries = mantras.flatMap((m) => {
   return out;
 });
 
+const THEME_KEY = "mantra-explorer-theme";
+
+function readStoredTheme() {
+  try {
+    const t = window.localStorage.getItem(THEME_KEY);
+    return t === "light" ? "light" : "dark";
+  } catch {
+    return "dark";
+  }
+}
+
 export default function MantraExplorer() {
+  const [theme, setTheme] = useState(readStoredTheme);
   const [query, setQuery] = useState("");
   const [selectedKey, setSelectedKey] = useState(entries[0].key);
   const [openChipId, setOpenChipId] = useState(null);
@@ -349,8 +365,16 @@ export default function MantraExplorer() {
     });
   }, [query]);
 
-  const selected =
-    filtered.find((e) => e.key === selectedKey) || filtered[0] || entries[0];
+  const selected = filtered.find((e) => e.key === selectedKey) || filtered[0] || null;
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    try {
+      window.localStorage.setItem(THEME_KEY, theme);
+    } catch {
+      // storage unavailable (private mode etc.) — theme still applies for this session
+    }
+  }, [theme]);
 
   // close any open popup when switching mantras
   useEffect(() => {
@@ -371,6 +395,15 @@ export default function MantraExplorer() {
   return (
     <div className="app">
       <header className="app-header">
+        <button
+          type="button"
+          className="theme-toggle"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+          title={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+        >
+          {theme === "dark" ? "☀" : "☾"}
+        </button>
         <div
           className={"ornament" + (selected?.lang === "sanskrit" ? " ornament-sanskrit" : " ornament-tibetan")}
           aria-hidden="true"
@@ -394,7 +427,7 @@ export default function MantraExplorer() {
         />
         <select
           className="mantra-select"
-          value={selected.key}
+          value={selected?.key ?? ""}
           onChange={(e) => setSelectedKey(e.target.value)}
         >
           {filtered.map((e) => (
@@ -419,7 +452,12 @@ export default function MantraExplorer() {
           />
           Show translation under each line
         </label>
-        <button type="button" className="print-trigger-btn" onClick={() => setPrintOpen(true)}>
+        <button
+          type="button"
+          className="print-trigger-btn"
+          disabled={!selected}
+          onClick={() => setPrintOpen(true)}
+        >
           Print / Trace clean copy
         </button>
       </div>
